@@ -1,4 +1,6 @@
 import curses
+from curses import wrapper
+from curses.textpad import rectangle
 
 VERSION = "v PROTOTYPE_02"
 
