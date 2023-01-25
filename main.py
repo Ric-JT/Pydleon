@@ -99,10 +99,25 @@ class App:
 		self.done = True
 
 	def maininit(self):		# where add widget usually goes
-		pass
+		start_widget = StartWidget(self)
+		self.add_widget(start_widget,"start",True)
+		start_widget.refresh()
 
 	def main(self,stdscr):
-		pass
+		rectangle(stdscr, 0, 0, MAXSIZE_Y-1, MAXSIZE_X-1)
+		stdscr.refresh()
+
+		self.maininit()
+
+		key = None
+		while not self.done:
+			key = stdscr.getch()
+
+			for widget in self.active_widgets:
+				widget.run(key)		# TODO: distinguish between focused widgets
+
+
+
 
 app = App()
 wrapper(app.main)
