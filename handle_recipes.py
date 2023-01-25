@@ -132,12 +132,21 @@ class RecipeBook:
         """
         recipes_dict = {}
         for target in self.recipes:
+            # Start recipe evaluation believing it's possible
             is_possible = True
+
+            # Get recipe from Recipe Book, if doesn't exist return empty recipe
             recipe = self.recipes.get(target, {})
+
+            # If there isn't a recipe or is invalid for the current smithing level
+            # assume impossible recipe
             if not len(recipe) or (smth_lvl and smth_lvl < recipe["smth_lvl_req"]):
                 is_possible = False
+            # If there is a recipe and valid for the current smithing level
             else:
                 rec_ingredients = recipe["ingredients"]
+                # If any ingredient isn't available or isn't enough to craft the recipe
+                # assume impossible recipe
                 for rec_ingredient in rec_ingredients:
                     if (
                         rec_ingredient not in ingredients
@@ -145,6 +154,7 @@ class RecipeBook:
                     ):
                         is_possible = False
                         break
+            # If the recipe is still considered possible add it to the recipes dict
             if is_possible:
                 recipes_dict.update(self.get_recipe_by_name(target))
 
@@ -158,9 +168,14 @@ class RecipeBook:
         bag : dict
             Set of items to add
         """
+        # Add bag to Recipe Book Bag
         _update_dict_add(self.bag, bag)
+
+        # Get Grindleft through a subtraction of the Recipe Book Bag to the grindcost
         grindcost = self.grindcost.copy()
         self.grindleft = _update_dict_sub(grindcost, self.bag)
+
+        # Get possible recipes based on Recipe Book Bag
         self.possible_recipes = recipe_book.get_recipes_by_ingredients(self.bag)
 
     def get_item_cost(self, item: str, number: int) -> dict:
@@ -180,15 +195,21 @@ class RecipeBook:
         """
 
         cost = {}
+        # If Recipe Book has a recipe for the item
         if self.recipes.get(item):
             ingredients = self.recipes[item]["ingredients"]
 
+            # Break the ingredient down until there is no more ingredients with recipes
             for ingredient in ingredients:
                 item_cost = self.get_item_cost(ingredient, ingredients[ingredient])
                 _update_dict_add(cost, item_cost)
 
+            # Multiply the item cost by the number of items
             cost_series = pd.Series(cost, dtype=int) * number
+
+            # Convert cost back to Dictionary
             cost = cost_series.to_dict()
+        # Else set the item itself as the cost
         else:
             cost[item] = number
 
@@ -204,12 +225,18 @@ class RecipeBook:
         """
         cost = {}
 
+        # Get cost for the new wishes
         for wish in wishes:
             wish_cost = self.get_item_cost(wish, wishes[wish])
             _update_dict_add(cost, wish_cost)
 
+        # Add wishes to Grindlist
         _update_dict_add(self.grindlist, wishes)
+
+        # Add wishes cost to Grindcost
         _update_dict_add(self.grindcost, cost)
+
+        # Update Grindleft based on Grindcost and Recipe Book Bag
         grindcost = self.grindcost.copy()
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
@@ -246,17 +273,27 @@ class RecipeBook:
 
 
 if __name__ == "__main__":
+    # Open recipes Json
     recipes_json_filename = "recipes.json"
     with open(recipes_json_filename, "r") as file:
         recipes = json.load(file)
 
+    # Build Recipe Book
     recipe_book = RecipeBook(recipes=recipes)
 
+    # Initiate Inventory Bag
     bag = {"Crimson String": 20, "Cue Tape": 5, "Spore Cap": 10, "Copper Bar": 10000}
+
+    # Initiate Grindlist
     grindlist = {"Wooden Bow": 1, "Goo Galoshes": 2}
 
+    # Add Inventory Bag to Recipe Book
     recipe_book.add_to_bag(bag)
+    # Add Grindlist to Recipe Book
     recipe_book.add_to_grindlist(grindlist)
 
+    # Print Inventory
     recipe_book.print_inventory()
+
+    # Print Grindlist
     recipe_book.print_grindlist()
