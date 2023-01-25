@@ -215,6 +215,27 @@ class RecipeBook:
 
         return cost
 
+    def get_itemlist_cost(self, item_list: dict) -> dict:
+        """This function calculates the cost for a set of items
+
+        Parameters
+        ----------
+        item_list : dict
+            Dictionary with item names as keys and number of that item name as value
+
+        Returns
+        -------
+        dict
+            Dictionary ith item names as keys and number of that item name as value to represent the cost.
+        """
+        cost = {}
+
+        # Get cost for the List of Items
+        for item in item_list:
+            item_cost = self.get_item_cost(item, item_list[item])
+            _update_dict_add(cost, item_cost)
+        return cost
+
     def add_to_grindlist(self, wishes: dict = {}):
         """This function adds grind wishes to the grind list. Also updates self.gindcost and self.grindleft
 
@@ -223,12 +244,9 @@ class RecipeBook:
         wishes : dict, optional
             Dictionary with items as key and quantity as value to represent the item grind wishes, by default {}
         """
-        cost = {}
-
         # Get cost for the new wishes
-        for wish in wishes:
-            wish_cost = self.get_item_cost(wish, wishes[wish])
-            _update_dict_add(cost, wish_cost)
+        wishes = {wish: wishes[wish] for wish in wishes if wishes[wish] > 0}
+        cost = self.get_cost_itemlist(wishes)
 
         # Add wishes to Grindlist
         _update_dict_add(self.grindlist, wishes)
@@ -285,7 +303,7 @@ if __name__ == "__main__":
     bag = {"Crimson String": 20, "Cue Tape": 5, "Spore Cap": 10, "Copper Bar": 10000}
 
     # Initiate Grindlist
-    grindlist = {"Wooden Bow": 1, "Goo Galoshes": 2}
+    grindlist = {"Wooden Bow": 20, "Goo Galoshes": 0, "Boxing Gloves": 1}
 
     # Add Inventory Bag to Recipe Book
     recipe_book.add_to_bag(bag)
