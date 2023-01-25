@@ -3,6 +3,21 @@ import pandas as pd
 
 
 def _update_dict_add(bag: dict, new_items: dict) -> dict:
+    """This is an auxiliary function that allows to update an existing dict with the new items relying on the addition operator.
+    If one key in *new_items* exists in both dictionaries, then the resulting value for that key would be the sum of both values.
+
+    Parameters
+    ----------
+    bag : dict
+        Dictionary to update with the *new_items*
+    new_items : dict
+        Dictionary with keys and values to update *bag*
+
+    Returns
+    -------
+    dict
+        Resulting dictionary
+    """
     for item_name in new_items:
         if bag.get(item_name):
             bag[item_name] += new_items[item_name]
@@ -12,6 +27,21 @@ def _update_dict_add(bag: dict, new_items: dict) -> dict:
 
 
 def _update_dict_sub(bag: dict, new_items: dict) -> dict:
+    """This is an auxiliary function that allows to update an existing dict with the new items relying on the subtraction operator.
+    If one key in *new_items* exists in both dictionaries, then the resulting value for that key would be the difference of both values.
+
+    Parameters
+    ----------
+    bag : dict
+        Dictionary to update with the *new_items*
+    new_items : dict
+        Dictionary with keys and values to update *bag*
+
+    Returns
+    -------
+    dict
+        Resulting dictionary
+    """
     for item_name in new_items:
         if bag.get(item_name):
             res = bag[item_name] - new_items[item_name]
@@ -21,11 +51,43 @@ def _update_dict_sub(bag: dict, new_items: dict) -> dict:
 
 
 def print_hline(n: int = 100):
+    """This function prints an Horizontal line with *n* consecutive '_'
+
+    Parameters
+    ----------
+    n : int, optional
+        Number of consecutive '_', by default 100
+    """
     print("_" * n)
 
 
 class RecipeBook:
     def __init__(self, recipes: dict = {}):
+        """This is the initial function of Recipe Book. It initiates the attributes of the class.
+
+        Attributes:
+        ----------
+        self.recipes: dict
+            Recipe book dictionary with the recipe output item name as keys and the requirements as values.
+            The requirements are also dict with the following keys
+                - 'ingredients' : dict
+                    Dictionary with items as keys and their required quantity as the value
+                - 'smth_lvl_req': int
+                    Smithing level required to craft the recipe
+                - 'recipe_source': str
+                    How the recipe is achieved
+                - 'anvil_tab': int
+                    To which anvil tab the recipe belongs to
+                - 'recipe_id': id
+                    Recipe Id in the respective anvil tab
+        self.bag: dict
+            Dictionary with with items as keys and their required quantity as the value, representing the Inventory bag
+
+        Parameters
+        ----------
+        recipes : dict, optional
+            Recipe book as a dictionary, by default {}
+        """
         self.recipes: dict = recipes
         self.bag: dict = {}
 
@@ -36,12 +98,38 @@ class RecipeBook:
         self.grindleft: dict = {}
 
     def get_recipe_by_name(self, name: str) -> dict:
+        """This function gets a recipe from an output item name. If it isn't in the recipe book return an empty dict
+
+        Parameters
+        ----------
+        name : str
+            Recipe output item name
+
+        Returns
+        -------
+        dict
+            Recipe Dictionary from the recipe book
+        """
         recipe_dict = {name: self.recipes.get(name, {})}
         return recipe_dict
 
     def get_recipes_by_ingredients(
         self, ingredients: dict, smth_lvl: int = None
     ) -> dict:
+        """This function gets the recipes based on a set of ingredients
+
+        Parameters
+        ----------
+        ingredients : dict
+            Set of ingredients to use in recipe search
+        smth_lvl : int, optional
+            Player smithing Level, by default None
+
+        Returns
+        -------
+        dict
+            Possible recipes with the given ingredients
+        """
         recipes_dict = {}
         for target in self.recipes:
             is_possible = True
@@ -63,12 +151,34 @@ class RecipeBook:
         return recipes_dict
 
     def add_to_bag(self, bag: dict):
+        """Add set of items to self.bag. It also updates the self.grindcost and self.possible_recipes
+
+        Parameters
+        ----------
+        bag : dict
+            Set of items to add
+        """
         _update_dict_add(self.bag, bag)
         grindcost = self.grindcost.copy()
         self.grindleft = _update_dict_sub(grindcost, self.bag)
         self.possible_recipes = recipe_book.get_recipes_by_ingredients(self.bag)
 
-    def get_item_cost(self, item: str, number: int):
+    def get_item_cost(self, item: str, number: int) -> dict:
+        """Get the cost in materials of certain number of one type of item.
+
+        Parameters
+        ----------
+        item : str
+            Item to evaluate
+        number : int
+            Number of Items
+
+        Returns
+        -------
+        dict
+            Dictionary with items as key and quantity as value to represent the item cost
+        """
+
         cost = {}
         if self.recipes.get(item):
             ingredients = self.recipes[item]["ingredients"]
@@ -85,6 +195,13 @@ class RecipeBook:
         return cost
 
     def add_to_grindlist(self, wishes: dict = {}):
+        """This function adds grind wishes to the grind list. Also updates self.gindcost and self.grindleft
+
+        Parameters
+        ----------
+        wishes : dict, optional
+            Dictionary with items as key and quantity as value to represent the item grind wishes, by default {}
+        """
         cost = {}
 
         for wish in wishes:
@@ -96,15 +213,14 @@ class RecipeBook:
         grindcost = self.grindcost.copy()
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
-        return self.grindlist, self.grindcost
-
     def print_inventory(self):
+        """This function prints the current Inventory and current Possible Recipes"""
         print_hline()
         print(f"Inventory:")
         for item in self.bag:
             print(f"\t - {item} x{self.bag[item]}")
 
-        print(f"Possible recipes:")
+        print(f"Possible Recipes:")
         for recipe in self.possible_recipes:
             print(f"\t{recipe}")
 
@@ -113,6 +229,7 @@ class RecipeBook:
         print_hline()
 
     def print_grindlist(self):
+        """This function prints the grindlist, grindcost and grindleft"""
         print_hline()
         print(f"Grind List:")
         for wish in self.grindlist:
