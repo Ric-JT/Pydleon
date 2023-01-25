@@ -27,6 +27,39 @@ class MyWidget:
 		raise NotImplementedError()
 
 
+class StartWidget(MyWidget):
+	def __init__(self,app,parent=None):
+		super().__init__(app,parent)
+		self.window = curses.newwin(MAXSIZE_Y-2,MAXSIZE_X-2,1,1)
+		self.selection = 0
+		
+
+	def run(self,key):
+		if key == curses.KEY_DOWN:
+			self.selection += 1
+			self.selection = min(2, self.selection)
+		elif key == curses.KEY_UP:
+			self.selection -= 1
+			self.selection = max(0, self.selection)
+		elif key == 10:
+			if self.selection == 0:
+				return
+			elif self.selection == 1:
+				return
+			elif self.selection == 2:
+				self.app.quit()
+				return
+
+		self.refresh()
+
+	def refresh(self):
+		self.window.clear()
+
+		self.addstr_centered_horizontally(self.window,5,"   YOOOOO   ", curses.A_REVERSE if self.selection == 2 else curses.A_NORMAL)
+
+		self.window.refresh()
+
+
 class App:
 	def __init__(self):
 		self.widget_list = {}
