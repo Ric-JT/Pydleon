@@ -1,68 +1,28 @@
-cake_template:dict = {
+cake_template: dict = {
     "account": {
         "bundlesPurchased": {},
         "chest": {},
         "chestBank": 0,
         "obols": {},
         "tasks": {
-            "unlocked": {
-                "world1": {},
-                "world2": {},
-                "world3": {}
-            },
-            "milestoneProgress": {
-                "world1": {},
-                "world2": {},
-                "world3": {}
-            },
-            "meritsOwned": {
-                "world1": {},
-                "world2": {},
-                "world3": {}
-            },
-            "craftsUnlocked": {
-                "world1": {},
-                "world2": {},
-                "world3": {}
-            }
+            "unlocked": {"world1": {}, "world2": {}, "world3": {}},
+            "milestoneProgress": {"world1": {}, "world2": {}, "world3": {}},
+            "meritsOwned": {"world1": {}, "world2": {}, "world3": {}},
+            "craftsUnlocked": {"world1": {}, "world2": {}, "world3": {}},
         },
         "alchemy": {
-            "bubbleLevels": {
-                "power": {},
-                "quick": {},
-                "highIq": {},
-                "kazam": {}
-            },
-            "vialLevels": {}
-
+            "bubbleLevels": {"power": {}, "quick": {}, "highIq": {}, "kazam": {}},
+            "vialLevels": {},
         },
-        "stamps": {
-            "combat": {},
-            "skills": {},
-            "misc": {}
-        },
+        "stamps": {"combat": {}, "skills": {}, "misc": {}},
         "bribes": {},
         "cards": {},
         "starSigns": {},
-        "forge": {
-            "level": {}
-        },
-        "guild": {
-            "bonuses": {},
-            "memberInfo": {}
-        },
+        "forge": {"level": {}},
+        "guild": {"bonuses": {}, "memberInfo": {}},
         "highestClasses": {},
-        "highestItemCounts": {
-            "Copper Ore": 0,
-            "Oak Logs": 0,
-            "Grass Leaf": 0
-        },
-        "minigameHighscores": {
-            "chopping": 0,
-            "fishing": 0,
-            "catching": 0,
-            "mining": 0
-        },
+        "highestItemCounts": {"Copper Ore": 0, "Oak Logs": 0, "Grass Leaf": 0},
+        "minigameHighscores": {"chopping": 0, "fishing": 0, "catching": 0, "mining": 0},
         "quests": {},
         "looty": {},
         "refinery": {
@@ -73,11 +33,11 @@ cake_template:dict = {
                 "spontaneity": {},
                 "dioxide": {},
                 "red": {},
-                "red2": {}
-            }
+                "red2": {},
+            },
         },
-        "anvilCraftsUnlocked": {}
-
+        "anvilCraftsUnlocked": {},
+        "cogs": {},
     },
     "characters": {
         "name": "",
@@ -95,9 +55,7 @@ cake_template:dict = {
         "instaRevives": 0,
         "gender": 0,
         "minigamePlays": 0,
-
         "inventory": [],
-
         "equipment": {},
         "tools": {},
         "food": {},
@@ -118,10 +76,8 @@ cake_template:dict = {
             "production": {},
             "upgrades": {},
         },
-
         "attackLoadout": {},
         "invBagsUsed": {},
         "npcDialogue": {},
-
-    }
+    },
 }

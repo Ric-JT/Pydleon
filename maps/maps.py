@@ -31,7 +31,7 @@ classNumberMap = {
     33: "Shaman",
 }
 
-charSubclassMap = {
+char_subclass_map = {
     "Journeyman": "Beginner",
     "Barbarian": "Warrior",
     "Squire": "Warrior",

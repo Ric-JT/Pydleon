@@ -1,6 +1,6 @@
 # maps stored mob names to their game display name
 # used for naming cards
-mobMap = {
+mob_map = {
     "Blank": "Blank",
     "ForgeA": "Fire_Forge",
     "ForgeB": "Cinder_Forge",

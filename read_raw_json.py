@@ -1,5 +1,6 @@
 import json
-import requests
+import pandas as pd
+
 from template_data import cake_template
 from maps.classTalentMap import class_index_map, class_talent_map, class_talent_page_map
 from maps.itemMap import item_map
@@ -11,13 +12,51 @@ from maps.maps import (
     fishing_bait_map,
     fishing_line_map,
     large_bubble_map,
+    char_subclass_map,
 )
 from maps.cardEquipMap import card_equip_map
 from maps.talentMap import talent_map
+from maps.mobMap import mob_map
+from maps.cardLevelMap import card_level_map
 
 
 def print_hline(n: int = 100):
     print("_" * n)
+
+
+def create_refinery_data(fields):
+    # 0 =
+    # 1 = inventory
+    # 2 =
+    # 3 = redox salt
+    # 3[0] = refined (unclaimed)
+    # 3[1] = rank
+    # 3[2] = ???
+    # 3[3] = on/off
+    # 3[4] = auto-refine percent
+    # 4 = explosive salt
+    # 5 = spontaneity salt
+    # 6 = dioxide salt
+    # 7 = red salt
+    # 8 = red salt 2
+    rawRefinery = json.loads(fields["Refinery"])
+    refinery = {}
+    refinery["salts"] = {}
+
+    # this is how they are named in the template file
+    salts = ["redox", "explosive", "spontaneity", "dioxide", "red", "red2"]
+    for ix, salt in enumerate(salts):
+        # redox starts at index 3, so it has such an offset
+        rawSalt = rawRefinery[ix + 3]
+        refinery["salts"][salt] = {
+            "refined": rawSalt[0],
+            "rank": rawSalt[1],
+            "state": "on" if rawSalt[3] == 1 else "off",
+            "autoPercent": rawSalt[4],
+        }
+        # TODO add refinery storage
+
+    return refinery
 
 
 def fill_characters_data(chars: list, numChars: int, fields: dict) -> list:
@@ -293,7 +332,7 @@ def fill_characters_data(chars: list, numChars: int, fields: dict) -> list:
         ]
 
         rawAnvil = fields[f"AnvilPA_{i}"]
-        print(rawAnvil)
+
         # [0-13] of rawAnvil are each anvil product
         # of each product...
         # 0 = amount to be produced (claimed)
@@ -315,22 +354,253 @@ def fill_characters_data(chars: list, numChars: int, fields: dict) -> list:
     return chars
 
 
-def parse_dough(dough: dict):
+def fill_account_data(account: dict, characters: list, fields: dict) -> dict:
+    account["chestBank"] = fields["MoneyBANK"]
 
+    # chest
+    chestOrder = [
+        item_map.get(item_name, "UNKNOWN") for item_name in fields["ChestOrder"]
+    ]
+    chestQuantity = fields["ChestQuantity"]
+    account["chest"] = [
+        {item_name: int(count) if type(count) == str else count}
+        for item_name, count in zip(chestOrder, chestQuantity)
+    ]
+
+    # obols
+    obolNames = [obol_name_map.get(obol, "UNKNOWN") for obol in fields["ObolEqO1"]]
+    obolBonusMap = json.loads(fields["ObolEqMAPz1"])
+    plainObolData = [
+        {"name": obolNames[id], "bonus": {}} for id, _ in enumerate(obolNames)
+    ]
+    for key in obolBonusMap:
+        plainObolData[int(key)]["bonus"] = obolBonusMap[key]
+    account["obols"] = plainObolData
+
+    # TaskZZ0 = Current milestone in uncompleted task
+    # TaskZZ1 = Completed Task Count
+    # TaskZZ2 = merit shop purchases
+    # TaskZZ3 = crafts unlocked
+    # TaskZZ4 = total unlock points & unspent merit points
+    # TaskZZ5 = current daily tasks
+    taskData = cake_template["account"]["tasks"]
+    # unlocked
+    ZZ1 = json.loads(fields["TaskZZ1"])
+    taskData["unlocked"]["world1"] = ZZ1[0]
+    taskData["unlocked"]["world2"] = ZZ1[1]
+    taskData["unlocked"]["world3"] = ZZ1[2]
+    # milestoneProgress
+    ZZ0 = json.loads(fields["TaskZZ0"])
+    taskData["milestoneProgress"]["world1"] = ZZ0[0]
+    taskData["milestoneProgress"]["world2"] = ZZ0[1]
+    taskData["milestoneProgress"]["world3"] = ZZ0[2]
+    # meritsOwned
+    ZZ2 = json.loads(fields["TaskZZ2"])
+    taskData["meritsOwned"]["world1"] = ZZ2[0]
+    taskData["meritsOwned"]["world2"] = ZZ2[1]
+    taskData["meritsOwned"]["world3"] = ZZ2[2]
+    # craftsUnlocked
+    ZZ3 = json.loads(fields["TaskZZ3"])
+    taskData["craftsUnlocked"]["world1"] = ZZ3[0]
+    taskData["craftsUnlocked"]["world2"] = ZZ3[1]
+    taskData["craftsUnlocked"]["world3"] = ZZ3[2]
+    account["tasks"] = taskData
+
+    # stamps
+    stampData = cake_template["account"]["stamps"]
+    # combat
+    stampData["combat"] = {
+        int(level): fields["StampLv"][0][level]
+        for level in fields["StampLv"][0]
+        if level != "length"
+    }
+    # skills
+    stampData["skills"] = {
+        int(level): fields["StampLv"][1][level]
+        for level in fields["StampLv"][1]
+        if level != "length"
+    }
+    # misc
+    stampData["misc"] = {
+        int(level): fields["StampLv"][2][level]
+        for level in fields["StampLv"][2]
+        if level != "length"
+    }
+    account["stamps"] = stampData
+
+    # forge
+    account["forge"]["level"] = [int(level) for level in fields["ForgeLV"]]
+
+    # alchemy
+    alchemyData = fields["CauldronInfo"]
+    account["alchemy"]["bubbleLevels"]["power"] = {
+        int(level): alchemyData[0][level]
+        for level in alchemyData[0]
+        if level != "length"
+    }
+    account["alchemy"]["bubbleLevels"]["quick"] = {
+        int(level): alchemyData[1][level]
+        for level in alchemyData[1]
+        if level != "length"
+    }
+    account["alchemy"]["bubbleLevels"]["highIq"] = {
+        int(level): alchemyData[2][level]
+        for level in alchemyData[2]
+        if level != "length"
+    }
+    account["alchemy"]["bubbleLevels"]["kazam"] = {
+        int(level): alchemyData[3][level]
+        for level in alchemyData[3]
+        if level != "length"
+    }
+    account["alchemy"]["vialLevels"] = {
+        int(level): alchemyData[4][level]
+        for level in alchemyData[4]
+        if level != "length"
+    }
+
+    # highest class data
+    highest_classes = []
+    for c in characters:
+        row = {
+            "class": char_subclass_map.get(c["class"], f"UNKNOWN-{c['class']}"),
+            "level": c["level"],
+        }
+        highest_classes += [row]
+
+    df = pd.DataFrame(highest_classes)
+    df["level"] = df["level"].astype(int)
+    df.reset_index()
+    ids = list(df.groupby(by=["class"], as_index=False, sort=False).idxmax()["level"])
+    levels = list(df.groupby(by=["class"], as_index=False, sort=False).max()["level"])
+
+    account["highestClasses"] = {id: level for id, level in zip(ids, levels)}
+
+    # minigame high scores
+    minigameHighscores = fields["FamValMinigameHiscores"]
+    account["minigameHighscores"]["chopping"] = int(minigameHighscores[0])
+    account["minigameHighscores"]["fishing"] = int(minigameHighscores[1])
+    account["minigameHighscores"]["catching"] = int(minigameHighscores[2])
+    account["minigameHighscores"]["mining"] = int(minigameHighscores[3])
+
+    # highest item counts
+    cols_to_count = ["Copper Ore", "Oak Logs", "Grass Leaf"]
+    for item in account["chest"]:
+        for col in cols_to_count:
+            if col in item:
+                account["highestItemCounts"][col] = item[col]
+
+    # cards
+    rawCardsData = json.loads(fields["Cards0"])
+    cleanCardData = {}
+    for key in rawCardsData.keys():
+        lookup = mob_map.get(key, "UNKNOWN")
+        count = int(rawCardsData[key])
+        base = card_level_map.get(key)
+        if count == 0:
+            starlevel = "Not Found"
+        elif count >= base * 9:
+            starlevel = "3 Star"
+        elif count >= base * 4:
+            starlevel = "2 Star"
+        elif count >= base:
+            starlevel = "1 Star"
+        else:
+            starlevel = "Acquired"
+
+        cleanCardData[lookup] = {
+            "collected": count,
+            "starLevel": starlevel,
+        }
+    account["cards"] = cleanCardData
+
+    # bribes
+    bribes = fields["BribeStatus"]
+    account["bribes"] = bribes
+    # TODO add map for bribe names?
+
+    # refinery
+    account["refinery"] = create_refinery_data(fields)
+
+    # quests complete (possibly temporary for use in spreadsheet)
+    quests = {}
+    n_chars = len(characters)
+    for n in range(n_chars):
+        lookup = f"QuestComplete_{n}"
+        quests[lookup] = json.loads(fields[lookup])
+
+    account["quests"] = quests
+
+    # looty mc shooty raw display
+
+    account["looty"] = json.loads(fields["Cards1"])
+
+    # purchases
+    rawBundles = json.loads(fields["BundlesReceived"])
+    rawBundles.update({int(rawBundles[key]) for key in rawBundles})
+    account["bundlesPurchased"] = rawBundles
+
+    # anvil crafts unlocked
+    # currently 0 = unlocked, -1 = locked. Might change to a better value
+    rawAnvil = json.loads(fields["AnvilCraftStatus"])
+    account["anvilCraftsUnlocked"]["tab1"] = rawAnvil[0]
+    account["anvilCraftsUnlocked"]["tab2"] = rawAnvil[1]
+    account["anvilCraftsUnlocked"]["tab3"] = rawAnvil[2]
+
+    # cogs
+
+    rawCogPositions = json.loads(fields["CogO"])
+    rawCogData = json.loads(fields["CogM"])
+    working_cogs = rawCogData.keys()
+    cogs = []
+
+    cogs = [
+        {
+            rawCogPositions[ix]: (
+                rawCogData[f"{ix}"]
+                if f"{ix}" in working_cogs
+                else {"a": None, "b": None}
+            )
+        }
+        for ix, cogName in enumerate(rawCogPositions)
+    ]
+
+    account["cogs"] = cogs
+
+    return account
+
+
+def fillGuildData(fields: dict, guildInfo: dict):
+    res = {}
+    res["id"] = guildInfo["i"]
+    res["name"] = guildInfo["n"]
+    res["bonuses"] = guildInfo["stats"]
+
+    return res
+
+
+def parse_dough(dough: dict):
+    res = {}
     numChars = len(dough["charNameData"])
     fields = dough["saveData"]
+    guildInfo = dough["guildInfo"]
     characters = []
     for i in range(numChars):
         newCharacter = cake_template["characters"].copy()
         newCharacter["name"] = dough["charNameData"][i]
         characters += [newCharacter]
-    characters = fill_characters_data(
+    res["characters"] = fill_characters_data(
         characters,
         numChars,
         fields,
     )
 
-    return characters
+    res["account"] = fill_account_data(
+        cake_template["account"], res["characters"], fields
+    )
+
+    res["account"]["Guild"] = fillGuildData(fields, guildInfo)
+    return res
 
 
 def print_line(ids: list, values: list, prefix: str = "", separators: list = None):
@@ -338,31 +608,32 @@ def print_line(ids: list, values: list, prefix: str = "", separators: list = Non
     lines = []
     line = []
     for id, value, separator in zip(ids, values, separators):
-        if id == "cardSetEquip":
-            pass
+
         if type(value) == dict:
             line += [prefix + f"{id}{separator}"]
+            new_prefix = prefix + "\t"
             dict_lines = []
             dict_line = []
             counter = 0
-            new_prefix = prefix + "\t"
             for key in value:
                 if type(value[key]) == dict:
-
-                    # for key2 in value[key]:
-                    #     if type(value[key][key2]) == dict:
                     dict_line += [f"{key}{separator} {value[key]}"]
                     dict_lines += [new_prefix + " \t ".join(dict_line)]
                     dict_line = []
-                elif type(value[key]) == list:
-                    dict_line += [f"{key}{separator}"]
-                    dict_lines += [new_prefix + " \t ".join(dict_line)]
-                    dict_line = []
-
+                elif (
+                    type(value[key]) == list
+                    and len(value[key])
+                    and type(value[key][0]) == dict
+                ):
                     new_new_prefix = new_prefix + "\t"
                     for prod_item_info in value[key]:
-                        for key2 in prod_item_info:
-                            dict_line += [f"{key2}{separator} {prod_item_info[key2]}"]
+                        if type(prod_item_info) == dict:
+                            for key2 in prod_item_info:
+                                dict_line += [
+                                    f"{key2}{separator} {prod_item_info[key2]}"
+                                ]
+                        else:
+                            dict_line += [f"{key}{separator} {prod_item_info}"]
                         dict_lines += [new_new_prefix + " \t ".join(dict_line)]
                         dict_line = []
 
@@ -378,7 +649,7 @@ def print_line(ids: list, values: list, prefix: str = "", separators: list = Non
             line += ["\n".join(dict_lines)]
         elif type(value) == list and len(value):
             if type(value[0]) == dict:
-                line += [prefix + f"{id}{separator} {type(value)} {type(value[0])}"]
+                line += [prefix + f"{id}{separator}"]
                 dict_lines = []
                 dict_line = []
                 counter = 0
@@ -408,14 +679,13 @@ def print_line(ids: list, values: list, prefix: str = "", separators: list = Non
         else:
             line += [prefix + f"{id}{separator} {value}"]
         lines += line
+
     for line in lines:
         print(line)
 
 
-def print_charachers(chars: list):
+def print_characters(chars: list):
     for ch in chars:
-        name, level, ch_class = ch["name"], ch["level"], ch["class"]
-
         columns = ["name", "class", "level"]
         line = ["", "", "lv."]
         values = [ch[column] for column in columns]
@@ -467,6 +737,37 @@ def print_charachers(chars: list):
         print_hline()
 
 
+def print_account(account: dict):
+    columns = ["chestBank"]
+    values = [account[column] for column in columns]
+    line = ["Bank Money"]
+    print_line(line, values)
+
+    columns = [
+        "chest",
+        "obols",
+        "tasks",
+        "stamps",
+        "forge",
+        "alchemy",
+        "highestClasses",
+        "minigameHighscores",
+        "highestItemCounts",
+        "cards",
+        "bribes",
+        "refinery",
+        "quests",
+        "looty",
+        "bundlesPurchased",
+        "anvilCraftsUnlocked",
+        "cogs",
+        "Guild",
+    ]
+
+    for column in columns:
+        print_line([column.capitalize()], [account[column]])
+
+
 if __name__ == "__main__":
     filename = "raw_data.json"
     with open(filename, "r") as fp:
@@ -494,5 +795,6 @@ if __name__ == "__main__":
         "saveData": saveData,
     }
 
-    chars = parse_dough(raw_dough)
-    print_charachers([chars[2]])
+    cake = parse_dough(raw_dough)
+    print_characters([cake["characters"][2]])
+    print_account(cake["account"])

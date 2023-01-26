@@ -4,7 +4,7 @@
 # 2 Star: c[2]*4
 # 3 Star: c[2]*9
 # where c[2] is the number values mapped here
-cardLevelMap = {
+card_level_map = {
     "mushG": 5,
     "mushR": 10,
     "frogG": 6,
