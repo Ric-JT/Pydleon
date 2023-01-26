@@ -130,7 +130,9 @@ class RawFieldParser:
     def get_char_POBoxUpgrades(self, char_i: int) -> List[int]:
         default_type: str = "POBOXUPGRADES"
         src_field_name: str = f"POu_{char_i}"
-        return self._get_straight_field_data(src_field_name, default_type=default_type)
+        return json.loads(
+            self._get_straight_field_data(src_field_name, default_type=default_type)
+        )
 
     def get_char_invBagsUsed(self, char_i: int) -> List[dict]:
         default_type: str = "INVBAGUSED"
@@ -143,7 +145,7 @@ class RawFieldParser:
 
         bag_ids: List[str] = list(inv_bags)
         bag_names: List[str] = [item_map[f"InvBag{bag_id}"] for bag_id in bag_ids]
-        bag_values: List[int] = [inv_bags[bag_id] for bag_id in bag_ids]
+        bag_values: List[int] = [int(inv_bags[bag_id]) for bag_id in bag_ids]
 
         return [
             {bag_name: bag_value} for bag_name, bag_value in zip(bag_names, bag_values)
