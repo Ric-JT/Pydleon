@@ -3,6 +3,8 @@ from curses import wrapper
 from curses.textpad import rectangle
 
 VERSION = "v PROTOTYPE_02"
+MAXSIZE_X = 60
+MAXSIZE_Y = 24
 
 class MyWidget:
 	def __init__(self,app,parent=None):
