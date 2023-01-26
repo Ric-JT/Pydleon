@@ -75,57 +75,57 @@ class App:
 class MyWidget:
     def __init__(self, app, parent=None):
         self.app: App = app
-		self.parent = parent
-		self.winlist = []
+        self.parent = parent
+        self.winlist = []
 
     def addstr_centered_horizontally(
         self, window, y, text, attr=None
     ):  # Extend curses.Window and add method to windows instead
         _, max_x = window.getmaxyx()
-		len_text = len(text)
+        len_text = len(text)
 
         # TODO: Check if curses does this automatically
-		if len_text > max_x:
+        if len_text > max_x:
             raise curses.error
 
-		# startx should begin before the center depending on str length
+        # startx should begin before the center depending on str length
         startx = (max_x - len_text) // 2
 
         window.addstr(y, startx, text, attr)
 
     def run(self, key):
-		raise NotImplementedError()
+        raise NotImplementedError()
 
-	def refresh(self):
-		raise NotImplementedError()
+    def refresh(self):
+        raise NotImplementedError()
 
 
 class StartWidget(MyWidget):
     def __init__(self, app: App, parent=None):
         super().__init__(app, parent)
         self.window = curses.newwin(MAXSIZE_Y - 2, MAXSIZE_X - 2, 1, 1)
-		self.selection = 0
+        self.selection = 0
 
     def run(self, key):
-		if key == curses.KEY_DOWN:
-			self.selection += 1
+        if key == curses.KEY_DOWN:
+            self.selection += 1
             self.selection = min(1, self.selection)
-		elif key == curses.KEY_UP:
-			self.selection -= 1
-			self.selection = max(0, self.selection)
-		elif key == 10:
-			if self.selection == 0:
+        elif key == curses.KEY_UP:
+            self.selection -= 1
+            self.selection = max(0, self.selection)
+        elif key == 10:
+            if self.selection == 0:
                 grindlist_widget = self.app.get("smithing_grindlist")
                 self.app.goto_widget(self, grindlist_widget)
-				return
-			elif self.selection == 1:
-				self.app.quit()
-				return
+                return
+            elif self.selection == 1:
+                self.app.quit()
+                return
 
-		self.refresh()
+        self.refresh()
 
-	def refresh(self):
-		self.window.clear()
+    def refresh(self):
+        self.window.clear()
 
         self.addstr_centered_horizontally(
             self.window,
@@ -140,7 +140,7 @@ class StartWidget(MyWidget):
             curses.A_REVERSE if self.selection == 1 else curses.A_NORMAL,
         )
 
-		self.window.refresh()
+        self.window.refresh()
 
 
 class SmithingGrindlistWidget(MyWidget):
