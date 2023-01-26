@@ -42,7 +42,7 @@ charSubclassMap = {
 }
 OLDcharSubclassMap = {2: 1, 8: 7, 9: 7, 20: 19, 21: 19, 33: 31, 32: 31}
 
-skillIndexMap = {
+skill_index_map = {
     0: "character",
     1: "mining",
     2: "smithing",
@@ -239,7 +239,7 @@ stampIdToDisplayMap = {
 }
 
 # maps the star signs ID (index) with their in game name
-starSignMap = {
+star_sign_map = {
     999: "None",
     0: "The_Buff_Guy",
     1: "Flexo_Bendo",
@@ -277,7 +277,7 @@ starSignMap = {
     33: "Chronus_Cosmos",
 }
 
-fishingBaitMap = {
+fishing_bait_map = {
     0: "Fly",
     1: "Wormie",
     2: "Iron_Hook",
@@ -295,7 +295,7 @@ fishingBaitMap = {
     14: "Fat_Albert",
 }
 
-fishingLineMap = {
+fishing_line_map = {
     0: "Fishing_Twine",
     1: "Copper_Twine",
     2: "Silver_Twine",
@@ -314,7 +314,7 @@ fishingLineMap = {
 }
 
 # this should probably change.. but it works...
-cardSetMap = {
+card_set_map = {
     "None": "None",
     "{%_EXP_if_below_Lv_50": "Blunder_Hills",
     "{%_All_Food_Effect": "Yum-Yum_Desert",
@@ -327,7 +327,7 @@ cardSetMap = {
 }
 
 # maps_the_weird_naming_convention_of_each_large_bubble_to_its_display_name
-largeBubbleMap = {
+large_bubble_map = {
     "_11": "Call_Me_Bob",
     "_6": "Sploosh_Sploosh",
     "_3": "Wyoming_Blood",

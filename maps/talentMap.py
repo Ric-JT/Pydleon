@@ -1,5 +1,5 @@
 # talents are stored as a number, so this maps that number to their name
-talentMap = {
+talent_map = {
     0: "HEALTH_BOOSTER",
     1: "MANA_BOOSTER",
     2: "EXPERIENCE_BOOSTER",

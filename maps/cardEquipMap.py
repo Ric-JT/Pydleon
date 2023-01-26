@@ -1,5 +1,5 @@
 # used for mapping equipped cards to their bonus display in idleon calculator
-cardEquipMap = {
+card_equip_map = {
     "B": "None",
     "mushG": "Green Mushroom (+ Base HP)",
     "mushR": "Red Mushroom (+ Base LUK)",

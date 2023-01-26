@@ -44,7 +44,7 @@ class_index_map = {
 }
 
 # maps a class with its talent page(s)
-classTalentMap = {
+class_talent_map = {
     "Beginner": ["Beginner"],
     "Journeyman": ["Beginner", "Journeyman"],
     "Maestro": ["Beginner", "Journeyman", "Maestro"],
@@ -66,7 +66,7 @@ classTalentMap = {
 }
 
 # maps a talent page with its coorsponding talents
-classTalentPageMap = {
+class_talent_page_map = {
     "Beginner": [
         "HEALTH_BOOSTER",
         "MANA_BOOSTER",
