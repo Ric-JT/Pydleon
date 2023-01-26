@@ -19,8 +19,7 @@ class MyWidget:
 		# startx should begin before the center depending on str length
 		startx = (max_x-len_text) // 2
 
-		window.addstr(y,max_x-1,"e",attr)
-		window.addstr(y,startx,text,attr)
+        window.addstr(y, startx, text, attr)
 
 	def run(self,key):
 		raise NotImplementedError()
