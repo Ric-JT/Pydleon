@@ -1,6 +1,8 @@
 import json
+from typing import Dict, List
 import pandas as pd
 
+from utils.parsing.raw_field_parser import RawFieldParser
 from template_data import cake_template
 from maps.classTalentMap import class_index_map, class_talent_map, class_talent_page_map
 from maps.itemMap import item_map
@@ -59,43 +61,23 @@ def create_refinery_data(fields):
     return refinery
 
 
-def fill_characters_data(chars: list, numChars: int, fields: dict) -> list:
+def fill_characters_data(
+    chars: list, numChars: int, fields, parser: RawFieldParser
+) -> list:
     for i in range(numChars):
-        chars[i]["class"] = class_index_map.get(
-            fields[f"CharacterClass_{i}"], "UNKNOWN"
-        )
-        chars[i]["money"] = fields[f"Money_{i}"]
-        chars[i]["AFKtarget"] = fields[f"AFKtarget_{i}"].capitalize()
-        chars[i]["currentMap"] = fields[f"CurrentMap_{i}"]
-        chars[i]["npcDialogue"] = json.loads(fields[f"NPCdialogue_{i}"])
-        chars[i]["timeAway"] = fields[f"PTimeAway_{i}"]
-        chars[i]["instaRevives"] = fields[f"PVInstaRevives_{i}"]
-        chars[i]["gender"] = (
-            "Pee standing up" if fields[f"PVGender_{i}"] == 0 else "Pee seating down"
-        )
-        chars[i]["minigamePlays"] = fields[f"PVMinigamePlays_{i}"]
-
-        statlist = fields[f"PVStatList_{i}"]
-        columns = ["strength", "agility", "wisdom", "luck", "level"]
-        for stat, value in zip(columns, statlist):
-            chars[i][stat] = value
-
-        chars[i]["POBoxUpgrades"] = fields[f"POu_{i}"]
-
-        rawInvBagsUsed = json.loads(fields[f"InvBagsUsed_{i}"])
-        bags = list(rawInvBagsUsed.keys())
-        chars[i]["invBagsUsed"] = [{item_map["InvBag" + bag]: bag} for bag in bags]
-
-        inventoryItemNames = [
-            item_map.get(item_name, "UNKNOWN")
-            for item_name in fields[f"InventoryOrder_{i}"]
-        ]
-        inventoryItemCounts = fields[f"ItemQTY_{i}"]
-
-        chars[i]["inventory"] = [
-            {item_name: int(count) if type(count) == str else count}
-            for item_name, count in zip(inventoryItemNames, inventoryItemCounts)
-        ]
+        chars[i]["class"]: str = parser.get_char_class(i)
+        chars[i]["money"]: int = parser.get_char_money(i)
+        chars[i]["AFKtarget"]: str = parser.get_char_AFKtarget(i)
+        chars[i]["currentMap"]: int = parser.get_char_currentMap(i)
+        chars[i]["npcDialogue"]: Dict[str, int] = parser.get_char_npcDialog(i)
+        chars[i]["timeAway"]: int = parser.get_char_AFKtime(i)
+        chars[i]["instaRevives"]: int = parser.get_char_instaRevives(i)
+        chars[i]["gender"]: int = parser.get_char_gender(i)
+        chars[i]["minigamePlays"]: int = parser.get_char_minigames(i)
+        chars[i].update(parser.get_char_statlist(i))
+        chars[i]["POBoxUpgrades"]: List[int] = parser.get_char_POBoxUpgrades(i)
+        chars[i]["invBagsUsed"]: List[int] = parser.get_char_invBagsUsed(i)
+        chars[i]["inventory"] = parser.get_char_inventory(i)
 
         equipableNames = fields[f"EquipOrder_{i}"]
         equipableCounts = fields[f"EquipQTY_{i}"]
@@ -583,16 +565,19 @@ def parse_dough(dough: dict):
     res = {}
     numChars = len(dough["charNameData"])
     fields = dough["saveData"]
+    parser = RawFieldParser(fields)
     guildInfo = dough["guildInfo"]
     characters = []
     for i in range(numChars):
         newCharacter = cake_template["characters"].copy()
         newCharacter["name"] = dough["charNameData"][i]
         characters += [newCharacter]
+
     res["characters"] = fill_characters_data(
         characters,
         numChars,
         fields,
+        parser,
     )
 
     res["account"] = fill_account_data(
