@@ -753,6 +753,11 @@ def print_account(account: dict):
         print_line([column.capitalize()], [account[column]])
 
 
+def save_json(json_data: dict, filename: str = "new_json.json", indent:int=4):
+    with open(filename, "w") as fp:
+        json.dump(json_data, fp, indent = indent)
+
+
 if __name__ == "__main__":
     filename = "raw_data.json"
     with open(filename, "r") as fp:
@@ -783,3 +788,5 @@ if __name__ == "__main__":
     cake = parse_dough(raw_dough)
     print_characters([cake["characters"][2]])
     print_account(cake["account"])
+
+    save_json(cake)
