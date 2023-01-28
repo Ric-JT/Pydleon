@@ -1,0 +1,3395 @@
+{
+    "Boxing Gloves": {
+        "ingredients": {
+            "Crimson String": 1,
+            "Cue Tape": 5
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 1
+    },
+    "Wooden Spear": {
+        "ingredients": {
+            "Spore Cap": 10,
+            "Copper Bar": 5
+        },
+        "smth_lvl_req": 2,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 2
+    },
+    "Wooden Bow": {
+        "ingredients": {
+            "Spore Cap": 10,
+            "Thread": 15
+        },
+        "smth_lvl_req": 2,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 3
+    },
+    "Gnarled Wand": {
+        "ingredients": {
+            "Spore Cap": 10,
+            "Oak Logs": 15
+        },
+        "smth_lvl_req": 2,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 4
+    },
+    "Farmer Brim": {
+        "ingredients": {
+            "Spore Cap": 4,
+            "Copper Ore": 5
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 5
+    },
+    "Orange Tee": {
+        "ingredients": {
+            "Spore Cap": 6,
+            "Oak Logs": 3
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 6
+    },
+    "Torn Jeans": {
+        "ingredients": {
+            "Frog Leg": 6,
+            "Copper Bar": 3
+        },
+        "smth_lvl_req": 4,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 7
+    },
+    "Flip Flops": {
+        "ingredients": {
+            "Bean Slices": 12,
+            "Grass Leaf": 5
+        },
+        "smth_lvl_req": 6,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 8
+    },
+    "Copper Pickaxe": {
+        "ingredients": {
+            "Copper Bar": 5,
+            "Frog Leg": 10
+        },
+        "smth_lvl_req": 3,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 9
+    },
+    "Cramped Mining Pouch": {
+        "ingredients": {
+            "Copper Ore": 120
+        },
+        "smth_lvl_req": 5,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 10
+    },
+    "Copper Chopper": {
+        "ingredients": {
+            "Copper Bar": 5,
+            "Oak Logs": 10,
+            "Thread": 5
+        },
+        "smth_lvl_req": 4,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 11
+    },
+    "Cramped Choppin Pouch": {
+        "ingredients": {
+            "Oak Logs": 150,
+            "Trusty Nails": 30
+        },
+        "smth_lvl_req": 6,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 12
+    },
+    "Leather Cap": {
+        "ingredients": {
+            "Frog Leg": 15,
+            "Oak Logs": 30,
+            "Thread": 10
+        },
+        "smth_lvl_req": 4,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 13
+    },
+    "The Stingers": {
+        "ingredients": {
+            "Copper Bar": 20,
+            "Oak Logs": 75,
+            "Trusty Nails": 20
+        },
+        "smth_lvl_req": 6,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 14
+    },
+    "Cramped Food Pouch": {
+        "ingredients": {
+            "Nomwich": 75,
+            "Hot Dog": 25,
+            "Oak Logs": 60,
+            "Copper Bar": 15
+        },
+        "smth_lvl_req": 7,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 15
+    },
+    "Cramped Material Pouch": {
+        "ingredients": {
+            "Trusty Nails": 80,
+            "Frog Leg": 40,
+            "Bean Slices": 30
+        },
+        "smth_lvl_req": 8,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 16
+    },
+    "Copper Helmet": {
+        "ingredients": {
+            "Copper Bar": 20,
+            "Bean Slices": 40
+        },
+        "smth_lvl_req": 6,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 17
+    },
+    "Copper Platebody": {
+        "ingredients": {
+            "Copper Bar": 25,
+            "Trusty Nails": 120
+        },
+        "smth_lvl_req": 7,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 18
+    },
+    "Copper Platelegs": {
+        "ingredients": {
+            "Copper Bar": 30,
+            "Bleach Logs": 150
+        },
+        "smth_lvl_req": 8,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 19
+    },
+    "Copper Boots": {
+        "ingredients": {
+            "Copper Bar": 75
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 20
+    },
+    "Militia Helm": {
+        "ingredients": {
+            "Copper Helmet": 1,
+            "Iron Bar": 15,
+            "Copper Ore": 80
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 21
+    },
+    "Thief Hood": {
+        "ingredients": {
+            "Copper Helmet": 1,
+            "Iron Bar": 15,
+            "Thread": 40
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 22
+    },
+    "Top Hat": {
+        "ingredients": {
+            "Copper Helmet": 1,
+            "Iron Bar": 15,
+            "Oak Logs": 150
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 23
+    },
+    "Birthday Hat": {
+        "ingredients": {
+            "Copper Helmet": 1,
+            "Iron Bar": 150
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 24
+    },
+    "Steel Axe": {
+        "ingredients": {
+            "Slime Sludge": 125,
+            "Boring Brick": 125
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 25
+    },
+    "Birch Longbow": {
+        "ingredients": {
+            "Slime Sludge": 125,
+            "Bleach Logs": 250
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 26
+    },
+    "Quarterstaff": {
+        "ingredients": {
+            "Slime Sludge": 125,
+            "Copper Bar": 100
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 27
+    },
+    "Copper Band": {
+        "ingredients": {
+            "Copper Bar": 300
+        },
+        "smth_lvl_req": 11,
+        "recipe_source": "DropTable1",
+        "anvil_tab": 1,
+        "recipe_id": 28
+    },
+    "Iron Pickaxe": {
+        "ingredients": {
+            "Iron Bar": 70,
+            "Carrot Cube": 150
+        },
+        "smth_lvl_req": 13,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 29
+    },
+    "Small Mining Pouch": {
+        "ingredients": {
+            "Iron Ore": 700
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 30
+    },
+    "Iron Hatchet": {
+        "ingredients": {
+            "Jungle Logs": 200,
+            "Boring Brick": 100
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 31
+    },
+    "Small Choppin Pouch": {
+        "ingredients": {
+            "Bleach Logs": 800
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 32
+    },
+    "Iron Helmet": {
+        "ingredients": {
+            "Iron Bar": 125,
+            "Glublin Ear": 300
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 33
+    },
+    "Iron Platebody": {
+        "ingredients": {
+            "Iron Bar": 150,
+            "Jungle Logs": 600
+        },
+        "smth_lvl_req": 13,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 34
+    },
+    "Iron Platelegs": {
+        "ingredients": {
+            "Iron Bar": 170,
+            "Boring Brick": 225
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 35
+    },
+    "Anvil Tab 2": {
+        "ingredients": {
+            "Iron Bar": 250,
+            "Chain Link": 200,
+            "Forest Fibres": 400,
+            "Bullfrog Horn": 250
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 36
+    },
+    "Blue Tee": {
+        "ingredients": {
+            "Orange Tee": 1,
+            "Spore Cap": 25,
+            "Oak Logs": 50
+        },
+        "smth_lvl_req": 3,
+        "recipe_source": "The Smithing Grind",
+        "anvil_tab": 1,
+        "recipe_id": 37
+    },
+    "Sleek Shank": {
+        "ingredients": {
+            "Wooden Bow": 1,
+            "Gnarled Wand": 1,
+            "Wooden Spear": 2,
+            "Thread": 300
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 38
+    },
+    "Iron Boots": {
+        "ingredients": {
+            "Copper Boots": 1,
+            "Trusty Nails": 500,
+            "Iron Bar": 125
+        },
+        "smth_lvl_req": 13,
+        "recipe_source": "W1 Colosseum first silver chest",
+        "anvil_tab": 1,
+        "recipe_id": 39
+    },
+    "Steel Band": {
+        "ingredients": {
+            "Iron Bar": 600
+        },
+        "smth_lvl_req": 13,
+        "recipe_source": "DropTable3, Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 40
+    },
+    "Purple Tupacband": {
+        "ingredients": {
+            "Bleach Logs": 100,
+            "Iron Ore": 50,
+            "Crude Oil": 60
+        },
+        "smth_lvl_req": 5,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 41
+    },
+    "Icing Ironbite": {
+        "ingredients": {
+            "Iron Ore": 5,
+            "Small Mana Potion": 2
+        },
+        "smth_lvl_req": 2,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 42
+    },
+    "Saucy Logfries": {
+        "ingredients": {
+            "Jungle Logs": 6,
+            "Small Life Potion": 3
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 43
+    },
+    "Goo Galoshes": {
+        "ingredients": {
+            "Copper Boots": 1,
+            "Slime Sludge": 600,
+            "Jungle Logs": 1000
+        },
+        "smth_lvl_req": 11,
+        "recipe_source": "Slime",
+        "anvil_tab": 1,
+        "recipe_id": 44
+    },
+    "Fur Shirt": {
+        "ingredients": {
+            "Glublin Ear": 500,
+            "Iron Bar": 500
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Glublin, Videogame Highscores are COOL!",
+        "anvil_tab": 1,
+        "recipe_id": 45
+    },
+    "Hide Shirt": {
+        "ingredients": {
+            "Copper Platebody": 1,
+            "Steel Axe": 1,
+            "Bleach Logs": 325
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 46
+    },
+    "Eco Friendly Oil": {
+        "ingredients": {
+            "Crude Oil": 1,
+            "Grass Leaf": 1
+        },
+        "smth_lvl_req": 4,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 47
+    },
+    "Dooble Goopi": {
+        "ingredients": {
+            "Copper Band": 1,
+            "Steel Band": 1,
+            "Slime Sludge": 1000
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Slime",
+        "anvil_tab": 1,
+        "recipe_id": 48
+    },
+    "Bleached Designer Wode Patch Pants": {
+        "ingredients": {
+            "Torn Jeans": 3,
+            "Plank": 275,
+            "Bleach Logs": 700
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Wode Board",
+        "anvil_tab": 1,
+        "recipe_id": 49
+    },
+    "Dirty Coal Miner Baggy Soot Pants": {
+        "ingredients": {
+            "Torn Jeans": 3,
+            "Iron Ore": 200
+        },
+        "smth_lvl_req": 12,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 50
+    },
+    "Peanut": {
+        "ingredients": {
+            "Hot Dog": 2,
+            "Copper Ore": 1,
+            "Bleach Logs": 1
+        },
+        "smth_lvl_req": 5,
+        "recipe_source": "Brunchin' with the Blobs",
+        "anvil_tab": 1,
+        "recipe_id": 51
+    },
+    "Golden Peanut": {
+        "ingredients": {
+            "Peanut": 100,
+            "Gold Bar": 50
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "How It's Made, Episode 7. The Super Peanut",
+        "anvil_tab": 1,
+        "recipe_id": 52
+    },
+    "Blunderbag": {
+        "ingredients": {
+            "Spore Tee": 2,
+            "Green Headband": 2,
+            "Spore Cap": 150
+        },
+        "smth_lvl_req": 8,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 53
+    },
+    "Purple Tee": {
+        "ingredients": {
+            "Orange Tee": 1,
+            "Red Spore Cap": 40,
+            "Bleach Logs": 100
+        },
+        "smth_lvl_req": 5,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 54
+    },
+    "Green Tee": {
+        "ingredients": {
+            "Spore Tee": 1,
+            "Orange Tee": 1,
+            "Thread": 150
+        },
+        "smth_lvl_req": 7,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 55
+    },
+    "Black Tee": {
+        "ingredients": {
+            "Orange Tee": 5,
+            "Blue Tee": 2,
+            "Purple Tee": 2,
+            "Green Tee": 2
+        },
+        "smth_lvl_req": 9,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 56
+    },
+    "Blunderhills NPC Completion Token": {
+        "ingredients": {
+            "Easy Blunderhills NPC Token": 1,
+            "Med Blunderhills NPC Token": 1,
+            "Hard Blunderhills NPC Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Champion of the Grasslands",
+        "anvil_tab": 1,
+        "recipe_id": 57
+    },
+    "Blunder Skills Completion Token": {
+        "ingredients": {
+            "Amarok Helmet": 1,
+            "Platinum Bar": 1000,
+            "Veiny Logs": 2000
+        },
+        "smth_lvl_req": 40,
+        "recipe_source": "Champion of the Grasslands",
+        "anvil_tab": 1,
+        "recipe_id": 58
+    },
+    "Blunderhills Misc Completion Token": {
+        "ingredients": {
+            "Carrot Launcher": 1,
+            "Golden Peanut": 30,
+            "Golden Plop": 12,
+            "Bolt Cutters": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Champion of the Grasslands",
+        "anvil_tab": 1,
+        "recipe_id": 59
+    },
+    "Acorn Topper": {
+        "ingredients": {
+            "Acorn": 25000,
+            "Woodular Circle": 15
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 60
+    },
+    "Easy Blunderhills NPC Token": {
+        "ingredients": {
+            "Woodsman Token": 1,
+            "Glumlee Token": 1,
+            "Stiltzcho Token": 1,
+            "Funguy Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Champion of the Grasslands",
+        "anvil_tab": 1,
+        "recipe_id": 61
+    },
+    "Med Blunderhills NPC Token": {
+        "ingredients": {
+            "Krunk Token": 1,
+            "Tiki Chief Token": 1,
+            "Dog Bone Token": 1,
+            "Papua Piggea Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Champion of the Grasslands",
+        "anvil_tab": 1,
+        "recipe_id": 62
+    },
+    "Hard Blunderhills NPC Token": {
+        "ingredients": {
+            "Picnic Token": 1,
+            "TP Pete Token": 1,
+            "Sproutinald Token": 1,
+            "Dazey Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "Champion of the Grasslands",
+        "anvil_tab": 1,
+        "recipe_id": 63
+    },
+    "Serrated Rex Ring": {
+        "ingredients": {
+            "Rex Ring": 1,
+            "Iron Bar": 1000
+        },
+        "smth_lvl_req": 20,
+        "recipe_source": "Baba Yaga",
+        "anvil_tab": 1,
+        "recipe_id": 64
+    },
+    "Amarok Helmet": {
+        "ingredients": {
+            "Amarok Slab": 20,
+            "Forest Fibres": 2500,
+            "Woodular Circle": 5
+        },
+        "smth_lvl_req": 23,
+        "recipe_source": "Blunder Hills Merit Shop",
+        "anvil_tab": 1,
+        "recipe_id": 65
+    },
+    "Amarok Bodyplate": {
+        "ingredients": {
+            "Amarok Slab": 10,
+            "Iron Bar": 300,
+            "Corn Kernels": 600
+        },
+        "smth_lvl_req": 21,
+        "recipe_source": "Blunder Hills Merit Shop",
+        "anvil_tab": 1,
+        "recipe_id": 66
+    },
+    "Amarok Hinds": {
+        "ingredients": {
+            "Amarok Slab": 6,
+            "Chain Link": 300,
+            "Bullfrog Horn": 500
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Blunder Hills Merit Shop",
+        "anvil_tab": 1,
+        "recipe_id": 67
+    },
+    "Amarok Paws": {
+        "ingredients": {
+            "Iron Boots": 1,
+            "Amarok Slab": 5,
+            "Grass Leaf": 125
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Blunder Hills Merit Shop",
+        "anvil_tab": 1,
+        "recipe_id": 68
+    },
+    "Fishing Overalls": {
+        "ingredients": {
+            "Bleached Designer Wode Patch Pants": 2,
+            "Goldfish": 500
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Walking Stick",
+        "anvil_tab": 1,
+        "recipe_id": 69
+    },
+    "Bandito Pantaloon": {
+        "ingredients": {
+            "Dirty Coal Miner Baggy Soot Pants": 2,
+            "Fly": 500
+        },
+        "smth_lvl_req": 14,
+        "recipe_source": "Poop",
+        "anvil_tab": 1,
+        "recipe_id": 70
+    },
+    "Chaotic Amarok Pendant": {
+        "ingredients": {
+            "Chaotic Amarok Slab": 4,
+            "Amarok Slab": 10,
+            "Distilled Water": 25
+        },
+        "smth_lvl_req": 25,
+        "recipe_source": "Blunder Hills Merit Shop",
+        "anvil_tab": 1,
+        "recipe_id": 72
+    },
+    "Copper Fish Rod": {
+        "ingredients": {
+            "Copper Bar": 200,
+            "Goldfish": 180
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 73
+    },
+    "Cramped Fish Pouch": {
+        "ingredients": {
+            "Goldfish": 180
+        },
+        "smth_lvl_req": 9,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 74
+    },
+    "Copper Netted Net": {
+        "ingredients": {
+            "Jungle Logs": 500,
+            "Fly": 400
+        },
+        "smth_lvl_req": 10,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 75
+    },
+    "Cramped Bug Pouch": {
+        "ingredients": {
+            "Fly": 180
+        },
+        "smth_lvl_req": 9,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 76
+    },
+    "Iron Fishing Rod": {
+        "ingredients": {
+            "Iron Bar": 300,
+            "Hermit Can": 650,
+            "Distilled Water": 3
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 77
+    },
+    "Small Fish Pouch": {
+        "ingredients": {
+            "Hermit Can": 425,
+            "Distilled Water": 2
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 78
+    },
+    "Reinforced Net": {
+        "ingredients": {
+            "Forest Fibres": 800,
+            "Butterfly": 850,
+            "Distilled Water": 3
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 79
+    },
+    "Small Bug Pouch": {
+        "ingredients": {
+            "Butterfly": 425,
+            "Distilled Water": 2
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Task Unlocks Tab 1",
+        "anvil_tab": 1,
+        "recipe_id": 80
+    },
+    "Silkskin Traps": {
+        "ingredients": {
+            "Poison Froge": 1,
+            "Redox Salts": 5
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 81
+    },
+    "Small Critter Pouch": {
+        "ingredients": {
+            "Froge": 200,
+            "Redox Salts": 3
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 82
+    },
+    "Ceramic Skull": {
+        "ingredients": {
+            "Forest Soul": 250,
+            "Redox Salts": 5
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 83
+    },
+    "Small Soul Pouch": {
+        "ingredients": {
+            "Forest Soul": 200,
+            "Redox Salts": 3
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Start",
+        "anvil_tab": 1,
+        "recipe_id": 84
+    },
+    "Gold Helmet": {
+        "ingredients": {
+            "Copper Helmet": 1,
+            "Fly": 2000,
+            "Gold Bar": 250
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 1
+    },
+    "Gold Platebody": {
+        "ingredients": {
+            "Copper Platebody": 1,
+            "Pocket Sand": 1500,
+            "Gold Bar": 350
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 2
+    },
+    "Gold Platelegs": {
+        "ingredients": {
+            "Copper Platelegs": 1,
+            "Goldfish": 500,
+            "Gold Bar": 475
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 3
+    },
+    "Gold Boots": {
+        "ingredients": {
+            "Iron Boots": 1,
+            "Gold Bar": 600,
+            "Distilled Water": 4
+        },
+        "smth_lvl_req": 20,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 4
+    },
+    "Bandage Wraps": {
+        "ingredients": {
+            "The Stingers": 3,
+            "Cue Tape": 5000,
+            "Potty Rolls": 2000
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 5
+    },
+    "Royal Bayonet": {
+        "ingredients": {
+            "Forest Fibres": 1250,
+            "Steel Axe": 1,
+            "Distilled Water": 8
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 6
+    },
+    "Spiked Menace": {
+        "ingredients": {
+            "Birch Longbow": 1,
+            "Gold Bar": 250,
+            "Distilled Water": 8
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 7
+    },
+    "Starlight": {
+        "ingredients": {
+            "Quarterstaff": 1,
+            "Chain Link": 1000,
+            "Distilled Water": 8
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 8
+    },
+    "Gold Pickaxe": {
+        "ingredients": {
+            "Iron Pickaxe": 1,
+            "Megalodon Tooth": 2500,
+            "Gold Bar": 800
+        },
+        "smth_lvl_req": 20,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 9
+    },
+    "Average Mining Pouch": {
+        "ingredients": {
+            "Cramped Mining Pouch": 2,
+            "Small Mining Pouch": 1,
+            "Gold Ore": 2000
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 10
+    },
+    "Golden Axe": {
+        "ingredients": {
+            "Iron Hatchet": 1,
+            "Golden Dubloon": 5,
+            "Crabby Cakey": 2000
+        },
+        "smth_lvl_req": 20,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 11
+    },
+    "Average Choppin Pouch": {
+        "ingredients": {
+            "Cramped Choppin Pouch": 2,
+            "Small Choppin Pouch": 1,
+            "Forest Fibres": 2100
+        },
+        "smth_lvl_req": 15,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 12
+    },
+    "Gold Fishing Rod": {
+        "ingredients": {
+            "Hermit Can": 2500,
+            "Leather Hide": 1000,
+            "Iron Fishing Rod": 1
+        },
+        "smth_lvl_req": 22,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 13
+    },
+    "Average Fish Pouch": {
+        "ingredients": {
+            "Cramped Fish Pouch": 2,
+            "Small Fish Pouch": 1,
+            "Hermit Can": 2000
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 14
+    },
+    "Golden Net": {
+        "ingredients": {
+            "Golden Dubloon": 5,
+            "Butterfly": 2500,
+            "Reinforced Net": 1
+        },
+        "smth_lvl_req": 22,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 15
+    },
+    "Average Bug Pouch": {
+        "ingredients": {
+            "Cramped Bug Pouch": 2,
+            "Small Bug Pouch": 1,
+            "Butterfly": 2100
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 16
+    },
+    "Defenders Dignity": {
+        "ingredients": {
+            "Goldfish": 10000,
+            "Golden Plop": 4,
+            "Distilled Water": 15
+        },
+        "smth_lvl_req": 23,
+        "recipe_source": "Mimic",
+        "anvil_tab": 2,
+        "recipe_id": 17
+    },
+    "Strung Bludgeon": {
+        "ingredients": {
+            "Sleek Shank": 1,
+            "Glass Shard": 4,
+            "Distilled Water": 20
+        },
+        "smth_lvl_req": 28,
+        "recipe_source": "Mafioso",
+        "anvil_tab": 2,
+        "recipe_id": 18
+    },
+    "Average Food Pouch": {
+        "ingredients": {
+            "Cramped Food Pouch": 2,
+            "Meat Pie": 400,
+            "Icing Ironbite": 700,
+            "Saucy Logfries": 700
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 19
+    },
+    "Average Material Pouch": {
+        "ingredients": {
+            "Cramped Material Pouch": 2,
+            "Glass Shard": 1,
+            "Chain Link": 1700
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 20
+    },
+    "Platinum Helmet": {
+        "ingredients": {
+            "Iron Helmet": 1,
+            "Jellyfish": 2250,
+            "Platinum Bar": 750
+        },
+        "smth_lvl_req": 29,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 21
+    },
+    "Platinum Platbody": {
+        "ingredients": {
+            "Iron Platebody": 1,
+            "Potato Remains": 5000,
+            "Platinum Bar": 1000
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 22
+    },
+    "Platinum Shins": {
+        "ingredients": {
+            "Iron Platelegs": 1,
+            "Sentient Cereal": 5000,
+            "Platinum Bar": 1250
+        },
+        "smth_lvl_req": 31,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 23
+    },
+    "Platinum Boots": {
+        "ingredients": {
+            "Gold Boots": 1,
+            "Tropilogs": 7000,
+            "Jellyfish": 3000
+        },
+        "smth_lvl_req": 32,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 24
+    },
+    "Polished Bludgeon": {
+        "ingredients": {
+            "Strung Bludgeon": 1,
+            "Distilled Water": 25
+        },
+        "smth_lvl_req": 25,
+        "recipe_source": "Dr Defecaus",
+        "anvil_tab": 2,
+        "recipe_id": 25
+    },
+    "Enforced Slasher": {
+        "ingredients": {
+            "Nuget Cake": 3,
+            "Leather Hide": 2500,
+            "Royal Bayonet": 1
+        },
+        "smth_lvl_req": 23,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 26
+    },
+    "Pharoah Bow": {
+        "ingredients": {
+            "Spiked Menace": 1,
+            "Woodular Circle": 3,
+            "Bloach": 1400
+        },
+        "smth_lvl_req": 23,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 27
+    },
+    "Crows Nest": {
+        "ingredients": {
+            "Starlight": 1,
+            "Golden Plop": 3,
+            "Fruitfly": 4000
+        },
+        "smth_lvl_req": 23,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 28
+    },
+    "Platinum Pickaxe": {
+        "ingredients": {
+            "Gold Pickaxe": 1,
+            "Platinum Bar": 800,
+            "Pincer Arm": 10500
+        },
+        "smth_lvl_req": 26,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 29
+    },
+    "Sizable Mining Pouch": {
+        "ingredients": {
+            "Platinum Ore": 7500,
+            "Average Mining Pouch": 1
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 30
+    },
+    "Plat Hatchet": {
+        "ingredients": {
+            "Golden Axe": 1,
+            "Tropilogs": 6500,
+            "Chain Link": 5000
+        },
+        "smth_lvl_req": 26,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 31
+    },
+    "Sizable Choppin Pouch": {
+        "ingredients": {
+            "Tropilogs": 7500,
+            "Average Choppin Pouch": 1
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 32
+    },
+    "Plat Fishing Rod": {
+        "ingredients": {
+            "Bloach": 2000,
+            "Platinum Bar": 800,
+            "Gold Fishing Rod": 1
+        },
+        "smth_lvl_req": 29,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 33
+    },
+    "Sizable Fish Pouch": {
+        "ingredients": {
+            "Bloach": 2500,
+            "Goldfish": 5000,
+            "Average Fish Pouch": 1
+        },
+        "smth_lvl_req": 27,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 34
+    },
+    "Platinet": {
+        "ingredients": {
+            "Fruitfly": 7000,
+            "Platinum Ore": 3000,
+            "Golden Net": 1
+        },
+        "smth_lvl_req": 29,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 35
+    },
+    "Sizable Bug Pouch": {
+        "ingredients": {
+            "Fruitfly": 7500,
+            "Average Bug Pouch": 1
+        },
+        "smth_lvl_req": 27,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 36
+    },
+    "Sizable Food Pouch": {
+        "ingredients": {
+            "Golden Meat Pie": 9,
+            "Nuget Cake": 4,
+            "Average Food Pouch": 2
+        },
+        "smth_lvl_req": 28,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 37
+    },
+    "Sizable Materials Pouch": {
+        "ingredients": {
+            "Golden Plop": 3,
+            "Woodular Circle": 4,
+            "Average Material Pouch": 2
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 38
+    },
+    "Anvil Tab 3": {
+        "ingredients": {
+            "Platinum Bar": 2000,
+            "Bloach": 2000,
+            "Fruitfly": 2000,
+            "High Steaks": 1500
+        },
+        "smth_lvl_req": 35,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 40
+    },
+    "Empty Box": {
+        "ingredients": {
+            "Hermit Can": 250,
+            "Megalodon Tooth": 400,
+            "Distilled Water": 4
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 41
+    },
+    "Googley Eyes": {
+        "ingredients": {
+            "Woodular Circle": 2,
+            "Distilled Water": 5,
+            "Capitalist Case": 1
+        },
+        "smth_lvl_req": 17,
+        "recipe_source": "Crabcake",
+        "anvil_tab": 2,
+        "recipe_id": 42
+    },
+    "Bullet": {
+        "ingredients": {
+            "Forest Fibres": 10,
+            "Fly": 10
+        },
+        "smth_lvl_req": 16,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 43
+    },
+    "FMJ Bullet": {
+        "ingredients": {
+            "Gold Ore": 15,
+            "Bullet": 2
+        },
+        "smth_lvl_req": 20,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 44
+    },
+    "Nuget Cake Fedora": {
+        "ingredients": {
+            "Nuget Cake": 5,
+            "Distilled Water": 20,
+            "Googley Eyes": 1
+        },
+        "smth_lvl_req": 19,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 45
+    },
+    "Viking Cap": {
+        "ingredients": {
+            "Militia Helm": 1,
+            "Gold Bar": 400,
+            "Glass Shard": 2
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 46
+    },
+    "Sleek Coif": {
+        "ingredients": {
+            "Thief Hood": 1,
+            "Tropilogs": 2000,
+            "Glass Shard": 2
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 47
+    },
+    "Witch Hat": {
+        "ingredients": {
+            "Top Hat": 1,
+            "Corn Kernels": 4000,
+            "Glass Shard": 2
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 48
+    },
+    "Studded Hide": {
+        "ingredients": {
+            "Hide Shirt": 1,
+            "Megalodon Tooth": 4000,
+            "Nuget Cake": 1
+        },
+        "smth_lvl_req": 26,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 50
+    },
+    "Feral Leathering": {
+        "ingredients": {
+            "Fur Shirt": 1,
+            "Stick": 3000,
+            "Nuget Cake": 1
+        },
+        "smth_lvl_req": 26,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 51
+    },
+    "Furled Robes": {
+        "ingredients": {
+            "Tattered Cloth": 1,
+            "Leather Hide": 1500,
+            "Nuget Cake": 1
+        },
+        "smth_lvl_req": 26,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 52
+    },
+    "Cavern Trekkers": {
+        "ingredients": {
+            "Gold Boots": 1,
+            "Distilled Water": 9,
+            "Copper Ore": 1500,
+            "Iron Ore": 1200
+        },
+        "smth_lvl_req": 22,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 53
+    },
+    "Angler Boots": {
+        "ingredients": {
+            "Gold Boots": 1,
+            "Distilled Water": 9,
+            "Goldfish": 1250,
+            "Hermit Can": 1000
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 54
+    },
+    "Logger Heels": {
+        "ingredients": {
+            "Gold Boots": 1,
+            "Distilled Water": 9,
+            "Jungle Logs": 1600,
+            "Forest Fibres": 1000
+        },
+        "smth_lvl_req": 22,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 55
+    },
+    "Bandito Boots": {
+        "ingredients": {
+            "Gold Boots": 1,
+            "Distilled Water": 9,
+            "Fly": 2000,
+            "Butterfly": 1250
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 56
+    },
+    "Slurpin Herm": {
+        "ingredients": {
+            "Hermit Can": 5,
+            "Average Strength Potion": 2
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 57
+    },
+    "Buttered Toasted Butter": {
+        "ingredients": {
+            "Butterfly": 5,
+            "Kebab Sticks": 1
+        },
+        "smth_lvl_req": 24,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 58
+    },
+    "Dootjat Eye": {
+        "ingredients": {
+            "Silver Antique": 1,
+            "Gold Bar": 80,
+            "Ghost": 5
+        },
+        "smth_lvl_req": 21,
+        "recipe_source": "Sand Giant",
+        "anvil_tab": 2,
+        "recipe_id": 59
+    },
+    "Sandy Satchel": {
+        "ingredients": {
+            "Golden Plop": 1,
+            "Snakeskinventory Bag": 1,
+            "Pocket Sand": 777
+        },
+        "smth_lvl_req": 18,
+        "recipe_source": "Task Unlocks Tab 2",
+        "anvil_tab": 2,
+        "recipe_id": 60
+    },
+    "Efaunt Helmet": {
+        "ingredients": {
+            "Trimmed Rune Platelegs": 1,
+            "Ripped Tunic": 20,
+            "Armor Upgrade Stone C": 2,
+            "Dootjat Eye": 3
+        },
+        "smth_lvl_req": 43,
+        "recipe_source": "Yum Yum Desert Merit Shop",
+        "anvil_tab": 2,
+        "recipe_id": 61
+    },
+    "Efaunt Ribcage": {
+        "ingredients": {
+            "Ripped Tunic": 10,
+            "Midnight Cookie": 10,
+            "Distilled Water": 25
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Yum Yum Desert Merit Shop",
+        "anvil_tab": 2,
+        "recipe_id": 62
+    },
+    "Efaunt Hipilium": {
+        "ingredients": {
+            "Ripped Tunic": 7,
+            "Minuteglass": 3,
+            "Distilled Water": 25
+        },
+        "smth_lvl_req": 37,
+        "recipe_source": "Yum Yum Desert Merit Shop",
+        "anvil_tab": 2,
+        "recipe_id": 63
+    },
+    "Efaunts Broken Ankles": {
+        "ingredients": {
+            "Platinum Boots": 1,
+            "Ripped Tunic": 5,
+            "Nuget Cake": 3
+        },
+        "smth_lvl_req": 32,
+        "recipe_source": "Yum Yum Desert Merit Shop",
+        "anvil_tab": 2,
+        "recipe_id": 64
+    },
+    "Efaunt Trunculus": {
+        "ingredients": {
+            "Bandage Wraps": 1,
+            "Pharoah Bow": 1,
+            "Ribbed Tunic": 4,
+            "Ripped Tunic": 15
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Yum Yum Desert Merit Shop",
+        "anvil_tab": 2,
+        "recipe_id": 65
+    },
+    "Protectors Pride": {
+        "ingredients": {
+            "Defenders Dignity": 1,
+            "Trimmed Rune Platelegs": 1,
+            "Distilled Water": 35
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "King Doot",
+        "anvil_tab": 2,
+        "recipe_id": 66
+    },
+    "Skullfish Pendant": {
+        "ingredients": {
+            "Fishhead Pendant": 1,
+            "Distilled Water": 60
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "Biggie Hours",
+        "anvil_tab": 2,
+        "recipe_id": 67
+    },
+    "Wooden Traps": {
+        "ingredients": {
+            "Mutant Crabbo": 2,
+            "Redox Salts": 20
+        },
+        "smth_lvl_req": 29,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 69
+    },
+    "Sizable Critter Pouch": {
+        "ingredients": {
+            "Crabbo": 1000,
+            "Redox Salts": 15
+        },
+        "smth_lvl_req": 28,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 70
+    },
+    "Horned Skull": {
+        "ingredients": {
+            "Dune Soul": 1200,
+            "Redox Salts": 25
+        },
+        "smth_lvl_req": 29,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 71
+    },
+    "Sizable Soul Pouch": {
+        "ingredients": {
+            "Dune Soul": 1500,
+            "Redox Salts": 20
+        },
+        "smth_lvl_req": 28,
+        "recipe_source": "Start",
+        "anvil_tab": 2,
+        "recipe_id": 72
+    },
+    "Yumyum Desert NPC Completion Token": {
+        "ingredients": {
+            "Easy Yumyum Dez NPC Token": 1,
+            "Med Yumyum Dez NPC Token": 1,
+            "Hard Yumyum Dez NPC Token": 1
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "The New Sheriff",
+        "anvil_tab": 2,
+        "recipe_id": 73
+    },
+    "Yumyum Skills Completion Token": {
+        "ingredients": {
+            "Bloach": 4000,
+            "Fruitfly": 8000,
+            "Dense Water": 50
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "The New Sheriff",
+        "anvil_tab": 2,
+        "recipe_id": 74
+    },
+    "Yumyum Misc Completion Token": {
+        "ingredients": {
+            "Efaunt Helmet": 1,
+            "Fuscismatia": 1,
+            "Minuteglass": 13,
+            "Ghost": 100
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "The New Sheriff",
+        "anvil_tab": 2,
+        "recipe_id": 75
+    },
+    "Star Talent Reset Potion": {
+        "ingredients": {
+            "Talent Point Reset Fragment": 25,
+            "Distilled Water": 5
+        },
+        "smth_lvl_req": 28,
+        "recipe_source": "Biggie Hours, Efaunt",
+        "anvil_tab": 2,
+        "recipe_id": 76
+    },
+    "Easy Yumyum Dez NPC Token": {
+        "ingredients": {
+            "Bandit Bob Token": 1,
+            "Snake Jar Token": 1,
+            "Whattso Token": 1,
+            "Cowbo Jones Token": 1
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "The New Sheriff",
+        "anvil_tab": 2,
+        "recipe_id": 77
+    },
+    "Med Yumyum Dez NPC Token": {
+        "ingredients": {
+            "Carpetiem Token": 1,
+            "Goldric Token": 1,
+            "Fishpaste Token": 1,
+            "Cattleprod Token": 1
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "The New Sheriff",
+        "anvil_tab": 2,
+        "recipe_id": 78
+    },
+    "Hard Yumyum Dez NPC Token": {
+        "ingredients": {
+            "Loominadi Token": 1,
+            "Djonnut Token": 1,
+            "Scubidew Token": 1,
+            "Wellington Token": 1
+        },
+        "smth_lvl_req": 30,
+        "recipe_source": "The New Sheriff",
+        "anvil_tab": 2,
+        "recipe_id": 79
+    },
+    "Dementia Helmet": {
+        "ingredients": {
+            "Platinum Helmet": 1,
+            "Froge": 5000,
+            "Dementia Bar": 300
+        },
+        "smth_lvl_req": 36,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 1
+    },
+    "Dementia Body": {
+        "ingredients": {
+            "Platinum Platbody": 1,
+            "Forest Soul": 1000,
+            "Dementia Bar": 350
+        },
+        "smth_lvl_req": 37,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 2
+    },
+    "Dementia Shins": {
+        "ingredients": {
+            "Platinum Shins": 1,
+            "Floof Ploof": 8000,
+            "Dementia Bar": 400
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 3
+    },
+    "Dementia Boots": {
+        "ingredients": {
+            "Platinum Boots": 1,
+            "Poison Froge": 3,
+            "Dementia Bar": 500
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 4
+    },
+    "Uninflated Glove": {
+        "ingredients": {
+            "Bandage Wraps": 2,
+            "Melty Cube": 70000
+        },
+        "smth_lvl_req": 40,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 5
+    },
+    "The Ice Breaker": {
+        "ingredients": {
+            "Enforced Slasher": 1,
+            "Melty Cube": 25000,
+            "Redox Salts": 150
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 6
+    },
+    "Blizzard Bow": {
+        "ingredients": {
+            "Pharoah Bow": 1,
+            "Forest Soul": 7000,
+            "Redox Salts": 150
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 7
+    },
+    "Spriggly Storm": {
+        "ingredients": {
+            "Crows Nest": 1,
+            "Tundra Logs": 10000,
+            "Redox Salts": 150
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 8
+    },
+    "Dementia Pickaxe": {
+        "ingredients": {
+            "Platinum Pickaxe": 1,
+            "Dementia Bar": 275,
+            "Moustache Comb": 15000
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 9
+    },
+    "Big Mining Pouch": {
+        "ingredients": {
+            "Dementia Ore": 17500,
+            "Sizable Mining Pouch": 2
+        },
+        "smth_lvl_req": 35,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 10
+    },
+    "Dementia Dicer": {
+        "ingredients": {
+            "Plat Hatchet": 1,
+            "Tundra Logs": 15000,
+            "Redox Salts": 50
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 11
+    },
+    "Big Choppin Pouch": {
+        "ingredients": {
+            "Tundra Logs": 20000,
+            "Sizable Choppin Pouch": 2
+        },
+        "smth_lvl_req": 35,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 12
+    },
+    "Dementia Rod for Fishing": {
+        "ingredients": {
+            "Dementia Bar": 300,
+            "Redox Salts": 50,
+            "Plat Fishing Rod": 1
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 13
+    },
+    "Big Fish Pouch": {
+        "ingredients": {
+            "Crescent Scorpie": 4,
+            "Redox Salts": 50,
+            "Sizable Fish Pouch": 2
+        },
+        "smth_lvl_req": 35,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 14
+    },
+    "Dementia Net": {
+        "ingredients": {
+            "Mosquisnow": 15000,
+            "Redox Salts": 50,
+            "Platinet": 1
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 15
+    },
+    "Big Bug Pouch": {
+        "ingredients": {
+            "Mosquisnow": 10000,
+            "Sizable Bug Pouch": 2
+        },
+        "smth_lvl_req": 35,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 16
+    },
+    "Natural Traps": {
+        "ingredients": {
+            "Nakeo Moleo": 5,
+            "Redox Salts": 50,
+            "Wooden Traps": 1
+        },
+        "smth_lvl_req": 40,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 17
+    },
+    "Big Critter Pouch": {
+        "ingredients": {
+            "Mousey": 10000,
+            "Sizable Critter Pouch": 2
+        },
+        "smth_lvl_req": 37,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 18
+    },
+    "Prickle Skull": {
+        "ingredients": {
+            "Rooted Soul": 7000,
+            "Redox Salts": 50,
+            "Horned Skull": 1
+        },
+        "smth_lvl_req": 40,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 19
+    },
+    "Big Soul Pouch": {
+        "ingredients": {
+            "Rooted Soul": 8000,
+            "Sizable Soul Pouch": 2
+        },
+        "smth_lvl_req": 37,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 20
+    },
+    "Midnight Stopwatch": {
+        "ingredients": {
+            "Silver Stopwatch": 1,
+            "Midnight Cookie": 30,
+            "Dense Water": 20,
+            "Spontaneity Salts": 400
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Dilapidated Slush",
+        "anvil_tab": 3,
+        "recipe_id": 21
+    },
+    "Dawn Stopwatch": {
+        "ingredients": {
+            "Silver Stopwatch": 1,
+            "BobGoldPickle Chain": 1,
+            "Dense Water": 20,
+            "Spontaneity Salts": 400
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Mutated Mush",
+        "anvil_tab": 3,
+        "recipe_id": 22
+    },
+    "Big Food Pouch": {
+        "ingredients": {
+            "Slurpin Herm": 1500,
+            "Buttered Toasted Butter": 1500,
+            "Yeti Ham": 10000,
+            "Sizable Food Pouch": 2
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 23
+    },
+    "Big Materials Pouch": {
+        "ingredients": {
+            "Sticky Stick": 15000,
+            "Ice Age 3": 3,
+            "Sizable Materials Pouch": 2
+        },
+        "smth_lvl_req": 39,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 24
+    },
+    "Void Imperium Helmet": {
+        "ingredients": {
+            "Dementia Helmet": 1,
+            "Spontaneity Salts": 500,
+            "Void Bar": 1000,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 43,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 25
+    },
+    "Void Imperium Platebody": {
+        "ingredients": {
+            "Dementia Body": 1,
+            "Audio Cord": 75000,
+            "Void Bar": 500,
+            "Dense Water": 4
+        },
+        "smth_lvl_req": 44,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 26
+    },
+    "Void Imperium Shardshins": {
+        "ingredients": {
+            "Dementia Shins": 1,
+            "Wispy Lumber": 75000,
+            "Void Bar": 650,
+            "Dense Water": 4
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 27
+    },
+    "Void Imperium Kicks": {
+        "ingredients": {
+            "Dementia Boots": 1,
+            "Flycicle": 60000,
+            "Void Bar": 725,
+            "Dense Water": 4
+        },
+        "smth_lvl_req": 46,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 28
+    },
+    "Eclectic Ordeal": {
+        "ingredients": {
+            "Yellow Snowflake": 100,
+            "Minervowl": 50,
+            "Dootjat Eye": 10,
+            "Dense Water": 15
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 29
+    },
+    "Deuscythe": {
+        "ingredients": {
+            "The Ice Breaker": 1,
+            "Black Lense": 10,
+            "Eternal Lord of The Undying Ember": 15,
+            "Dense Water": 7
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 30
+    },
+    "Blackhole Bow": {
+        "ingredients": {
+            "Blizzard Bow": 1,
+            "Black Lense": 4,
+            "Spontaneity Salts": 350,
+            "Dense Water": 7
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 31
+    },
+    "Grey Gatsby": {
+        "ingredients": {
+            "Spriggly Storm": 1,
+            "Black Lense": 4,
+            "Frigid Soul": 5000,
+            "Dense Water": 7
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 32
+    },
+    "Void Imperium Pik": {
+        "ingredients": {
+            "Dementia Pickaxe": 1,
+            "Void Bar": 400,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 33
+    },
+    "Large Mining Pouch": {
+        "ingredients": {
+            "Void Ore": 25000,
+            "Big Mining Pouch": 2
+        },
+        "smth_lvl_req": 43,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 34
+    },
+    "Void Imperium Axe": {
+        "ingredients": {
+            "Dementia Dicer": 1,
+            "Wispy Lumber": 50000,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 35
+    },
+    "Large Choppin Pouch": {
+        "ingredients": {
+            "Wispy Lumber": 30000,
+            "Big Choppin Pouch": 2
+        },
+        "smth_lvl_req": 43,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 36
+    },
+    "Void Imperium Rod": {
+        "ingredients": {
+            "Spontaneity Salts": 200,
+            "Minervowl": 3,
+            "Dementia Rod for Fishing": 1,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 37
+    },
+    "Large Fish Pouch": {
+        "ingredients": {
+            "Bloach": 50000,
+            "Big Fish Pouch": 2
+        },
+        "smth_lvl_req": 43,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 38
+    },
+    "Void Imperium Net": {
+        "ingredients": {
+            "Flycicle": 50000,
+            "Dementia Net": 1,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 45,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 39
+    },
+    "Large Bug Pouch": {
+        "ingredients": {
+            "Flycicle": 35000,
+            "Big Bug Pouch": 2
+        },
+        "smth_lvl_req": 43,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 40
+    },
+    "Steel Traps": {
+        "ingredients": {
+            "Eternal Lord of The Undying Ember": 6,
+            "Natural Traps": 1,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 46,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 41
+    },
+    "Large Critter Pouch": {
+        "ingredients": {
+            "Pingy": 30000,
+            "Big Critter Pouch": 2
+        },
+        "smth_lvl_req": 44,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 42
+    },
+    "Manifested Skull": {
+        "ingredients": {
+            "Frigid Soul": 8000,
+            "Prickle Skull": 1,
+            "Dense Water": 5
+        },
+        "smth_lvl_req": 46,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 43
+    },
+    "Large Soul Pouch": {
+        "ingredients": {
+            "Rooted Soul": 30000,
+            "Big Soul Pouch": 2
+        },
+        "smth_lvl_req": 44,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 44
+    },
+    "Large Food Pouch": {
+        "ingredients": {
+            "Golden Ham": 10,
+            "Critter Numnums": 30,
+            "Soulble Gum": 30,
+            "Big Food Pouch": 1
+        },
+        "smth_lvl_req": 44,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 45
+    },
+    "Large Materials Pouch": {
+        "ingredients": {
+            "Audio Cord": 60000,
+            "Black Lense": 3,
+            "Big Materials Pouch": 1
+        },
+        "smth_lvl_req": 44,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 46
+    },
+    "Anvil Tab 4": {
+        "ingredients": {
+            "Void Bar": 1200,
+            "Frigid Soul": 7500,
+            "Eternal Lord of The Undying Ember": 10,
+            "Spontaneity Salts": 400
+        },
+        "smth_lvl_req": 50,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 48
+    },
+    "Mark of Member": {
+        "ingredients": {
+            "Grandma Disguise": 1,
+            "Void Imperium Helmet": 1,
+            "Dioxide Synthesis": 400
+        },
+        "smth_lvl_req": 49,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 49
+    },
+    "Murmillo Helm": {
+        "ingredients": {
+            "Void Imperium Helmet": 1,
+            "Dioxide Synthesis": 150
+        },
+        "smth_lvl_req": 48,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 50
+    },
+    "Conquistador Plume": {
+        "ingredients": {
+            "Void Imperium Helmet": 1,
+            "Dioxide Synthesis": 150
+        },
+        "smth_lvl_req": 48,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 51
+    },
+    "Adornment of the High Priest": {
+        "ingredients": {
+            "Void Imperium Helmet": 1,
+            "Dioxide Synthesis": 150
+        },
+        "smth_lvl_req": 48,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 52
+    },
+    "Member Hoodie": {
+        "ingredients": {
+            "Uninflated Glove": 2,
+            "Void Imperium Platebody": 1,
+            "Dioxide Synthesis": 400
+        },
+        "smth_lvl_req": 50,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 53
+    },
+    "Damascus Plates": {
+        "ingredients": {
+            "Void Imperium Platebody": 1,
+            "Dioxide Synthesis": 250
+        },
+        "smth_lvl_req": 49,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 54
+    },
+    "Evergreen Wraps": {
+        "ingredients": {
+            "Void Imperium Platebody": 1,
+            "Dioxide Synthesis": 250
+        },
+        "smth_lvl_req": 49,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 55
+    },
+    "Elegantine Robes": {
+        "ingredients": {
+            "Void Imperium Platebody": 1,
+            "Dioxide Synthesis": 250
+        },
+        "smth_lvl_req": 49,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 56
+    },
+    "Critter Numnums": {
+        "ingredients": {
+            "Crabbo": 100,
+            "Distilled Water": 1
+        },
+        "smth_lvl_req": 36,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 57
+    },
+    "Soulble Gum": {
+        "ingredients": {
+            "Dune Soul": 70,
+            "Distilled Water": 1
+        },
+        "smth_lvl_req": 36,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 58
+    },
+    "Shivering Sack": {
+        "ingredients": {
+            "Mamooth Hide Bag": 1,
+            "Melty Cube": 2000,
+            "Yellow Snowflake": 3
+        },
+        "smth_lvl_req": 35,
+        "recipe_source": "Task Unlocks Tab 3",
+        "anvil_tab": 3,
+        "recipe_id": 59
+    },
+    "Honker Hat": {
+        "ingredients": {
+            "Honker": 1000000,
+            "Diamond Duck": 1,
+            "Dense Water": 25
+        },
+        "smth_lvl_req": 40,
+        "recipe_source": "Start",
+        "anvil_tab": 3,
+        "recipe_id": 60
+    },
+    "Tundra NPC Completion Token": {
+        "ingredients": {
+            "Easy FB Tundra NPC Token": 1,
+            "Med FB Tundra NPC Token": 1,
+            "Hard FB Tundra NPC Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "The Fresh Prince of the Tundra",
+        "anvil_tab": 3,
+        "recipe_id": 61
+    },
+    "Tundra Skills Completion Token": {
+        "ingredients": {
+            "Frigid Soul": 12500,
+            "Jade Scarab": 4,
+            "Refurbished Cog": 1
+        },
+        "smth_lvl_req": 2,
+        "recipe_source": "The Fresh Prince of the Tundra",
+        "anvil_tab": 3,
+        "recipe_id": 62
+    },
+    "Tundra Misc Completion Token": {
+        "ingredients": {
+            "Chizoar Helmet": 1,
+            "Neutron Ice Ring": 1,
+            "Nullo Salt": 10,
+            "Black Lense": 60
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "The Fresh Prince of the Tundra",
+        "anvil_tab": 3,
+        "recipe_id": 63
+    },
+    "Bucket of Slush": {
+        "ingredients": {
+            "Melty Cube": 5,
+            "Snow Ball": 20,
+            "Iron Bar": 5
+        },
+        "smth_lvl_req": 38,
+        "recipe_source": "DropTable15",
+        "anvil_tab": 3,
+        "recipe_id": 64
+    },
+    "Easy FB Tundra NPC Token": {
+        "ingredients": {
+            "Lonely Hunter Token": 1,
+            "Hoggi Token": 1,
+            "Snouts Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "The Fresh Prince of the Tundra",
+        "anvil_tab": 3,
+        "recipe_id": 65
+    },
+    "Med FB Tundra NPC Token": {
+        "ingredients": {
+            "Shuvelle Token": 1,
+            "Yondergreen Token": 1,
+            "Crystalswine Token": 1
+        },
+        "smth_lvl_req": 2,
+        "recipe_source": "The Fresh Prince of the Tundra",
+        "anvil_tab": 3,
+        "recipe_id": 66
+    },
+    "Hard FB Tundra NPC Token": {
+        "ingredients": {
+            "Bellows Token": 1,
+            "Bill Brr Token": 1
+        },
+        "smth_lvl_req": 1,
+        "recipe_source": "The Fresh Prince of the Tundra",
+        "anvil_tab": 3,
+        "recipe_id": 67
+    },
+    "Chizoars Caustic Scarf": {
+        "ingredients": {
+            "Chizoars Blankie": 1,
+            "Chizoar Stalagmite": 15,
+            "Chizoar Spike": 30
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Frostbite Tundra Merit Shop",
+        "anvil_tab": 3,
+        "recipe_id": 68
+    },
+    "Chizoar Helmet": {
+        "ingredients": {
+            "Void Imperium Helmet": 1,
+            "Chizoar Spike": 25,
+            "Blood Bone": 1000,
+            "Purple Salt": 100
+        },
+        "smth_lvl_req": 50,
+        "recipe_source": "Frostbite Tundra Merit Shop",
+        "anvil_tab": 3,
+        "recipe_id": 69
+    },
+    "Chizoar Bodyplate": {
+        "ingredients": {
+            "Void Imperium Platebody": 1,
+            "Chizoar Spike": 18,
+            "Ram Wool": 100000,
+            "Purple Salt": 50
+        },
+        "smth_lvl_req": 49,
+        "recipe_source": "Frostbite Tundra Merit Shop",
+        "anvil_tab": 3,
+        "recipe_id": 70
+    },
+    "Chizoar Scaled Leggings": {
+        "ingredients": {
+            "Void Imperium Shardshins": 1,
+            "Chizoar Spike": 10,
+            "Black Lense": 8,
+            "Dioxide Synthesis": 250
+        },
+        "smth_lvl_req": 48,
+        "recipe_source": "Frostbite Tundra Merit Shop",
+        "anvil_tab": 3,
+        "recipe_id": 71
+    },
+    "Chizoar Walkers": {
+        "ingredients": {
+            "Void Imperium Kicks": 1,
+            "Chizoar Spike": 6,
+            "Ice Age 3": 10,
+            "Dioxide Synthesis": 100
+        },
+        "smth_lvl_req": 47,
+        "recipe_source": "Frostbite Tundra Merit Shop",
+        "anvil_tab": 3,
+        "recipe_id": 72
+    },
+    "Lustre Veil": {
+        "ingredients": {
+            "Void Imperium Helmet": 1,
+            "Skelefish": 80000,
+            "Lustre Bar": 2500
+        },
+        "smth_lvl_req": 50,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 1
+    },
+    "Lustre Chestplate": {
+        "ingredients": {
+            "Void Imperium Platebody": 1,
+            "Purple Mush Cap": 100000,
+            "Lustre Bar": 1200
+        },
+        "smth_lvl_req": 51,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 2
+    },
+    "Lustre Scales": {
+        "ingredients": {
+            "Void Imperium Shardshins": 1,
+            "Purple Screw": 60000,
+            "Lustre Bar": 1600
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 3
+    },
+    "Lustre Shieldshoe": {
+        "ingredients": {
+            "Void Imperium Kicks": 1,
+            "TV Remote": 120000,
+            "Lustre Bar": 2000
+        },
+        "smth_lvl_req": 53,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 4
+    },
+    "Knuckle Sabers": {
+        "ingredients": {
+            "Eclectic Ordeal": 1,
+            "Thingymabob": 50000,
+            "Dioxide Synthesis": 2000
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 5
+    },
+    "Slimsharp Fin": {
+        "ingredients": {
+            "Deuscythe": 1,
+            "Alien Hive Chunk": 90000,
+            "Dioxide Synthesis": 500
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 6
+    },
+    "Shardsure Leif": {
+        "ingredients": {
+            "Blackhole Bow": 1,
+            "Skelefish": 110000,
+            "Dioxide Synthesis": 500
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 7
+    },
+    "Skullslip Hallow": {
+        "ingredients": {
+            "Grey Gatsby": 1,
+            "Bunny": 50000,
+            "Dioxide Synthesis": 500
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 8
+    },
+    "Lustre Pickaxe": {
+        "ingredients": {
+            "Void Imperium Pik": 1,
+            "Lustre Bar": 1000,
+            "Dioxide Synthesis": 600
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 9
+    },
+    "Massive Mining Pouch": {
+        "ingredients": {
+            "Lustre Ore": 110000,
+            "Dioxide Synthesis": 400
+        },
+        "smth_lvl_req": 53,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 10
+    },
+    "Lustre Logger": {
+        "ingredients": {
+            "Void Imperium Axe": 1,
+            "Alien Hive Chunk": 110000,
+            "Dioxide Synthesis": 600
+        },
+        "smth_lvl_req": 52,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 11
+    },
+    "Massive Choppin Pouch": {
+        "ingredients": {
+            "Alien Hive Chunk": 110000,
+            "Dioxide Synthesis": 400
+        },
+        "smth_lvl_req": 53,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 12
+    },
+    "Lustre Rod": {
+        "ingredients": {
+            "Skelefish": 90000,
+            "Void Imperium Rod": 1,
+            "Dioxide Synthesis": 750
+        },
+        "smth_lvl_req": 53,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 13
+    },
+    "Massive Fish Pouch": {
+        "ingredients": {
+            "Skelefish": 120000,
+            "Dioxide Synthesis": 500
+        },
+        "smth_lvl_req": 54,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 14
+    },
+    "Lustre Netting": {
+        "ingredients": {
+            "Worker Bee": 130000,
+            "Void Imperium Net": 1,
+            "Dioxide Synthesis": 750
+        },
+        "smth_lvl_req": 53,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 15
+    },
+    "Massive Bug Pouch": {
+        "ingredients": {
+            "Worker Bee": 110000,
+            "Dioxide Synthesis": 500
+        },
+        "smth_lvl_req": 54,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 16
+    },
+    "Meaty Traps": {
+        "ingredients": {
+            "Jade Scarab": 10,
+            "Steel Traps": 1,
+            "Dioxide Synthesis": 1000
+        },
+        "smth_lvl_req": 54,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 17
+    },
+    "Massive Critter Pouch": {
+        "ingredients": {
+            "Honker": 100000,
+            "Dioxide Synthesis": 1000
+        },
+        "smth_lvl_req": 55,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 18
+    },
+    "Glauss Skull": {
+        "ingredients": {
+            "Frigid Soul": 40000,
+            "Manifested Skull": 1,
+            "Dioxide Synthesis": 1000
+        },
+        "smth_lvl_req": 54,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 19
+    },
+    "Massive Soul Pouch": {
+        "ingredients": {
+            "Frigid Soul": 90000,
+            "Dioxide Synthesis": 1000
+        },
+        "smth_lvl_req": 55,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 20
+    },
+    "Rough Rockers": {
+        "ingredients": {
+            "Cavern Trekkers": 1,
+            "Lustre Shieldshoe": 1,
+            "Copper Ore": 300000
+        },
+        "smth_lvl_req": 56,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 21
+    },
+    "Fiberous Footings": {
+        "ingredients": {
+            "Logger Heels": 1,
+            "Lustre Shieldshoe": 1,
+            "Oak Logs": 300000
+        },
+        "smth_lvl_req": 56,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 22
+    },
+    "Deep Sea Galoshes": {
+        "ingredients": {
+            "Angler Boots": 1,
+            "Lustre Shieldshoe": 1,
+            "Goldfish": 300000
+        },
+        "smth_lvl_req": 56,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 23
+    },
+    "Spaggy Westerados": {
+        "ingredients": {
+            "Bandito Boots": 1,
+            "Lustre Shieldshoe": 1,
+            "Fly": 300000
+        },
+        "smth_lvl_req": 56,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 24
+    },
+    "Chef Hat Shoes": {
+        "ingredients": {
+            "Cooking Clogs": 4,
+            "Lustre Shieldshoe": 1
+        },
+        "smth_lvl_req": 55,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 25
+    },
+    "Sheek Scrubs": {
+        "ingredients": {
+            "Laboratory Scrubs": 4,
+            "Lustre Shieldshoe": 1
+        },
+        "smth_lvl_req": 55,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 26
+    },
+    "Massive Food Pouch": {
+        "ingredients": {
+            "Sheepie Dairy": 175000,
+            "Magic Meatloaf": 30,
+            "Lost Batteries": 10,
+            "Dioxide Synthesis": 1000
+        },
+        "smth_lvl_req": 58,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 27
+    },
+    "Massive Materials Pouch": {
+        "ingredients": {
+            "Genie Lamp": 130000,
+            "Lost Batteries": 10,
+            "Dioxide Synthesis": 1000
+        },
+        "smth_lvl_req": 58,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 28
+    },
+    "Diabolical Headcase": {
+        "ingredients": {
+            "Lustre Veil": 1,
+            "Blobfish": 600000,
+            "Starfire Bar": 10000,
+            "Nullo Salt": 800
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 29
+    },
+    "Diabolical Abdomen": {
+        "ingredients": {
+            "Lustre Chestplate": 1,
+            "Cubed Logs": 400000,
+            "Starfire Bar": 2500,
+            "Nullo Salt": 400
+        },
+        "smth_lvl_req": 61,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 30
+    },
+    "Diabolical Trimed Leg Guards": {
+        "ingredients": {
+            "Lustre Scales": 1,
+            "Fairy": 450000,
+            "Starfire Bar": 4000,
+            "Nullo Salt": 600
+        },
+        "smth_lvl_req": 62,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 31
+    },
+    "Diabolical Toe Tips": {
+        "ingredients": {
+            "Lustre Shieldshoe": 1,
+            "Manta Ray": 500000,
+            "Starfire Bar": 5000,
+            "Nullo Salt": 700
+        },
+        "smth_lvl_req": 63,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 32
+    },
+    "Diabolical Gauntlet": {
+        "ingredients": {
+            "Knuckle Sabers": 1,
+            "Starfire Bar": 50000,
+            "Nullo Salt": 5000
+        },
+        "smth_lvl_req": 65,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 33
+    },
+    "Diabolical Flesh Ripper": {
+        "ingredients": {
+            "Slimsharp Fin": 1,
+            "Kraken": 200000,
+            "Starfire Bar": 3000,
+            "Nullo Salt": 750
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 34
+    },
+    "Diabolical Continuit": {
+        "ingredients": {
+            "Shardsure Leif": 1,
+            "Voodofish": 10,
+            "Starfire Bar": 3000,
+            "Nullo Salt": 750
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 35
+    },
+    "Diabolical Opticule": {
+        "ingredients": {
+            "Skullslip Hallow": 1,
+            "Squishy Soul": 15000,
+            "Starfire Bar": 3000,
+            "Nullo Salt": 800
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 36
+    },
+    "Starfire Pickaxe": {
+        "ingredients": {
+            "Lustre Pickaxe": 1,
+            "Lustre Bar": 5000,
+            "Pearler Shell": 20
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 37
+    },
+    "Volumetric Mining Pouch": {
+        "ingredients": {
+            "Starfire Ore": 300000,
+            "Pearler Shell": 4,
+            "Purple Salt": 800
+        },
+        "smth_lvl_req": 62,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 38
+    },
+    "Starfire Hatchet": {
+        "ingredients": {
+            "Lustre Logger": 1,
+            "Cubed Logs": 100000,
+            "Pearler Shell": 40
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 39
+    },
+    "Volumetric Chopping Pouch": {
+        "ingredients": {
+            "Cubed Logs": 300000,
+            "Pearler Shell": 4,
+            "Purple Salt": 800
+        },
+        "smth_lvl_req": 62,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 40
+    },
+    "Starfire Rod": {
+        "ingredients": {
+            "Manta Ray": 40000,
+            "Pearler Shell": 60,
+            "Lustre Rod": 1
+        },
+        "smth_lvl_req": 61,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 41
+    },
+    "Volumetric Fish Pouch": {
+        "ingredients": {
+            "Manta Ray": 300000,
+            "Nullo Salt": 600
+        },
+        "smth_lvl_req": 63,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 42
+    },
+    "Starfire Trim Netting": {
+        "ingredients": {
+            "Fairy": 100000,
+            "Pearler Shell": 80,
+            "Lustre Netting": 1
+        },
+        "smth_lvl_req": 61,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 43
+    },
+    "Volumetric Bug Pouch": {
+        "ingredients": {
+            "Fairy": 300000,
+            "Nullo Salt": 600
+        },
+        "smth_lvl_req": 63,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 44
+    },
+    "Royal Traps": {
+        "ingredients": {
+            "Blobfish": 100000,
+            "Meaty Traps": 1
+        },
+        "smth_lvl_req": 62,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 45
+    },
+    "Volumetric Critta Pouch": {
+        "ingredients": {
+            "Blobfish": 300000,
+            "Nullo Salt": 800
+        },
+        "smth_lvl_req": 64,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 46
+    },
+    "Luciferian Skull": {
+        "ingredients": {
+            "Squishy Soul": 60000,
+            "Glauss Skull": 1
+        },
+        "smth_lvl_req": 62,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 47
+    },
+    "Volumetric Soul Pouch": {
+        "ingredients": {
+            "Squishy Soul": 300000,
+            "Nullo Salt": 800
+        },
+        "smth_lvl_req": 64,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 48
+    },
+    "Volumetric Food Pouch": {
+        "ingredients": {
+            "Spicy Space Ribs": 500000,
+            "Nullo Salt": 800,
+            "Pearler Shell": 25
+        },
+        "smth_lvl_req": 64,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 49
+    },
+    "Volumetric Matty Pouch": {
+        "ingredients": {
+            "Condensed Zap": 500000,
+            "Pearler Shell": 25,
+            "Nullo Salt": 800
+        },
+        "smth_lvl_req": 64,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 50
+    },
+    "Anvil Tab 5": {
+        "ingredients": {
+            "Starfire Bar": 5000,
+            "Cubed Logs": 200000,
+            "Fairy": 150000,
+            "Nullo Salt": 600
+        },
+        "smth_lvl_req": 65,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 52
+    },
+    "Peeper Pouch": {
+        "ingredients": {
+            "Sand Shark": 10000,
+            "Worker Bee": 20000,
+            "Alien Hive Chunk": 20000,
+            "Squishy Soul": 5000
+        },
+        "smth_lvl_req": 53,
+        "recipe_source": "Task Unlocks Tab 4",
+        "anvil_tab": 4,
+        "recipe_id": 53
+    },
+    "Bolstered DNA Splicer": {
+        "ingredients": {
+            "Ghost": 100,
+            "Sappy DNA Splicer": 5
+        },
+        "smth_lvl_req": 55,
+        "recipe_source": "Pincermin",
+        "anvil_tab": 4,
+        "recipe_id": 54
+    },
+    "Double Barreled DNA Splicer": {
+        "ingredients": {
+            "Ice Age 3": 30,
+            "Bolstered DNA Splicer": 1
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Thermister",
+        "anvil_tab": 4,
+        "recipe_id": 55
+    },
+    "Ergonomic DNA Splicer": {
+        "ingredients": {
+            "Lost Batteries": 200,
+            "Double Barreled DNA Splicer": 1
+        },
+        "smth_lvl_req": 65,
+        "recipe_source": "Octodar",
+        "anvil_tab": 4,
+        "recipe_id": 56
+    },
+    "Souped Lab Ring": {
+        "ingredients": {
+            "Lab Ring": 5,
+            "Purple Mush Cap": 100000,
+            "Chef Ring": 1
+        },
+        "smth_lvl_req": 60,
+        "recipe_source": "Mutated Mush",
+        "anvil_tab": 4,
+        "recipe_id": 57
+    },
+    "Thin Veil of The Troll": {
+        "ingredients": {
+            "Troll Scales": 50,
+            "Gold Twine": 10,
+            "Starfire Bar": 20000,
+            "Nullo Salt": 4000
+        },
+        "smth_lvl_req": 70,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 61
+    },
+    "Trollish Garb": {
+        "ingredients": {
+            "Troll Scales": 25,
+            "Pearler Shell": 25,
+            "Starfire Bar": 10000,
+            "Nullo Salt": 2800
+        },
+        "smth_lvl_req": 68,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 62
+    },
+    "Twisted Scales": {
+        "ingredients": {
+            "Troll Scales": 15,
+            "Condensed Zap": 333333,
+            "Starfire Bar": 5000,
+            "Nullo Salt": 1600
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 63
+    },
+    "Soles of the Troll": {
+        "ingredients": {
+            "Cooking Clogs": 8,
+            "Troll Scales": 10,
+            "Starfire Bar": 3000,
+            "Nullo Salt": 750
+        },
+        "smth_lvl_req": 65,
+        "recipe_source": "Start",
+        "anvil_tab": 4,
+        "recipe_id": 64
+    },
+    "Magma Core Headdress": {
+        "ingredients": {
+            "Thin Veil of The Troll": 1,
+            "Dust Mote": 80000,
+            "Dreadlo Bar": 2500
+        },
+        "smth_lvl_req": 65,
+        "recipe_source": "Cheese Nub",
+        "anvil_tab": 5,
+        "recipe_id": 1
+    },
+    "Magma Core Wavemaille": {
+        "ingredients": {
+            "Trollish Garb": 1,
+            "Sundried Glass": 900000,
+            "Dreadlo Bar": 1200
+        },
+        "smth_lvl_req": 66,
+        "recipe_source": "Stiltmole",
+        "anvil_tab": 5,
+        "recipe_id": 2
+    },
+    "Magma Core Battleskirt": {
+        "ingredients": {
+            "Twisted Scales": 1,
+            "Cheesy Crumbs": 10000000,
+            "Dreadlo Bar": 1600
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Molti",
+        "anvil_tab": 5,
+        "recipe_id": 3
+    },
+    "Magma Core Lavarunners": {
+        "ingredients": {
+            "Soles of the Troll": 1,
+            "Orange Slice": 1200000,
+            "Dreadlo Bar": 2000
+        },
+        "smth_lvl_req": 68,
+        "recipe_source": "Purgatory Stalker",
+        "anvil_tab": 5,
+        "recipe_id": 4
+    },
+    "Molten Core Knucklers": {
+        "ingredients": {
+            "Diabolical Gauntlet": 1,
+            "Golden Hampter Gummy Candy": 1000,
+            "Hampter": 500
+        },
+        "smth_lvl_req": 70,
+        "recipe_source": "Suggma",
+        "anvil_tab": 5,
+        "recipe_id": 5
+    },
+    "Magma Maul": {
+        "ingredients": {
+            "Diabolical Flesh Ripper": 1,
+            "Dandielogs": 500000,
+            "Hampter": 100
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Citringe",
+        "anvil_tab": 5,
+        "recipe_id": 6
+    },
+    "Sediment Core Grunkler": {
+        "ingredients": {
+            "Diabolical Continuit": 1,
+            "Dandielogs": 500000,
+            "Hampter": 100
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Lampar",
+        "anvil_tab": 5,
+        "recipe_id": 7
+    },
+    "Cattle Core Soothsayer Staff": {
+        "ingredients": {
+            "Diabolical Opticule": 1,
+            "Dandielogs": 500000,
+            "Hampter": 100
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Fire Spirit",
+        "anvil_tab": 5,
+        "recipe_id": 8
+    },
+    "Dreadlo Pickolo": {
+        "ingredients": {
+            "Starfire Pickaxe": 1,
+            "Starfire Bar": 10000
+        },
+        "smth_lvl_req": 70,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 9
+    },
+    "Colossal Mining Pouch": {
+        "ingredients": {
+            "Starfire Ore": 900000
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 10
+    },
+    "Dreadlo Eviscerator": {
+        "ingredients": {
+            "Starfire Hatchet": 1,
+            "Alien Hive Chunk": 110000
+        },
+        "smth_lvl_req": 70,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 11
+    },
+    "Colossal Chopping Pouch": {
+        "ingredients": {
+            "Maple Logs": 900000
+        },
+        "smth_lvl_req": 67,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 12
+    },
+    "Dreadlo Rod": {
+        "ingredients": {
+            "Starfire Rod": 1,
+            "Kraken": 250000
+        },
+        "smth_lvl_req": 71,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 13
+    },
+    "Colossal Fish Pouch": {
+        "ingredients": {
+            "Kraken": 900000
+        },
+        "smth_lvl_req": 68,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 14
+    },
+    "Dreadlo Matted Netting": {
+        "ingredients": {
+            "Starfire Trim Netting": 1,
+            "Scarab": 250000
+        },
+        "smth_lvl_req": 71,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 15
+    },
+    "Colossal Bug Pouch": {
+        "ingredients": {
+            "Scarab": 900000
+        },
+        "smth_lvl_req": 68,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 16
+    },
+    "Egalitarian Royal Traps": {
+        "ingredients": {
+            "Royal Traps": 1,
+            "Voodofish": 100,
+            "Nullo Salt": 10000
+        },
+        "smth_lvl_req": 73,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 17
+    },
+    "Colossal Critta Pouch": {
+        "ingredients": {
+            "Blobfish": 900000,
+            "Dioxide Synthesis": 5000
+        },
+        "smth_lvl_req": 69,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 18
+    },
+    "Dreadnaught Skull": {
+        "ingredients": {
+            "Oozie Soul": 125000,
+            "Slush Skull": 1,
+            "Luciferian Skull": 1,
+            "Nullo Salt": 10000
+        },
+        "smth_lvl_req": 73,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 19
+    },
+    "Colossal Soul Pouch": {
+        "ingredients": {
+            "Oozie Soul": 800000,
+            "Dioxide Synthesis": 5000
+        },
+        "smth_lvl_req": 69,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 20
+    },
+    "Colossal Food Pouch": {
+        "ingredients": {
+            "Grilled Cheese Nomwich": 2500000,
+            "Golden Grilled Cheese Nomwich": 50,
+            "Golden Hampter Gummy Candy": 50
+        },
+        "smth_lvl_req": 68,
+        "recipe_source": "Maccie",
+        "anvil_tab": 5,
+        "recipe_id": 21
+    },
+    "Colossal Matty Pouch": {
+        "ingredients": {
+            "Suggma Ashes": 2000000,
+            "Meteorite": 600000,
+            "Hampter": 200
+        },
+        "smth_lvl_req": 69,
+        "recipe_source": "Mister Brightside",
+        "anvil_tab": 5,
+        "recipe_id": 22
+    },
+    "Coldseeker Bullet": {
+        "ingredients": {
+            "Dust Mote": 100,
+            "Dandielogs": 100,
+            "Spitfire": 500
+        },
+        "smth_lvl_req": 71,
+        "recipe_source": "Biggole Mole",
+        "anvil_tab": 5,
+        "recipe_id": 23
+    },
+    "Anvil Tab 6": {
+        "ingredients": {
+            "Not Yet": 1
+        },
+        "smth_lvl_req": 80,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 24
+    },
+    "Not Yet": {
+        "ingredients": {
+            "Not Yet": 1
+        },
+        "smth_lvl_req": 63,
+        "recipe_source": "Start",
+        "anvil_tab": 5,
+        "recipe_id": 32
+    }
+}
