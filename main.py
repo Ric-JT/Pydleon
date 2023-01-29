@@ -2,6 +2,8 @@ import curses
 from curses import wrapper
 from curses.textpad import rectangle
 
+from pydleon import *
+
 VERSION = "v PROTOTYPE_02"
 MAXSIZE_X = 60
 MAXSIZE_Y = 24
@@ -72,34 +74,6 @@ class App:
                 widget.run(key)  # TODO: distinguish between focused widgets
 
 
-class Widget:
-    def __init__(self, app, parent=None):
-        self.app: App = app
-        self.parent = parent
-        self.winlist = []
-
-    def addstr_centered_horizontally(
-        self, window, y, text, attr=None
-    ):  # Extend curses.Window and add method to windows instead
-        _, max_x = window.getmaxyx()
-        len_text = len(text)
-
-        # TODO: Check if curses does this automatically
-        if len_text > max_x:
-            raise curses.error
-
-        # startx should begin before the center depending on str length
-        startx = (max_x - len_text) // 2
-
-        window.addstr(y, startx, text, attr)
-
-    def run(self, key):
-        raise NotImplementedError()
-
-    def refresh(self):
-        raise NotImplementedError()
-
-
 class StartWidget(Widget):
     def __init__(self, app: App, parent=None):
         super().__init__(app, parent)
@@ -127,13 +101,13 @@ class StartWidget(Widget):
     def refresh(self):
         self.window.clear()
 
-        self.addstr_centered_horizontally(
+        addstr_centered_horizontally(
             self.window,
             3,
             " Smithing Grindlist ",
             curses.A_REVERSE if self.selection == 0 else curses.A_NORMAL,
         )
-        self.addstr_centered_horizontally(
+        addstr_centered_horizontally(
             self.window,
             5,
             "        QUIT        ",
@@ -169,14 +143,14 @@ class SmithingGrindlistWidget(Widget):
     def refresh(self):
         self.window.clear()
 
-        self.addstr_centered_horizontally(
+        addstr_centered_horizontally(
             self.window,
             3,
             " I don't do nothin' ",
             curses.A_REVERSE if self.selection == 0 else curses.A_NORMAL,
         )
 
-        self.addstr_centered_horizontally(
+        addstr_centered_horizontally(
             self.window,
             5,
             "      Go back       ",
