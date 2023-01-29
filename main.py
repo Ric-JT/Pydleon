@@ -72,7 +72,7 @@ class App:
                 widget.run(key)  # TODO: distinguish between focused widgets
 
 
-class MyWidget:
+class Widget:
     def __init__(self, app, parent=None):
         self.app: App = app
         self.parent = parent
@@ -100,7 +100,7 @@ class MyWidget:
         raise NotImplementedError()
 
 
-class StartWidget(MyWidget):
+class StartWidget(Widget):
     def __init__(self, app: App, parent=None):
         super().__init__(app, parent)
         self.window = curses.newwin(MAXSIZE_Y - 2, MAXSIZE_X - 2, 1, 1)
@@ -143,7 +143,7 @@ class StartWidget(MyWidget):
         self.window.refresh()
 
 
-class SmithingGrindlistWidget(MyWidget):
+class SmithingGrindlistWidget(Widget):
     def __init__(self, app, parent=None):
         super().__init__(app, parent)
         self.window = curses.newwin(MAXSIZE_Y - 2, MAXSIZE_X - 2, 1, 1)
