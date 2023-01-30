@@ -2,18 +2,12 @@ import json
 from typing import Dict, List
 import pandas as pd
 
-from utils.parsing.raw_field_parser import RawFieldParser
-from template_data import cake_template
-from maps.classTalentMap import class_index_map, class_talent_map, class_talent_page_map
+from utils.raw_field_parser import RawFieldParser
+from utils.handle_cake import CakeHandler
+from resources.template_data import cake_template
 from maps.itemMap import item_map
 from maps.maps import (
     obol_name_map,
-    card_set_map,
-    skill_index_map,
-    star_sign_map,
-    fishing_bait_map,
-    fishing_line_map,
-    large_bubble_map,
     char_subclass_map,
 )
 from maps.cardEquipMap import card_equip_map
@@ -65,6 +59,7 @@ def fill_characters_data(
     chars: list, numChars: int, fields, parser: RawFieldParser
 ) -> list:
     for i in range(numChars):
+        print(chars[i]["name"])
         chars[i]["class"]: str = parser.get_char_class(i)
         chars[i]["money"]: int = parser.get_char_money(i)
         chars[i]["AFKtarget"]: str = parser.get_char_AFKtarget(i)
@@ -74,265 +69,22 @@ def fill_characters_data(
         chars[i]["instaRevives"]: int = parser.get_char_instaRevives(i)
         chars[i]["gender"]: int = parser.get_char_gender(i)
         chars[i]["minigamePlays"]: int = parser.get_char_minigames(i)
-        chars[i].update(parser.get_char_statlist(i))
+        chars[i].update(parser.get_char_statlist(i))  # Stat list, STR, DEF, etc
         chars[i]["POBoxUpgrades"]: List[int] = parser.get_char_POBoxUpgrades(i)
         chars[i]["invBagsUsed"]: List[int] = parser.get_char_invBagsUsed(i)
         chars[i]["inventory"] = parser.get_char_inventory(i)
-
-        equipableNames = fields[f"EquipOrder_{i}"]
-        equipableCounts = fields[f"EquipQTY_{i}"]
-
-        rawEquipmentNames = [
-            item_map.get(equipableNames[0][equip_name], "UNKNOWN")
-            for equip_name in equipableNames[0]
-            if equip_name != "length"
-        ]
-        rawEquipmentCounts = [
-            equipableCounts[0][equip_name]
-            for equip_name in equipableCounts[0]
-            if equip_name != "length"
-        ]
-        plainEquipmentData = [
-            {equip_name: count}
-            for equip_name, count in zip(rawEquipmentNames, rawEquipmentCounts)
-        ]
-        # add upgrade stone data
-        # IMm_# = players inventory (todo later as it isn't usefull for calculations)
-        # EMm0_# = equips
-        # EMm1_# = tools
-        equipmentStoneData = json.loads(fields[f"EMm0_{i}"])
-
-        blankData = {
-            "Defence": 0,
-            "WIS": 0,
-            "STR": 0,
-            "LUK": 0,
-            "Weapon_Power": 0,
-            "AGI": 0,
-            "Reach": 0,
-            "Upgrade_Slots_Left": 0,
-            "Power": 0,
-            "Speed": 0,
-            "UQ1val": 0,
-        }
-
-        # add blank data to everything in the list first
-        for j in range(len(plainEquipmentData)):
-            plainEquipmentData[j]["stoneData"] = blankData
-
-        # go through stone data and add any that need to be added
-        keys = equipmentStoneData.keys()
-        for key in keys:
-            # (hacky fix) some weapon power is stored as "Weapon_Power" instead of "Power"
-            # if that happens, just add "Power" with the same value
-            if "Weapon_Power" in equipmentStoneData[key].keys():
-                equipmentStoneData[key]["Power"] = equipmentStoneData[key][
-                    "Weapon_Power"
-                ]
-
-            plainEquipmentData[int(key)]["stoneData"] = equipmentStoneData[key]
-
-        chars[i]["equipment"] = plainEquipmentData
-
-        rawToolNames = [
-            item_map.get(equipableNames[1][tool_name], "UNKNOWN")
-            for tool_name in equipableNames[1]
-            if tool_name != "length"
-        ]
-        rawToolCounts = [
-            equipableCounts[1][tool_name]
-            for tool_name in equipableCounts[1]
-            if tool_name != "length"
-        ]
-
-        plainToolData = [
-            {tool_name: count} for tool_name, count in zip(rawToolNames, rawToolCounts)
-        ]
-        toolStoneData = json.loads(fields[f"EMm1_{i}"])
-
-        # add blank data to everything in the list first
-        for j in range(len(plainToolData)):
-            plainToolData[j]["stoneData"] = blankData
-
-        # go through stone data and add any that need to be added
-        keys = toolStoneData.keys()
-        for key in keys:
-            # (hacky fix) some weapon power is stored as "Weapon_Power" instead of "Power"
-            # if that happens, just add "Power" with the same value
-            if "Weapon_Power" in toolStoneData[key].keys():
-                toolStoneData[key]["Power"] = toolStoneData[key]["Weapon_Power"]
-
-            plainToolData[int(key)]["stoneData"] = toolStoneData[key]
-
-        chars[i]["tools"] = plainToolData
-
-        rawFoodNames = [
-            item_map.get(equipableNames[2][food_name], "UNKNOWN")
-            for food_name in equipableNames[2]
-            if food_name != "length"
-        ]
-        rawFoodCounts = [
-            equipableCounts[2][food_name]
-            for food_name in equipableCounts[2]
-            if food_name != "length"
-        ]
-        chars[i]["food"] = [
-            {food_name: count} for food_name, count in zip(rawFoodNames, rawFoodCounts)
-        ]
-
-        # obols
-        obolNames = [
-            obol_name_map.get(obol_name, "UNKNOWN")
-            for obol_name in fields[f"ObolEqO0_{i}"]
-        ]
-        obolMap = json.loads(fields[f"ObolEqMAP_{i}"])
-
-        plainObolData = [
-            {"name": obolNames[id], "bonus": {}} for id, _ in enumerate(obolNames)
-        ]
-        for key in obolMap:
-            plainObolData[int(key)]["bonus"] = obolMap[key]
-
-        chars[i]["obols"] = plainObolData
-
-        statueArray = json.loads(fields[f"StatueLevels_{i}"])
-        statueItems = []
-        for statue in statueArray:
-            statueItems += [{"level": int(statue[0]), "progress": statue[1]}]
-
-        chars[i]["statueLevels"] = statueItems
-
-        cardsArray = [
-            card_equip_map.get(card_id, "UNKNOWN")
-            for card_id in fields[f"CardEquip_{i}"]
-        ]
-
-        chars[i]["cardsEquip"] = cardsArray
-
-        rawCardSet = json.loads(fields[f"CSetEq_{i}"])
-        cardSetName = rawCardSet
-        chars[i]["cardSetEquip"] = [
-            card_set_map.get(name, "UNKNOWN") for name in cardSetName
-        ]
-
-        rawSkillLevels = fields[f"Lv0_{i}"]
-        unmappedSkillLevels = [int(skill) for skill in rawSkillLevels]
-        mappedSkillLevels = {}
-        for skill_index, skill_level in enumerate(unmappedSkillLevels):
-
-            if skill_level != -1:
-                mappedSkillLevels[
-                    skill_index_map.get(skill_index, f"UNKNOWN-{skill_index}")
-                ] = skill_level
-
-        chars[i]["skillLevels"] = mappedSkillLevels
-
-        rawStarSignData = fields[f"PVtStarSign_{i}"]
-        starSignSplit = rawStarSignData.split(",")
-        for sign_index, sign in enumerate(starSignSplit):
-            starSignSplit[sign_index] = sign.replace("_", "-1")
-            if sign == "":
-                starSignSplit[sign_index] = "-1"
-
-        starSign1 = star_sign_map.get(int(starSignSplit[0]), "None")
-        starSign2 = star_sign_map.get(int(starSignSplit[1]), "None")
-        starSignFinal = [starSign1, starSign2]
-        chars[i]["starSigns"] = starSignFinal
-
-        unmappedTalents = json.loads(fields[f"SL_{i}"])
-
-        mappedTalents = {
-            talent_map.get(int(key), "UNKNOWN"): unmappedTalents[key]
-            for key in unmappedTalents.keys()
-        }
-
-        # regular talents
-        talentPages = class_talent_map.get(chars[i]["class"], "UNKNOWN")
-
-        orderedClassTalents = []
-
-        for key in talentPages:
-            orderedClassTalents += class_talent_page_map.get(
-                "Savvy Basics" if key == "Savy Basics" else key, ["UNKNOWN"]
-            )
-
-        indexedTalents = {
-            class_tenant: mappedTalents.get(class_tenant, "-1")
-            for class_tenant in orderedClassTalents
-        }
-
-        chars[i]["talentLevels"] = indexedTalents
-
-        starTalentList = class_talent_page_map["Star Talents"]
-        starTalentIndexed = {}
-        counter = 0
-        for starTalent in starTalentList:
-            if starTalent == "FILLER":
-                starLevel = 0
-                starTalent += f"_{counter}"
-                counter += 1
-
-            else:
-                starLevel = mappedTalents.get(starTalent, -1)
-
-            starTalentIndexed.update({starTalent: starLevel})
-
-        chars[i]["starTalentLevels"] = starTalentIndexed
-
-        # talent attack loadout
-        unmappedLoadoutRaw = json.loads(fields[f"AttackLoadout_{i}"])
-        # merge them all into one array
-        unmappedLoadout = []
-
-        for key in unmappedLoadoutRaw:
-            unmappedLoadout += key
-
-        # change talent IDs to their in-game names
-        mappedLoadout = []
-        for talentId in unmappedLoadout:
-            if talentId != "Null":
-                mappedLoadout += [talent_map.get(talentId, "Unknown")]
-
-        # change talent names to their readable form
-        for ix, word in enumerate(mappedLoadout):
-            mappedLoadout[ix] = " ".join(
-                [w.capitalize() for w in word.lower().split("_")]
-            )
-
-        chars[i]["attackLoadout"] = mappedLoadout
-        chars[i]["fishingToolkitEquipped"]["bait"] = fishing_bait_map.get(
-            int(fields[f"PVFishingToolkit_{i}"][0]), "UNKNOWN"
-        )
-        chars[i]["fishingToolkitEquipped"]["line"] = fishing_line_map.get(
-            int(fields[f"PVFishingToolkit_{i}"][1]), "UNKNOWN"
-        )
-
-        charEquippedBubbles = json.loads(fields["CauldronBubbles"])[i]
-        chars[i]["bubblesEquipped"] = [
-            large_bubble_map.get(char_bubble, f"UNKNOWN-{char_bubble}")
-            for char_bubble in charEquippedBubbles
-        ]
-
-        rawAnvil = fields[f"AnvilPA_{i}"]
-
-        # [0-13] of rawAnvil are each anvil product
-        # of each product...
-        # 0 = amount to be produced (claimed)
-        # 1 = amount of xp gained when claimed
-        # 2 = current progress? (idk need more proof but also kinda useless)
-        # 3 = ???
-        anvilProducts = []
-        for rawProductStats in rawAnvil:
-            anvilProducts += [
-                {
-                    "produced": int(rawProductStats["0"]),
-                    "xp": int(rawProductStats["1"]),
-                    "progress": float(rawProductStats["2"]),
-                    "3": int(rawProductStats["3"]),
-                }
-            ]
-
-        chars[i]["anvil"]["production"] = anvilProducts
+        chars[i].update(parser.get_char_equipment(i))  # armor + tools
+        chars[i]["obols"] = parser.get_char_obols(i)
+        chars[i]["statueLevels"] = parser.get_char_statues(i)
+        chars[i]["cardsEquip"] = parser.get_char_cards(i)
+        chars[i]["cardSetEquip"] = parser.get_char_card_set(i)
+        chars[i]["skillLevels"] = parser.get_char_skill_levels(i)
+        chars[i]["starSigns"] = parser.get_char_star_signs(i)
+        chars[i].update(parser.get_char_tlnt_lvls(i))  # talents + star talents levels
+        chars[i]["attackLoadout"] = parser.get_char_atk_loadout(i)
+        chars[i]["fishingToolkitEquipped"] = parser.get_char_fishing_toolkit(i)
+        chars[i]["bubblesEquipped"] = parser.get_char_bubbles(i)
+        chars[i]["anvil"]["production"] = parser.get_char_anvil(i)
     return chars
 
 
@@ -478,14 +230,16 @@ def fill_account_data(account: dict, characters: list, fields: dict) -> dict:
     for key in rawCardsData.keys():
         lookup = mob_map.get(key, "UNKNOWN")
         count = int(rawCardsData[key])
-        base = card_level_map.get(key)
+        base = card_level_map.get(key, f"UNKNOWN-{key}")
         if count == 0:
             starlevel = "Not Found"
-        elif count >= base * 9:
-            starlevel = "3 Star"
+        elif count > base * 5:
+            starlevel = "4 Star"
         elif count >= base * 4:
+            starlevel = "3 Star"
+        elif count >= base * 3:
             starlevel = "2 Star"
-        elif count >= base:
+        elif count >= base * 2:
             starlevel = "1 Star"
         else:
             starlevel = "Acquired"
@@ -753,13 +507,13 @@ def print_account(account: dict):
         print_line([column.capitalize()], [account[column]])
 
 
-def save_json(json_data: dict, filename: str = "new_json.json", indent:int=4):
+def save_json(json_data: dict, filename: str = "new_json.json", indent: int = 4):
     with open(filename, "w") as fp:
-        json.dump(json_data, fp, indent = indent)
+        json.dump(json_data, fp, indent=indent)
 
 
 if __name__ == "__main__":
-    filename = "raw_data.json"
+    filename = "resources/raw_data.json"
     with open(filename, "r") as fp:
         saveData = json.load(fp)
 
@@ -786,7 +540,11 @@ if __name__ == "__main__":
     }
 
     cake = parse_dough(raw_dough)
-    print_characters([cake["characters"][2]])
-    print_account(cake["account"])
+    # print_characters([cake["characters"][2]])
+    # print_account(cake["account"])
 
-    save_json(cake)
+    save_json(cake, filename="resources/cake.json")
+
+    cake_handler = CakeHandler("resources/cake.json")
+
+    inventory = cake_handler.get_char_inventory(0)
