@@ -131,6 +131,7 @@ item_map = {
     "EquipmentHats16": "Top_Hat",
     "EquipmentHats26": "Witch_Hat",
     "EquipmentHats60": "Adornment_of_the_High_Priest",
+    "EquipmentHats75": "Apple Launch Hat",
     "EquipmentPunching1": "Boxing_Gloves",
     "EquipmentPunching2": "The_Stingers",
     "EquipmentPunching3": "Bandage_Wraps",
@@ -1070,4 +1071,5 @@ item_map = {
     "GemQ7": "Infinite_Forge",
     "GemQ8": "Infinite_Forge",
     "Mayo": "Maynaise_Bottle",
+    "EquipmentKeychain14": "Watamelon Chain",
 }

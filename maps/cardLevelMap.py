@@ -4,6 +4,7 @@
 # 2 Star: c[2]*4
 # 3 Star: c[2]*9
 # where c[2] is the number values mapped here
+
 card_level_map = {
     "mushG": 5,
     "mushR": 10,
@@ -46,6 +47,11 @@ card_level_map = {
     "Fish1": 10,
     "Fish2": 10,
     "Fish3": 10,
+    "Fish4": 10,
+    "Fish5": 9,
+    "Fish6": -1,
+    "Fish7": -1,
+    "Fish8": -1,
     "Bug1": 10,
     "Bug2": 10,
     "Plat": 10,
@@ -55,7 +61,6 @@ card_level_map = {
     "PalmTree": 10,
     "ToiletTree": 10,
     "StumpTree": 10,
-    "Fish4": 10,
     "Bug3": 10,
     "Bug4": 10,
     "SoulCard1": 3,

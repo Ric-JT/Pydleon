@@ -53,6 +53,12 @@ skill_index_map = {
     7: "trapping",
     8: "construction",
     9: "worship",
+    10: "cooking",
+    11: "breeding",
+    12: "laboratory",
+    13: "sailing",
+    14: "gaiming",
+    15: "divinity",
 }
 
 obol_name_map = {
@@ -328,6 +334,7 @@ card_set_map = {
 
 # maps_the_weird_naming_convention_of_each_large_bubble_to_its_display_name
 large_bubble_map = {
+    0: "Locked",
     "_11": "Call_Me_Bob",
     "_6": "Sploosh_Sploosh",
     "_3": "Wyoming_Blood",

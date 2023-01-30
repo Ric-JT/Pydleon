@@ -42,6 +42,8 @@ card_equip_map = {
     "Fish1": "Goldfish (+% Total MP)",
     "Fish2": "Hermit Can (+% Total Fishing Efficiency)",
     "Fish3": "Jellyfish (+% Fishing EXP)",
+    "Fish4": "Bloach (+% Total Fishing Away Gains)",
+    "Fish5": "Skelefish (+% Total Fishing Efficiency)",
     "Bug1": "Flies (+% Monster EXP While Active)",
     "Bug2": "Butterflies (+% Total Catching Efficiency)",
     "Plat": "Plat (+% Mining Away Gains)",
