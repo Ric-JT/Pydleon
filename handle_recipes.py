@@ -246,7 +246,7 @@ class RecipeBook:
         """
         # Get cost for the new wishes
         wishes = {wish: wishes[wish] for wish in wishes if wishes[wish] > 0}
-        cost = self.get_cost_itemlist(wishes)
+        cost = self.get_itemlist_cost(wishes)
 
         # Add wishes to Grindlist
         _update_dict_add(self.grindlist, wishes)
