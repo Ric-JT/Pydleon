@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from typing import List, Dict
 
-from template_data import cake_template
+from resources.template_data import cake_template
 from maps.itemMap import item_map
 from maps.cardEquipMap import card_equip_map
 from maps.talentMap import talent_map
