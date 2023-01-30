@@ -47,7 +47,7 @@ class App:
     def goto_widget(self, origin_widget, target_widget):
         self.deactivate_widget(origin_widget)
         self.activate_widget(target_widget)
-        target_widget.refresh()
+        target_widget.refresh(True)
 
     def quit(self):
         self.done = True
@@ -75,31 +75,38 @@ class App:
 
 
 class StartWidget(Widget):
+    keyfuncs = {}
+
     def __init__(self, app: App, parent=None):
         super().__init__(app, parent)
         self.window = curses.newwin(MAXSIZE_Y - 2, MAXSIZE_X - 2, 1, 1)
         self.selection = 0
 
-    def run(self, key):
-        if key == curses.KEY_DOWN:
-            self.selection += 1
-            self.selection = min(1, self.selection)
-        elif key == curses.KEY_UP:
-            self.selection -= 1
-            self.selection = max(0, self.selection)
-        elif key == 10:
-            if self.selection == 0:
-                grindlist_widget = self.app.get("smithing_grindlist")
-                self.app.goto_widget(self, grindlist_widget)
-                return
-            elif self.selection == 1:
-                self.app.quit()
-                return
-
+    @Widget.bind(keyfuncs, curses.KEY_DOWN)
+    def go_down(self):
+        self.selection += 1
+        self.selection = min(1, self.selection)
         self.refresh()
 
-    def refresh(self):
-        self.window.clear()
+    @Widget.bind(keyfuncs, curses.KEY_UP)
+    def go_up(self):
+        self.selection -= 1
+        self.selection = max(0, self.selection)
+        self.refresh()
+
+    @Widget.bind(keyfuncs, 10)
+    def press_button(self):
+        if self.selection == 0:
+            grindlist_widget = self.app.get("smithing_grindlist")
+            self.app.goto_widget(self, grindlist_widget)
+            return
+        elif self.selection == 1:
+            self.app.quit()
+            return
+
+    def refresh(self, clr=False):
+        if clr:
+            self.window.clear()
 
         addstr_centered_horizontally(
             self.window,
@@ -140,8 +147,9 @@ class SmithingGrindlistWidget(Widget):
 
         self.refresh()
 
-    def refresh(self):
-        self.window.clear()
+    def refresh(self, clr=False):
+        if clr:
+            self.window.clear()
 
         addstr_centered_horizontally(
             self.window,

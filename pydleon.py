@@ -18,13 +18,29 @@ def addstr_centered_horizontally(
 
 
 class Widget:
+    keyfuncs = {}
+
     def __init__(self, app, parent=None):
         self.app: App = app
         self.parent = parent
         self.winlist = []
 
-    def run(self, key):
-        raise NotImplementedError()
+    def bind(keyfuncs, key):
+        def decorator(func):
+            keyfuncs.update({key: func})
 
-    def refresh(self):
+            def wrapper(self):
+                bound_func = func.__get__(type(self), self)
+                return bound_func(self)
+
+            return wrapper
+
+        return decorator
+
+    def run(self, key):
+        if key not in self.keyfuncs:
+            return
+        self.keyfuncs[key](self)
+
+    def refresh(self, clr=False):
         raise NotImplementedError()
