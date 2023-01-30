@@ -62,7 +62,7 @@ def print_hline(n: int = 100):
 
 
 class RecipeBook:
-    def __init__(self, recipes: dict = {}):
+    def __init__(self, filename: str):
         """This is the initial function of Recipe Book. It initiates the attributes of the class.
 
         Attributes:
@@ -88,6 +88,12 @@ class RecipeBook:
         recipes : dict, optional
             Recipe book as a dictionary, by default {}
         """
+        try:
+            with open(filename, "r") as file:
+                recipes: dict = json.load(file)
+        except Exception as E:
+            raise (E)
+
         self.recipes: dict = recipes
         self.bag: dict = {}
 
@@ -176,7 +182,7 @@ class RecipeBook:
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
         # Get possible recipes based on Recipe Book Bag
-        self.possible_recipes = recipe_book.get_recipes_by_ingredients(self.bag)
+        self.possible_recipes = self.get_recipes_by_ingredients(self.bag)
 
     def get_item_cost(self, item: str, number: int) -> dict:
         """Get the cost in materials of certain number of one type of item.
@@ -246,7 +252,7 @@ class RecipeBook:
         """
         # Get cost for the new wishes
         wishes = {wish: wishes[wish] for wish in wishes if wishes[wish] > 0}
-        cost = self.get_cost_itemlist(wishes)
+        cost = self.get_itemlist_cost(wishes)
 
         # Add wishes to Grindlist
         _update_dict_add(self.grindlist, wishes)
@@ -293,11 +299,9 @@ class RecipeBook:
 if __name__ == "__main__":
     # Open recipes Json
     recipes_json_filename = "recipes.json"
-    with open(recipes_json_filename, "r") as file:
-        recipes = json.load(file)
 
     # Build Recipe Book
-    recipe_book = RecipeBook(recipes=recipes)
+    recipe_book = RecipeBook(filename=recipes_json_filename)
 
     # Initiate Inventory Bag
     bag = {"Crimson String": 20, "Cue Tape": 5, "Spore Cap": 10, "Copper Bar": 10000}

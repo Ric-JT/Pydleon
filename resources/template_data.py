@@ -1,3 +1,17 @@
+stone_upgrade_template = {
+    "Defence": 0,
+    "WIS": 0,
+    "STR": 0,
+    "LUK": 0,
+    "Weapon_Power": 0,
+    "AGI": 0,
+    "Reach": 0,
+    "Upgrade_Slots_Left": 0,
+    "Power": 0,
+    "Speed": 0,
+    "UQ1val": 0,
+}
+
 cake_template: dict = {
     "account": {
         "bundlesPurchased": {},
