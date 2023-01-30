@@ -1,1194 +1,1194 @@
 Name,id
-Copper Ore,0
-Iron Ore,1
-Slushy Obol of Much Dilapidation,1
-Gold Ore,2
-Platinum Ore,3
-Dementia Ore,4
-Void Ore,5
-Lustre Ore,6
-Starfire Ore,7
-Dreadlo Ore,8
-Godshard Ore,9
-Copper Bar,10
-Iron Bar,11
-Talent S Stamp,11
-Gold Bar,12
-Platinum Bar,13
-Dementia Bar,14
-Void Bar,15
-Lustre Bar,16
-Starfire Bar,17
-Dreadlo Bar,18
-Godshard Bar,19
-Oak Logs,20
-Bleach Logs,21
-Jungle Logs,22
-Forest Fibres,23
-Potty Rolls,24
+Copper_Ore,0
+Iron_Ore,1
+Slushy_Obol_of_Much_Dilapidation,1
+Gold_Ore,2
+Platinum_Ore,3
+Dementia_Ore,4
+Void_Ore,5
+Lustre_Ore,6
+Starfire_Ore,7
+Dreadlo_Ore,8
+Godshard_Ore,9
+Copper_Bar,10
+Iron_Bar,11
+Talent_S_Stamp,11
+Gold_Bar,12
+Platinum_Bar,13
+Dementia_Bar,14
+Void_Bar,15
+Lustre_Bar,16
+Starfire_Bar,17
+Dreadlo_Bar,18
+Godshard_Bar,19
+Oak_Logs,20
+Bleach_Logs,21
+Jungle_Logs,22
+Forest_Fibres,23
+Potty_Rolls,24
 Tropilogs,25
-Veiny Logs,26
-Tundra Logs,27
-Wispy Lumber,28
-Alien Hive Chunk,29
-Cubed Logs,30
-Maple Logs,31
+Veiny_Logs,26
+Tundra_Logs,27
+Wispy_Lumber,28
+Alien_Hive_Chunk,29
+Cubed_Logs,30
+Maple_Logs,31
 Dandielogs,32
-Grass Leaf,33
-Twisty Leaf,34
-Arctic Leaf,35
-Galactic Leaf,36
-Magma Leaf,37
+Grass_Leaf,33
+Twisty_Leaf,34
+Arctic_Leaf,35
+Galactic_Leaf,36
+Magma_Leaf,37
 Goldfish,38
-Hermit Can,39
+Hermit_Can,39
 Jellyfish,40
 Bloach,41
 Skelefish,42
-Sand Shark,43
-Manta Ray,44
+Sand_Shark,43
+Manta_Ray,44
 Kraken,45
 Fly,46
 Butterfly,47
-Sentient Cereal,48
+Sentient_Cereal,48
 Fruitfly,49
 Mosquisnow,50
 Flycicle,51
-Worker Bee,52
+Worker_Bee,52
 Fairy,53
 Scarab,54
-Dust Mote,55
+Dust_Mote,55
 Froge,56
-Poison Froge,57
+Poison_Froge,57
 Crabbo,58
-Mutant Crabbo,59
+Mutant_Crabbo,59
 Scorpie,60
-Crescent Scorpie,61
+Crescent_Scorpie,61
 Mousey,62
-Nakeo Moleo,63
+Nakeo_Moleo,63
 Owlio,64
 Minervowl,65
 Pingy,66
-Eternal Lord of The Undying Ember,67
+Eternal_Lord_of_The_Undying_Ember,67
 Bunny,68
 Purbunni,69
-Dung Beat,70
-Jade Scarab,71
+Dung_Beat,70
+Jade_Scarab,71
 Honker,72
-Diamond Duck,73
+Diamond_Duck,73
 Blobfish,74
 Voodofish,75
-Forest Soul,76
-Dune Soul,77
-Rooted Soul,78
-Frigid Soul,79
-Squishy Soul,80
-Oozie Soul,81
-Redox Salts,82
-Explosive Salts,83
-Spontaneity Salts,84
-Dioxide Synthesis,85
-Purple Salt,86
-Nullo Salt,87
+Forest_Soul,76
+Dune_Soul,77
+Rooted_Soul,78
+Frigid_Soul,79
+Squishy_Soul,80
+Oozie_Soul,81
+Redox_Salts,82
+Explosive_Salts,83
+Spontaneity_Salts,84
+Dioxide_Synthesis,85
+Purple_Salt,86
+Nullo_Salt,87
 Thread,88
-Crimson String,89
-Cue Tape,90
-Trusty Nails,91
-Boring Brick,92
-Chain Link,93
-Leather Hide,94
-Pinion Spur,95
-Lugi Bracket,96
-Purple Screw,97
+Crimson_String,89
+Cue_Tape,90
+Trusty_Nails,91
+Boring_Brick,92
+Chain_Link,93
+Leather_Hide,94
+Pinion_Spur,95
+Lugi_Bracket,96
+Purple_Screw,97
 Thingymabob,98
-Tangled Cords,99
-PVC Pipe,100
-Crude Oil,101
-Kapow Stamp,101
-Toxic Sludge,102
-Feather Stamp,102
-Radioactive Waste,103
-Stat Graph Stamp,103
-Glumlee's Special Tutorial Oil,104
-Pickaxe Stamp,104
-Eco Friendly Oil,105
-High IQ Lumber Stamp,105
-Magma Barrel,106
-Bag o Heads Stamp,106
-Distilled Water,107
-Saw Stamp,107
-Dense Water,108
-Egg Stamp,108
-Spore Cap,109
-Gold Ball Stamp,109
-Frog Leg,110
-Bean Slices,111
-Inventory Bag E,111
-Red Spore Cap,112
-Wealthy Wallet,112
-Slime Sludge,113
-Storage Chest 5,113
-Snake Skin,114
-Storage Chest 15,114
-Carrot Cube,115
-Storage Chest 25,115
-Glublin Ear,116
-Electrical Wiring,116
+Tangled_Cords,99
+PVC_Pipe,100
+Crude_Oil,101
+Kapow_Stamp,101
+Toxic_Sludge,102
+Feather_Stamp,102
+Radioactive_Waste,103
+Stat_Graph_Stamp,103
+Glumlee's_Special_Tutorial_Oil,104
+Pickaxe_Stamp,104
+Eco_Friendly_Oil,105
+High_IQ_Lumber_Stamp,105
+Magma_Barrel,106
+Bag_o_Heads_Stamp,106
+Distilled_Water,107
+Saw_Stamp,107
+Dense_Water,108
+Egg_Stamp,108
+Spore_Cap,109
+Gold_Ball_Stamp,109
+Frog_Leg,110
+Bean_Slices,111
+Inventory_Bag_E,111
+Red_Spore_Cap,112
+Wealthy_Wallet,112
+Slime_Sludge,113
+Storage_Chest_5,113
+Snake_Skin,114
+Storage_Chest_15,114
+Carrot_Cube,115
+Storage_Chest_25,115
+Glublin_Ear,116
+Electrical_Wiring,116
 Plank,117
-Bullfrog Horn,118
-Crash Box,118
-Corn Kernels,119
-Eternal Card Pack,119
-Golden Plop,120
-Rats Tail,121
+Bullfrog_Horn,118
+Crash_Box,118
+Corn_Kernels,119
+Eternal_Card_Pack,119
+Golden_Plop,120
+Rats_Tail,121
 Bonemeal,122
 Stick,123
-Woodular Circle,124
+Woodular_Circle,124
 Acorn,125
-Baba Yaga Baby Eggs,126
-Pocket Sand,127
-Glass Shard,128
-Megalodon Tooth,129
-Crabby Cakey,130
-Nuget Cake,131
+Baba_Yaga_Baby_Eggs,126
+Pocket_Sand,127
+Glass_Shard,128
+Megalodon_Tooth,129
+Crabby_Cakey,130
+Nuget_Cake,131
 Coconotnotto,132
-Furled Flag,133
-Pincer Arm,134
-Potato Remains,135
-High Steaks,136
-Wakka Cherry,137
+Furled_Flag,133
+Pincer_Arm,134
+Potato_Remains,135
+High_Steaks,136
+Wakka_Cherry,137
 Ghost,138
-Chizoar's Cavern Key,138
+Chizoar's_Cavern_Key,138
 Singlecle,139
-Talent Point Special Tab,139
+Talent_Point_Special_Tab,139
 Shrapshell,140
-Floof Ploof,141
-Melty Cube,142
-Yellow Snowflake,143
-Moustache Comb,144
-Ram Wool,145
-Sticky Stick,146
-Mamooth Tusk,147
-Ice Age 3,148
-Snow Ball,149
+Floof_Ploof,141
+Melty_Cube,142
+Yellow_Snowflake,143
+Moustache_Comb,144
+Ram_Wool,145
+Sticky_Stick,146
+Mamooth_Tusk,147
+Ice_Age_3,148
+Snow_Ball,149
 Pen,150
-Cracked Glass,151
-Sippy Straw,152
-Cryosnake Skin,153
-Audio Cord,154
-Contact Lense,155
-Black Lense,156
-Blood Bone,157
-Purple Mush Cap,158
-TV Remote,159
-Lost Batteries,160
-Half Eaten Donut,161
-Genie Lamp,162
-Bottle Cap,163
-Wurm Tail,164
-Tongue Bone,165
-Crumpled Wrapper,166
-Smol Worm,167
-Empty Oyster Shell,168
-Pearler Shell,169
-Wriggly Ball,170
-Gel Chunk,171
-Condensed Zap,172
-Amarok Slab,173
-Chaotic Amarok Slab,174
-Ripped Tunic,175
-Ribbed Tunic,176
-Chizoar Spike,177
-Chizoar Stalagmite,178
-Troll Scales,179
-Suggma Ashes,180
-Royal Suggma Urn,181
-Plated Crumbs,182
-Sundried Glass,183
-Cheesy Crumbs,184
-Stilt Pole,185
+Cracked_Glass,151
+Sippy_Straw,152
+Cryosnake_Skin,153
+Audio_Cord,154
+Contact_Lense,155
+Black_Lense,156
+Blood_Bone,157
+Purple_Mush_Cap,158
+TV_Remote,159
+Lost_Batteries,160
+Half_Eaten_Donut,161
+Genie_Lamp,162
+Bottle_Cap,163
+Wurm_Tail,164
+Tongue_Bone,165
+Crumpled_Wrapper,166
+Smol_Worm,167
+Empty_Oyster_Shell,168
+Pearler_Shell,169
+Wriggly_Ball,170
+Gel_Chunk,171
+Condensed_Zap,172
+Amarok_Slab,173
+Chaotic_Amarok_Slab,174
+Ripped_Tunic,175
+Ribbed_Tunic,176
+Chizoar_Spike,177
+Chizoar_Stalagmite,178
+Troll_Scales,179
+Suggma_Ashes,180
+Royal_Suggma_Urn,181
+Plated_Crumbs,182
+Sundried_Glass,183
+Cheesy_Crumbs,184
+Stilt_Pole,185
 Hampter,186
 Meteorite,187
-Shattered Skull,188
-Orange Slice,189
-OJ Juice,190
-Molten Lamp,191
+Shattered_Skull,188
+Orange_Slice,189
+OJ_Juice,190
+Molten_Lamp,191
 Spitfire,192
-Hard Hat,193
-Wormie Slices,194
-Mongo Worm Slices,195
-Farmer Brim,196
-Mark of Member,197
-Leather Cap,198
-White Headband,199
-Green Headband,200
-Red Headband,201
-Purple Tupacband,202
-Yellow Headband,203
-Pink Headband,204
-Grey Beret,205
-Traffic Cone,206
-Propeller Cap,207
-Baseball Hat,208
-Stump Prop,209
-Copper Helmet,210
-Iron Helmet,211
-Gold Helmet,212
-Amarok Helmet,213
-Platinum Helmet,214
-Dementia Helmet,215
-Efaunt Helmet,216
-Void Imperium Helmet,217
-Chizoar Helmet,218
-Lustre Veil,219
-Diabolical Headcase,220
-Thin Veil of The Troll,221
-Magma Core Headdress,222
-Birthday Hat,223
-Bored Beanie,224
-Royal Turban,225
-Paper Boat,226
-Alien Headband,227
-Cowbo Galloneer,228
-Grandma Disguise,229
-Santa Hat,230
+Hard_Hat,193
+Wormie_Slices,194
+Mongo_Worm_Slices,195
+Farmer_Brim,196
+Mark_of_Member,197
+Leather_Cap,198
+White_Headband,199
+Green_Headband,200
+Red_Headband,201
+Purple_Tupacband,202
+Yellow_Headband,203
+Pink_Headband,204
+Grey_Beret,205
+Traffic_Cone,206
+Propeller_Cap,207
+Baseball_Hat,208
+Stump_Prop,209
+Copper_Helmet,210
+Iron_Helmet,211
+Gold_Helmet,212
+Amarok_Helmet,213
+Platinum_Helmet,214
+Dementia_Helmet,215
+Efaunt_Helmet,216
+Void_Imperium_Helmet,217
+Chizoar_Helmet,218
+Lustre_Veil,219
+Diabolical_Headcase,220
+Thin_Veil_of_The_Troll,221
+Magma_Core_Headdress,222
+Birthday_Hat,223
+Bored_Beanie,224
+Royal_Turban,225
+Paper_Boat,226
+Alien_Headband,227
+Cowbo_Galloneer,228
+Grandma_Disguise,229
+Santa_Hat,230
 Jar,231
-Big Pretty Bow,232
-Steam Cap,233
-Bunny Ears,234
-Summer Shell,235
-Nuget Cake Fedora,236
-Honker Hat,237
-Acorn Topper,238
-Real Civil Engineer Helmet,239
-Apple Launch Hat,240
-Funny Hat,241
+Big_Pretty_Bow,232
+Steam_Cap,233
+Bunny_Ears,234
+Summer_Shell,235
+Nuget_Cake_Fedora,236
+Honker_Hat,237
+Acorn_Topper,238
+Real_Civil_Engineer_Helmet,239
+Apple_Launch_Hat,240
+Funny_Hat,241
 Meteorhead,242
-Ice Guard Helmet,243
-Militia Helm,244
-Viking Cap,245
-Murmillo Helm,246
-Thief Hood,247
-Sleek Coif,248
-Conquistador Plume,249
-Top Hat,250
-Witch Hat,251
-Adornment of the High Priest,252
-Boxing Gloves,253
-The Stingers,254
-Bandage Wraps,255
-Uninflated Glove,256
-Eclectic Ordeal,257
-Knuckle Sabers,258
-Diabolical Gauntlet,259
-Molten Core Knucklers,260
-Wooden Spear,261
-Steel Axe,262
-Royal Bayonet,263
-Enforced Slasher,264
-The Ice Breaker,265
+Ice_Guard_Helmet,243
+Militia_Helm,244
+Viking_Cap,245
+Murmillo_Helm,246
+Thief_Hood,247
+Sleek_Coif,248
+Conquistador_Plume,249
+Top_Hat,250
+Witch_Hat,251
+Adornment_of_the_High_Priest,252
+Boxing_Gloves,253
+The_Stingers,254
+Bandage_Wraps,255
+Uninflated_Glove,256
+Eclectic_Ordeal,257
+Knuckle_Sabers,258
+Diabolical_Gauntlet,259
+Molten_Core_Knucklers,260
+Wooden_Spear,261
+Steel_Axe,262
+Royal_Bayonet,263
+Enforced_Slasher,264
+The_Ice_Breaker,265
 Deuscythe,266
-Slimsharp Fin,267
-Diabolical Flesh Ripper,268
-Magma Maul,269
-Wooden Bow,270
-Birch Longbow,271
-Carrot Launcher,272
-Spiked Menace,273
-Pharoah Bow,274
-Blizzard Bow,275
-Blackhole Bow,276
-Shardsure Leif,277
-Diabolical Continuit,278
-Sediment Core Grunkler,279
-Gnarled Wand,280
+Slimsharp_Fin,267
+Diabolical_Flesh_Ripper,268
+Magma_Maul,269
+Wooden_Bow,270
+Birch_Longbow,271
+Carrot_Launcher,272
+Spiked_Menace,273
+Pharoah_Bow,274
+Blizzard_Bow,275
+Blackhole_Bow,276
+Shardsure_Leif,277
+Diabolical_Continuit,278
+Sediment_Core_Grunkler,279
+Gnarled_Wand,280
 Quarterstaff,281
 Starlight,282
-Crows Nest,283
-Spriggly Storm,284
-Grey Gatsby,285
-Skullslip Hallow,286
-Diabolical Opticule,287
-Cattle Core Soothsayer Staff,288
-Orange Tee,289
-MCR Tshirt,290
+Crows_Nest,283
+Spriggly_Storm,284
+Grey_Gatsby,285
+Skullslip_Hallow,286
+Diabolical_Opticule,287
+Cattle_Core_Soothsayer_Staff,288
+Orange_Tee,289
+MCR_Tshirt,290
 Planktop,291
-Hide Shirt,292
-Green Tee,293
-Purple Tee,294
-Blue Tee,295
-Spore Tee,296
-Black Tee,297
-Tattered Cloth,298
-Fur Shirt,299
-Copper Platebody,300
-Iron Platebody,301
-Gold Platebody,302
-Amarok Bodyplate,303
-Platinum Platbody,304
-Studded Hide,305
-Feral Leathering,306
-Furled Robes,307
-Dementia Body,308
-Efaunt Ribcage,309
-Void Imperium Platebody,310
-Member Hoodie,311
-Damascus Plates,312
-Evergreen Wraps,313
-Elegantine Robes,314
-Chizoar Bodyplate,315
-Lustre Chestplate,316
-Diabolical Abdomen,317
-Trollish Garb,318
-Magma Core Wavemaille,319
-Torn Jeans,320
-Copper Platelegs,321
-Iron Platelegs,322
-Gold Platelegs,323
-Amarok Hinds,324
-Platinum Shins,325
-Dementia Shins,326
-Efaunt Hipilium,327
-Void Imperium Shardshins,328
-Give Up On Life Pants,329
-Bleached Designer Wode Patch Pants,330
-Adam's Leaf,331
-Dirty Coal Miner Baggy Soot Pants,332
-Trimmed Rune Platelegs,333
-Fishing Overalls,334
-Bandito Pantaloon,335
-Chizoar Scaled Leggings,336
-Lustre Scales,337
-Diabolical Trimed Leg Guards,338
-Twisted Scales,339
-Magma Core Battleskirt,340
-Copper Boots,341
-Flip Flops,342
-Iron Boots,343
-Gold Boots,344
-Amarok Paws,345
-Platinum Boots,346
-Dementia Boots,347
-Efaunts Broken Ankles,348
-Void Imperium Kicks,349
-Goo Galoshes,350
-Cavern Trekkers,351
-Logger Heels,352
-Angler Boots,353
-Bandito Boots,354
-Eyern Boots,355
-Chizoar Walkers,356
-Rough Rockers,357
-Fiberous Footings,358
-Deep Sea Galoshes,359
-Spaggy Westerados,360
-Cooking Clogs,361
-Chef Hat Shoes,362
-Laboratory Scrubs,363
-Sheek Scrubs,364
-Lustre Shieldshoe,365
-Diabolical Toe Tips,366
-Soles of the Troll,367
-Magma Core Lavarunners,368
-Little Wooden Katana,369
-Sleek Shank,370
-Carrot Horror,371
+Hide_Shirt,292
+Green_Tee,293
+Purple_Tee,294
+Blue_Tee,295
+Spore_Tee,296
+Black_Tee,297
+Tattered_Cloth,298
+Fur_Shirt,299
+Copper_Platebody,300
+Iron_Platebody,301
+Gold_Platebody,302
+Amarok_Bodyplate,303
+Platinum_Platbody,304
+Studded_Hide,305
+Feral_Leathering,306
+Furled_Robes,307
+Dementia_Body,308
+Efaunt_Ribcage,309
+Void_Imperium_Platebody,310
+Member_Hoodie,311
+Damascus_Plates,312
+Evergreen_Wraps,313
+Elegantine_Robes,314
+Chizoar_Bodyplate,315
+Lustre_Chestplate,316
+Diabolical_Abdomen,317
+Trollish_Garb,318
+Magma_Core_Wavemaille,319
+Torn_Jeans,320
+Copper_Platelegs,321
+Iron_Platelegs,322
+Gold_Platelegs,323
+Amarok_Hinds,324
+Platinum_Shins,325
+Dementia_Shins,326
+Efaunt_Hipilium,327
+Void_Imperium_Shardshins,328
+Give_Up_On_Life_Pants,329
+Bleached_Designer_Wode_Patch_Pants,330
+Adam's_Leaf,331
+Dirty_Coal_Miner_Baggy_Soot_Pants,332
+Trimmed_Rune_Platelegs,333
+Fishing_Overalls,334
+Bandito_Pantaloon,335
+Chizoar_Scaled_Leggings,336
+Lustre_Scales,337
+Diabolical_Trimed_Leg_Guards,338
+Twisted_Scales,339
+Magma_Core_Battleskirt,340
+Copper_Boots,341
+Flip_Flops,342
+Iron_Boots,343
+Gold_Boots,344
+Amarok_Paws,345
+Platinum_Boots,346
+Dementia_Boots,347
+Efaunts_Broken_Ankles,348
+Void_Imperium_Kicks,349
+Goo_Galoshes,350
+Cavern_Trekkers,351
+Logger_Heels,352
+Angler_Boots,353
+Bandito_Boots,354
+Eyern_Boots,355
+Chizoar_Walkers,356
+Rough_Rockers,357
+Fiberous_Footings,358
+Deep_Sea_Galoshes,359
+Spaggy_Westerados,360
+Cooking_Clogs,361
+Chef_Hat_Shoes,362
+Laboratory_Scrubs,363
+Sheek_Scrubs,364
+Lustre_Shieldshoe,365
+Diabolical_Toe_Tips,366
+Soles_of_the_Troll,367
+Magma_Core_Lavarunners,368
+Little_Wooden_Katana,369
+Sleek_Shank,370
+Carrot_Horror,371
 Tarantulight,372
 Fuscismatia,373
-Strung Bludgeon,374
-Chaotic Amarok Pendant,375
-Strung Steamy,376
-Cedar Pendant,377
-Fishhead Pendant,378
-Deathly Cluster Pendant,379
-Hallowed Tail Pendant,380
-Persephones Bouquet,381
-Chizoars Blankie,382
-Chizoars Caustic Scarf,383
-Polished Bludgeon,384
-Skullfish Pendant,385
-Crescent Moon Pendant,386
-Copper Band,387
-Steel Band,388
-Death Wish,389
-Pugilist Demise,390
-Defenders Dignity,391
-Frisbee Ring,392
-Silver Stopwatch,393
-Dooble Goopi,394
-Sanic Ring,395
-Efaunt Trunculus,396
-Elf Twist Ring,397
-Rex Ring,398
-Bejeweled Ring,399
-Tenacity Ring,400
-The Emperor's Opal,401
-Neutron Ice Ring,402
-Lab Ring,403
-Chef Ring,404
-Serrated Rex Ring,405
-Protectors Pride,406
-Midnight Stopwatch,407
-Dawn Stopwatch,408
-Souped Lab Ring,409
-Tundra Killer Ring,410
-Nebula Killer Ring,411
-Dune Killer Ring,412
-Meteorite Ring,413
-Angel Wings,414
-Easter Egg Backpack,415
-Radiant Amarok Backstabber,416
-Gilded Efaunt Dislodged Tusks,417
-Blighted Chizoar Shard Cape,418
-Cascading Scaled Cape of Krieg,419
-Molten Cloak,420
-Simple Key Chain,421
-Leafy Chain,422
-Red Sneaker Chain,423
-Wartooth Chain,424
-8 Ball Chain,425
-Piggy Chain,426
-Dumbphone Chain,427
-Horn Chain,428
-Rustic Key Chain,429
-Taco Chain,430
-Cactus Chain,431
-Relic Chain,432
-Balloon Dog Chain,433
-Frozen Tart Chain,434
-Whatamelon Chain,435
-9 Ball Chain,436
-Pincer Hand Chain,437
-Gilded Key Chain,438
-Sushi Chain,439
-Time Candy Chain,440
-Star Blobulyte Galaxy Chain,441
-Mmm Donut Chain,442
-Negative 7 Chain,443
-Diamond Honker Chain,444
-BobGoldPickle Chain,445
-Eye Owe Ess Chain,446
-Key to Desert Chain,447
-Key to Mountains Chain,448
-Key to Purgatory Chain,449
-King of Food,450
-Lucky Lad,451
-Club Member,452
-Dice Dynamo,453
-Blunder Hero,454
-Original Gamer,455
+Strung_Bludgeon,374
+Chaotic_Amarok_Pendant,375
+Strung_Steamy,376
+Cedar_Pendant,377
+Fishhead_Pendant,378
+Deathly_Cluster_Pendant,379
+Hallowed_Tail_Pendant,380
+Persephones_Bouquet,381
+Chizoars_Blankie,382
+Chizoars_Caustic_Scarf,383
+Polished_Bludgeon,384
+Skullfish_Pendant,385
+Crescent_Moon_Pendant,386
+Copper_Band,387
+Steel_Band,388
+Death_Wish,389
+Pugilist_Demise,390
+Defenders_Dignity,391
+Frisbee_Ring,392
+Silver_Stopwatch,393
+Dooble_Goopi,394
+Sanic_Ring,395
+Efaunt_Trunculus,396
+Elf_Twist_Ring,397
+Rex_Ring,398
+Bejeweled_Ring,399
+Tenacity_Ring,400
+The_Emperor's_Opal,401
+Neutron_Ice_Ring,402
+Lab_Ring,403
+Chef_Ring,404
+Serrated_Rex_Ring,405
+Protectors_Pride,406
+Midnight_Stopwatch,407
+Dawn_Stopwatch,408
+Souped_Lab_Ring,409
+Tundra_Killer_Ring,410
+Nebula_Killer_Ring,411
+Dune_Killer_Ring,412
+Meteorite_Ring,413
+Angel_Wings,414
+Easter_Egg_Backpack,415
+Radiant_Amarok_Backstabber,416
+Gilded_Efaunt_Dislodged_Tusks,417
+Blighted_Chizoar_Shard_Cape,418
+Cascading_Scaled_Cape_of_Krieg,419
+Molten_Cloak,420
+Simple_Key_Chain,421
+Leafy_Chain,422
+Red_Sneaker_Chain,423
+Wartooth_Chain,424
+8_Ball_Chain,425
+Piggy_Chain,426
+Dumbphone_Chain,427
+Horn_Chain,428
+Rustic_Key_Chain,429
+Taco_Chain,430
+Cactus_Chain,431
+Relic_Chain,432
+Balloon_Dog_Chain,433
+Frozen_Tart_Chain,434
+Whatamelon_Chain,435
+9_Ball_Chain,436
+Pincer_Hand_Chain,437
+Gilded_Key_Chain,438
+Sushi_Chain,439
+Time_Candy_Chain,440
+Star_Blobulyte_Galaxy_Chain,441
+Mmm_Donut_Chain,442
+Negative_7_Chain,443
+Diamond_Honker_Chain,444
+BobGoldPickle_Chain,445
+Eye_Owe_Ess_Chain,446
+Key_to_Desert_Chain,447
+Key_to_Mountains_Chain,448
+Key_to_Purgatory_Chain,449
+King_of_Food,450
+Lucky_Lad,451
+Club_Member,452
+Dice_Dynamo,453
+Blunder_Hero,454
+Original_Gamer,455
 Trailblazer,456
-Ultra Unboxer,457
-Critter Baron,458
-YumYum Sheriff,459
+Ultra_Unboxer,457
+Critter_Baron,458
+YumYum_Sheriff,459
 Megalodon,460
-Club Maestro,461
-Beach Bro,462
-Frost Prince,463
-Idle Skiller,464
-Junk Pickaxe,465
-Copper Pickaxe,466
-Iron Pickaxe,467
-Gold Pickaxe,468
-Platinum Pickaxe,469
-Dementia Pickaxe,470
-Void Imperium Pik,471
-Lustre Pickaxe,472
-Starfire Pickaxe,473
-Dreadlo Pickolo,474
-Poopy Pickaxe,475
-Skewered Snek,476
-Old Hatchet,477
-Copper Chopper,478
-Iron Hatchet,479
-Stinky Axe,480
-Golden Axe,481
-Plat Hatchet,482
-Dementia Dicer,483
-Void Imperium Axe,484
-Lustre Logger,485
-Starfire Hatchet,486
-Dreadlo Eviscerator,487
-Annihilator of the Yggdrasil,488
-Grumbie the Hatchet Hammer,489
-Copper Fish Rod,490
-Iron Fishing Rod,491
-Gold Fishing Rod,492
-Plat Fishing Rod,493
-Dementia Rod for Fishing,494
-Void Imperium Rod,495
-Lustre Rod,496
-Starfire Rod,497
-Dreadlo Rod,498
-Copper Netted Net,499
-Reinforced Net,500
-Golden Net,501
+Club_Maestro,461
+Beach_Bro,462
+Frost_Prince,463
+Idle_Skiller,464
+Junk_Pickaxe,465
+Copper_Pickaxe,466
+Iron_Pickaxe,467
+Gold_Pickaxe,468
+Platinum_Pickaxe,469
+Dementia_Pickaxe,470
+Void_Imperium_Pik,471
+Lustre_Pickaxe,472
+Starfire_Pickaxe,473
+Dreadlo_Pickolo,474
+Poopy_Pickaxe,475
+Skewered_Snek,476
+Old_Hatchet,477
+Copper_Chopper,478
+Iron_Hatchet,479
+Stinky_Axe,480
+Golden_Axe,481
+Plat_Hatchet,482
+Dementia_Dicer,483
+Void_Imperium_Axe,484
+Lustre_Logger,485
+Starfire_Hatchet,486
+Dreadlo_Eviscerator,487
+Annihilator_of_the_Yggdrasil,488
+Grumbie_the_Hatchet_Hammer,489
+Copper_Fish_Rod,490
+Iron_Fishing_Rod,491
+Gold_Fishing_Rod,492
+Plat_Fishing_Rod,493
+Dementia_Rod_for_Fishing,494
+Void_Imperium_Rod,495
+Lustre_Rod,496
+Starfire_Rod,497
+Dreadlo_Rod,498
+Copper_Netted_Net,499
+Reinforced_Net,500
+Golden_Net,501
 Platinet,502
-Dementia Net,503
-Void Imperium Net,504
-Lustre Netting,505
-Starfire Trim Netting,506
-Dreadlo Matted Netting,507
-Cardboard Traps,508
-Silkskin Traps,509
-Wooden Traps,510
-Natural Traps,511
-Steel Traps,512
-Meaty Traps,513
-Royal Traps,514
-Egalitarian Royal Traps,515
-Wax Skull,516
-Ceramic Skull,517
-Horned Skull,518
-Prickle Skull,519
-Manifested Skull,520
-Glauss Skull,521
-Luciferian Skull,522
-Slush Skull,523
-Dreadnaught Skull,524
-Sappy DNA Splicer,525
-Bolstered DNA Splicer,526
-Double Barreled DNA Splicer,527
-Ergonomic DNA Splicer,528
+Dementia_Net,503
+Void_Imperium_Net,504
+Lustre_Netting,505
+Starfire_Trim_Netting,506
+Dreadlo_Matted_Netting,507
+Cardboard_Traps,508
+Silkskin_Traps,509
+Wooden_Traps,510
+Natural_Traps,511
+Steel_Traps,512
+Meaty_Traps,513
+Royal_Traps,514
+Egalitarian_Royal_Traps,515
+Wax_Skull,516
+Ceramic_Skull,517
+Horned_Skull,518
+Prickle_Skull,519
+Manifested_Skull,520
+Glauss_Skull,521
+Luciferian_Skull,522
+Slush_Skull,523
+Dreadnaught_Skull,524
+Sappy_DNA_Splicer,525
+Bolstered_DNA_Splicer,526
+Double_Barreled_DNA_Splicer,527
+Ergonomic_DNA_Splicer,528
 Nomwich,529
-Hot Dog,530
-Cheezy Pizza,531
+Hot_Dog,530
+Cheezy_Pizza,531
 Peanut,532
-Saucy Weiner,533
-Kebab Sticks,534
-Meat Pie,535
-Mountain Bread,536
-Yeti Ham,537
-Sheepie Dairy,538
+Saucy_Weiner,533
+Kebab_Sticks,534
+Meat_Pie,535
+Mountain_Bread,536
+Yeti_Ham,537
+Sheepie_Dairy,538
 Cupcake,539
-Spicy Space Ribs,540
-Lemon Slice,541
-Grilled Cheese Nomwich,542
-Cranberry Jam,543
-Milk Choco,544
-Magic Meatloaf,545
-Small Strength Potion,546
-Average Strength Potion,547
-Decent Strength Potion,548
-Potent Strength Potion,549
-Small Life Potion,550
-Average Life Potion,551
-Decent Life Potion,552
-Potent Life Potion,553
-Small Speed Potion,554
-Average Speed Potion,555
-Decent Speed Potion,556
-Potent Speed Potion,557
-Minto Choco,558
-Small Mana Potion,559
-Average Mana Potion,560
-Decent Mana Potion,561
-Potent Mana Potion,562
-Small EXP Potion,563
-Average EXP Potion,564
-Decent EXP Potion,565
-Potent EXP Potion,566
-Quotient EXP Potion,567
-Lemony Choco,568
-Shiny Pearl,569
-Icing Ironbite,570
-Giftybread Man,571
-Stained Pearl,572
-Saucy Logfries,573
-Chogg Nog,574
-Slurpin Herm,575
-Candy Canes,576
-Aqua Pearl,577
-Buttered Toasted Butter,578
+Spicy_Space_Ribs,540
+Lemon_Slice,541
+Grilled_Cheese_Nomwich,542
+Cranberry_Jam,543
+Milk_Choco,544
+Magic_Meatloaf,545
+Small_Strength_Potion,546
+Average_Strength_Potion,547
+Decent_Strength_Potion,548
+Potent_Strength_Potion,549
+Small_Life_Potion,550
+Average_Life_Potion,551
+Decent_Life_Potion,552
+Potent_Life_Potion,553
+Small_Speed_Potion,554
+Average_Speed_Potion,555
+Decent_Speed_Potion,556
+Potent_Speed_Potion,557
+Minto_Choco,558
+Small_Mana_Potion,559
+Average_Mana_Potion,560
+Decent_Mana_Potion,561
+Potent_Mana_Potion,562
+Small_EXP_Potion,563
+Average_EXP_Potion,564
+Decent_EXP_Potion,565
+Potent_EXP_Potion,566
+Quotient_EXP_Potion,567
+Lemony_Choco,568
+Shiny_Pearl,569
+Icing_Ironbite,570
+Giftybread_Man,571
+Stained_Pearl,572
+Saucy_Logfries,573
+Chogg_Nog,574
+Slurpin_Herm,575
+Candy_Canes,576
+Aqua_Pearl,577
+Buttered_Toasted_Butter,578
 Mistleberries,579
-Critter Numnums,580
-Soulble Gum,581
+Critter_Numnums,580
+Soulble_Gum,581
 Bullet,582
-FMJ Bullet,583
-Coldseeker Bullet,584
-Midnight Cookie,585
-Cherry Choco,586
-Golden Peanut,587
-Golden Jam,588
-Golden Kebabs,589
-Golden Meat Pie,590
-Golden Nomwich,591
-Golden Ham,592
-Golden Bread,593
-Golden Ribs,594
-Golden Cheese,595
-Golden Grilled Cheese Nomwich,596
-Golden Hampter Gummy Candy,597
-Butter Bar,598
-Bottled Town Teleport,599
-Talent Point Reset Fragment,600
-Talent Point Reset Potion,601
-Star Talent Reset Potion,602
-Sub Class Swap Token,603
-Post Office Box Reseto Magnifico,604
-Hat Premiumifier,605
-Premium Stone Refunder,606
-Small Experience Balloon,607
-Medium Experience Balloon,608
-Large Experience Balloon,609
-1 HR Time Candy,610
-2 HR Time Candy,611
-4 HR Time Candy,612
-12 HR Time Candy,613
-24 HR Time Candy,614
-72 HR Time Candy,615
-Steamy Time Candy,616
-Spooky Time Candy,617
-Cosmic Time Candy,618
-Easter Weapon Stone,619
-Summer Weapon Stone,620
-Weapon Upgrade Stone I,621
-Weapon Upgrade Stone II,622
-Weapon Upgrade Stone III,623
-Weapon Upgrade Stone C,624
-Warped Weapon Upgrade Stone,625
-Weapon Upgrade Stone IV,626
-Weapon Upgrade Stone V,627
-Easter Armor Stone,628
-Summer Armor Stone,629
-Armor Upgrade Stone I,630
-Armor Upgrade Stone G,631
-Armor Upgrade Stone II,632
-Armor Upgrade Stone B,633
-Armor Upgrade Stone III,634
-Armor Upgrade Stone C,635
-Armor Upgrade Stone IV,636
-Armor Upgrade Stone V,637
-Easter Tool Upgrade Stone,638
-Tool Upgrade Stone I,639
-Giftmas Tool Upgrade Stone,640
-Summer Tool Upgrade Stone,641
-Tool Upgrade Stone II,642
-Tool Upgrade Stone III,643
-Tool Upgrade Stone IV,644
-Tool Upgrade Stone V,645
-Helmet Upgrade Stone I,646
-Warped Helmet Upgrade Stone,647
-Giftmas Helmet Upgrade Stone,648
-Mystery Upgrade Stone I,649
-Mystery Upgrade Stone II,650
-Mystery Upgrade Stone III,651
-Premium STR Stone,652
-Premium AGI Stone,653
-Premium WIS Stone,654
-Premium LUK Stone,655
-Job Application,656
-Sculpting Tools,657
-Guilding Tools,658
+FMJ_Bullet,583
+Coldseeker_Bullet,584
+Midnight_Cookie,585
+Cherry_Choco,586
+Golden_Peanut,587
+Golden_Jam,588
+Golden_Kebabs,589
+Golden_Meat_Pie,590
+Golden_Nomwich,591
+Golden_Ham,592
+Golden_Bread,593
+Golden_Ribs,594
+Golden_Cheese,595
+Golden_Grilled_Cheese_Nomwich,596
+Golden_Hampter_Gummy_Candy,597
+Butter_Bar,598
+Bottled_Town_Teleport,599
+Talent_Point_Reset_Fragment,600
+Talent_Point_Reset_Potion,601
+Star_Talent_Reset_Potion,602
+Sub_Class_Swap_Token,603
+Post_Office_Box_Reseto_Magnifico,604
+Hat_Premiumifier,605
+Premium_Stone_Refunder,606
+Small_Experience_Balloon,607
+Medium_Experience_Balloon,608
+Large_Experience_Balloon,609
+1_HR_Time_Candy,610
+2_HR_Time_Candy,611
+4_HR_Time_Candy,612
+12_HR_Time_Candy,613
+24_HR_Time_Candy,614
+72_HR_Time_Candy,615
+Steamy_Time_Candy,616
+Spooky_Time_Candy,617
+Cosmic_Time_Candy,618
+Easter_Weapon_Stone,619
+Summer_Weapon_Stone,620
+Weapon_Upgrade_Stone_I,621
+Weapon_Upgrade_Stone_II,622
+Weapon_Upgrade_Stone_III,623
+Weapon_Upgrade_Stone_C,624
+Warped_Weapon_Upgrade_Stone,625
+Weapon_Upgrade_Stone_IV,626
+Weapon_Upgrade_Stone_V,627
+Easter_Armor_Stone,628
+Summer_Armor_Stone,629
+Armor_Upgrade_Stone_I,630
+Armor_Upgrade_Stone_G,631
+Armor_Upgrade_Stone_II,632
+Armor_Upgrade_Stone_B,633
+Armor_Upgrade_Stone_III,634
+Armor_Upgrade_Stone_C,635
+Armor_Upgrade_Stone_IV,636
+Armor_Upgrade_Stone_V,637
+Easter_Tool_Upgrade_Stone,638
+Tool_Upgrade_Stone_I,639
+Giftmas_Tool_Upgrade_Stone,640
+Summer_Tool_Upgrade_Stone,641
+Tool_Upgrade_Stone_II,642
+Tool_Upgrade_Stone_III,643
+Tool_Upgrade_Stone_IV,644
+Tool_Upgrade_Stone_V,645
+Helmet_Upgrade_Stone_I,646
+Warped_Helmet_Upgrade_Stone,647
+Giftmas_Helmet_Upgrade_Stone,648
+Mystery_Upgrade_Stone_I,649
+Mystery_Upgrade_Stone_II,650
+Mystery_Upgrade_Stone_III,651
+Premium_STR_Stone,652
+Premium_AGI_Stone,653
+Premium_WIS_Stone,654
+Premium_LUK_Stone,655
+Job_Application,656
+Sculpting_Tools,657
+Guilding_Tools,658
 BobJoePickle,659
 BallJoePickle,660
-Mining Certificate,661
-Desert Topaz,662
-Glacier Quartz,663
-Galaxial Amethyst,664
-Magma Geode,665
-Stone Peanut,666
-Ketchup Bottle,667
-Mustard Bottle,668
-Mayonnaise Bottle,669
-Broken Weapon,670
-Dried Paint Blob,671
-Engraved Bullet,672
-Golden Jam (Quest),673
-Scouting Report,674
-Strange Rock,675
-Green Tea,676
-Forest Villas Flyer Thingy,677
-Dog Bone,678
-Empty Box,679
-Employment Statistics,680
-Red Frisbee,681
-Broken Mic,682
-Loomi's Room Key,683
-Golden Dubloon,684
-Signed Arrest Warrant,685
-Time Thingy,686
-Corporatube Sub,687
-Instablab Follower,688
-Cloudsound Follower,689
-Birthday Card,690
-Pre Crime Box,691
-Bag o Nuts,692
-Casual Confidante,693
-Triumphant Treason,694
-Claiming Cashe,695
-Giftmas Box,696
-Bolt Cutters,697
-Monster Rating,698
-Player Rating With Letter P,699
-Player Rating With Letter S,700
-Googley Eyes,701
-Dootjat Eye,702
-Silver Antique,703
-Guild Giftbox,704
-Lovey Dovey Letter,705
-Choco Box,706
+Mining_Certificate,661
+Desert_Topaz,662
+Glacier_Quartz,663
+Galaxial_Amethyst,664
+Magma_Geode,665
+Stone_Peanut,666
+Ketchup_Bottle,667
+Mustard_Bottle,668
+Mayonnaise_Bottle,669
+Broken_Weapon,670
+Dried_Paint_Blob,671
+Engraved_Bullet,672
+Golden_Jam_(Quest),673
+Scouting_Report,674
+Strange_Rock,675
+Green_Tea,676
+Forest_Villas_Flyer_Thingy,677
+Dog_Bone,678
+Empty_Box,679
+Employment_Statistics,680
+Red_Frisbee,681
+Broken_Mic,682
+Loomi's_Room_Key,683
+Golden_Dubloon,684
+Signed_Arrest_Warrant,685
+Time_Thingy,686
+Corporatube_Sub,687
+Instablab_Follower,688
+Cloudsound_Follower,689
+Birthday_Card,690
+Pre_Crime_Box,691
+Bag_o_Nuts,692
+Casual_Confidante,693
+Triumphant_Treason,694
+Claiming_Cashe,695
+Giftmas_Box,696
+Bolt_Cutters,697
+Monster_Rating,698
+Player_Rating_With_Letter_P,699
+Player_Rating_With_Letter_S,700
+Googley_Eyes,701
+Dootjat_Eye,702
+Silver_Antique,703
+Guild_Giftbox,704
+Lovey_Dovey_Letter,705
+Choco_Box,706
 Flowies,707
-Egg Capsule,708
-Gummy Bunny,709
-Goldegg Capsule,710
-Sesame Seed,711
-The Bobber Challenge Scroll,712
-Elderly Peanut,713
-Pete the Peanut,714
-Beach Oyster,716
-Black Pearl,720
-White Pearl,721
-Divinity Pearl,722
+Egg_Capsule,708
+Gummy_Bunny,709
+Goldegg_Capsule,710
+Sesame_Seed,711
+The_Bobber_Challenge_Scroll,712
+Elderly_Peanut,713
+Pete_the_Peanut,714
+Beach_Oyster,716
+Black_Pearl,720
+White_Pearl,721
+Divinity_Pearl,722
 Dootophone,726
-Damaged Cog,727
-Refurbished Cog,728
-Shuvelle's Vote,729
-Yondergreens Vote,730
-Bill Brr's Vote,731
-Signed Contract,732
-2021 Giftmas Box,734
-Pile of Processor Chips,735
-Strung Jewels,736
-Bottled World Town Teleport,737
-Bucket of Slush,738
-Phone Box,740
-Gem Envelope,741
-Bottled Wind,742
-Gaming Fertilizer,743
-Blunderhills NPC Completion Token,744
-Blunder Skills Completion Token,745
-Blunderhills Misc Completion Token,746
-Yumyum Desert NPC Completion Token,747
-Yumyum Skills Completion Token,748
-Yumyum Misc Completion Token,749
-Easy Blunderhills NPC Token,750
-Med Blunderhills NPC Token,751
-Hard Blunderhills NPC Token,752
-Woodsman Token,753
-Glumlee Token,754
-Stiltzcho Token,755
-Funguy Token,756
-Krunk Token,757
-Tiki Chief Token,758
-Dog Bone Token,759
-Papua Piggea Token,760
-Picnic Token,761
-TP Pete Token,762
-Sproutinald Token,763
-Dazey Token,764
-Bandit Bob Token,765
-Snake Jar Token,766
-Whattso Token,767
-Cowbo Jones Token,768
-Carpetiem Token,769
-Goldric Token,770
-Cattleprod Token,771
-Fishpaste Token,772
-Loominadi Token,773
-Djonnut Token,774
-Scubidew Token,775
-Wellington Token,776
-Easy Yumyum Dez NPC Token,777
-Med Yumyum Dez NPC Token,778
-Hard Yumyum Dez NPC Token,779
-Lonely Hunter Token,780
-Hoggi Token,781
-Bellows Token,782
-Snouts Token,783
-Shuvelle Token,784
-Yondergreen Token,785
-Bill Brr Token,786
-Crystalswine Token,787
-Easy FB Tundra NPC Token,788
-Med FB Tundra NPC Token,789
-Hard FB Tundra NPC Token,790
-Tundra NPC Completion Token,791
-Tundra Skills Completion Token,792
-Tundra Misc Completion Token,793
-Power Statue,794
-Speed Statue,795
-Mining Statue,796
-Feasty Statue,797
-Health Statue,798
-Kachow Statue,799
-Lumberbob Statue,800
-Thicc Skin Statue,801
-Oceanman Statue,802
-Ol Reliable Statue,803
-Exp Book Statue,804
-Anvil Statue,805
-Cauldron Statue,806
-Beholder Statue,807
-Bullseye Statue,808
-Box Statue,809
-Twosoul Statue,810
-EhExPee Statue,811
-Seesaw Statue,812
-Pecunia Statue,813
-Mutton Statue,814
-Egg Statue,815
-Battleaxe Statue,816
-Spiral Statue,817
-Boat Statue,818
-Anvil Tab 2,819
-Anvil Tab 3,820
-Anvil Tab 4,821
-Anvil Tab 5,822
-Anvil Tab 6,823
-Miniature Mining Pouch,834
-Cramped Mining Pouch,835
-Small Mining Pouch,836
-Average Mining Pouch,837
-Sizable Mining Pouch,838
-Big Mining Pouch,839
-Large Mining Pouch,840
-Massive Mining Pouch,841
-Volumetric Mining Pouch,842
-Colossal Mining Pouch,843
-Miniature Choppin Pouch,844
-Cramped Choppin Pouch,845
-Small Choppin Pouch,846
-Average Choppin Pouch,847
-Sizable Choppin Pouch,848
-Big Choppin Pouch,849
-Large Choppin Pouch,850
-Massive Choppin Pouch,851
-Volumetric Chopping Pouch,852
-Colossal Chopping Pouch,853
-Miniscule Food Pouch,854
-Cramped Food Pouch,855
-Small Food Pouch,856
-Average Food Pouch,857
-Sizable Food Pouch,858
-Big Food Pouch,859
-Large Food Pouch,860
-Massive Food Pouch,861
-Volumetric Food Pouch,862
-Colossal Food Pouch,863
-Mini Materials Pouch,864
-Cramped Material Pouch,865
-Small Material Pouch,866
-Average Material Pouch,867
-Sizable Materials Pouch,868
-Big Materials Pouch,869
-Large Materials Pouch,870
-Massive Materials Pouch,871
-Volumetric Matty Pouch,872
-Colossal Matty Pouch,873
-Cramped Fish Pouch,874
-Small Fish Pouch,875
-Average Fish Pouch,876
-Sizable Fish Pouch,877
-Big Fish Pouch,878
-Large Fish Pouch,879
-Massive Fish Pouch,880
-Volumetric Fish Pouch,881
-Colossal Fish Pouch,882
-Cramped Bug Pouch,883
-Small Bug Pouch,884
-Average Bug Pouch,885
-Sizable Bug Pouch,886
-Big Bug Pouch,887
-Large Bug Pouch,888
-Massive Bug Pouch,889
-Volumetric Bug Pouch,890
-Colossal Bug Pouch,891
-Small Critter Pouch,892
-Sizable Critter Pouch,893
-Big Critter Pouch,894
-Large Critter Pouch,895
-Massive Critter Pouch,896
-Volumetric Critta Pouch,897
-Colossal Critta Pouch,898
-Small Soul Pouch,899
-Sizable Soul Pouch,900
-Big Soul Pouch,901
-Large Soul Pouch,902
-Massive Soul Pouch,903
-Volumetric Soul Pouch,904
-Colossal Soul Pouch,905
-Bronze STR Obol,906
-Silver STR Obol,907
-Gold STR Obol,908
-Platinum STR Obol,909
-Dementia STR Obol,910
-Bronze AGI Obol,911
-Silver AGI Obol,912
-Gold AGI Obol,913
-Platinum AGI Obol,914
-Dementia AGI Obol,915
-Bronze WIS Obol,916
-Silver WIS Obol,917
-Gold WIS Obol,918
-Platinum WIS Obol,919
-Dementia WIS Obol,920
-Bronze LUK Obol,921
-Silver LUK Obol,922
-Gold LUK Obol,923
-Platinum LUK Obol,924
-Dementia LUK Obol,925
-Bronze Obol of Puny Damage,926
-Silver Obol of Little Damage,927
-Golden Obol of Big Boy Damage,928
-Platinum Obol of Lethal Damage,929
-Dementia Obol of Infinite Damage,930
-Silver Obol of Pocket Change,931
-Golden Obol of Plentiful Riches,932
-Bronze Obol of Small Swings,933
-Silver Obol of Moderate Mining,934
-Golden Obol of Diligent Digging,935
-Platinum Obol of Dwarven Delving,936
-Dementia Obol of Magisterial Metals,937
-Bronze Obol of Chippin Chops,938
-Silver Obol of Big Bark,939
-Golden Obol of Huge Hackin,940
-Platinum Obol of Lumby Loggo,941
-Dementia Obol of WOWOWOWWO,942
-Bronze Obol of Finite Fish,943
-Silver Obol of Puny Pikes,944
-Golden Obol of Crazy Carp,945
-Platinum Obol of Tremendous Trout,946
-Dementia Obol of Monument Marlins,947
-Bronze Obol of Few Flies,948
-Silver Obol of Big Bugs,949
-Golden Obol of Insane Insects,950
-Platinum Obol of Ample Anthropods,951
-Dementia Obol of Colossal Crawlies,952
-Silver Obol of Double Sixes,953
-Golden Obol of Triple Sixes,954
-Platinum Obol of Yahtzee Sixes,955
-Dementia Obol of Infinisixes,956
-Bronze Obol of Pop,957
-Silver Obol of Pop Pop,958
-Golden Obol of Poppity Pop,959
-Platinum Obol of Poppity Poppy,960
-Dementia Obol of Pop Pop Pop Pop,961
-Bronze Obol of Multikill,962
-Silver Obol of Megakill,963
-Golden Obol of Ultrakill,964
-Platinum Obol of Killimanjaro,965
-Dementia Obol of Killionaire,966
-Bronze Obol of Experience,967
-Silver Obol of Experience,968
-Golden Obol of Experience,969
-Platinum Obol of Experience,970
-Dementia Obol of Experience,971
-Bronze Obol of Cards,972
-Silver Obol of Cards,973
-Golden Obol of Cards,974
-Platinum Obol of Cards,975
-Dementia Obol of Cards,976
-Bronze Obol of Defence,977
-Silver Obol of Defence,978
-Golden Obol of Defence,979
-Platinum Obol of Defense with an S,980
-Dementia Obol of Defence,981
-Bronze Obol of Trapping,982
-Silver Obol of Trapping,983
-Golden Obol of Trapping,984
-Platinum Obol of Trapping,985
-Dementia Obol of Trapping,986
-Bronze Obol of Construction,987
-Silver Obol of Construction,988
-Golden Obol of Construction,989
-Platinum Obol of Construction,990
-Dementia Obol of Construction,991
-Bronze Obol of Worship,992
-Silver Obol of Worship,993
-Golden Obol of Worship,994
-Platinum Obol of Worship,995
-Dementia Obol of Worship,996
-Granite Obol of Amarok's Stare,997
-Skeletal Obol of Efaunt's Gaze,998
-Frozen Obol of Chizoar's Rage,999
-Jagged Obol of Massive Trolling,1001
-Grumpy Obol of the Grandfrogger,1002
-Sword Stamp,1003
-Heart Stamp,1004
-Mana Stamp,1005
-Tomahawk Stamp,1006
-Target Stamp,1007
-Shield Stamp,1008
-Longsword Stamp,1009
-Fist Stamp,1011
-Battleaxe Stamp,1012
-Agile Stamp,1013
-Vitality Stamp,1014
-Book Stamp,1015
-Manamoar Stamp,1016
-Clover Stamp,1017
-Scimitar Stamp,1018
-Bullseye Stamp,1019
-Polearm Stamp,1021
-Violence Stamp,1022
-Buckler Stamp,1023
-Hermes Stamp,1024
-Sukka Foo,1025
-Arcane Stamp,1026
-Avast Yar Stamp,1027
-Steve Sword,1028
-Blover Stamp,1029
-Gilded Axe Stamp,1031
-Diamond Axe Stamp,1032
-Tripleshot Stamp,1033
-Blackheart Stamp,1034
-Maxo Slappo Stamp,1035
-Sashe Sidestamp,1036
+Damaged_Cog,727
+Refurbished_Cog,728
+Shuvelle's_Vote,729
+Yondergreens_Vote,730
+Bill_Brr's_Vote,731
+Signed_Contract,732
+2021_Giftmas_Box,734
+Pile_of_Processor_Chips,735
+Strung_Jewels,736
+Bottled_World_Town_Teleport,737
+Bucket_of_Slush,738
+Phone_Box,740
+Gem_Envelope,741
+Bottled_Wind,742
+Gaming_Fertilizer,743
+Blunderhills_NPC_Completion_Token,744
+Blunder_Skills_Completion_Token,745
+Blunderhills_Misc_Completion_Token,746
+Yumyum_Desert_NPC_Completion_Token,747
+Yumyum_Skills_Completion_Token,748
+Yumyum_Misc_Completion_Token,749
+Easy_Blunderhills_NPC_Token,750
+Med_Blunderhills_NPC_Token,751
+Hard_Blunderhills_NPC_Token,752
+Woodsman_Token,753
+Glumlee_Token,754
+Stiltzcho_Token,755
+Funguy_Token,756
+Krunk_Token,757
+Tiki_Chief_Token,758
+Dog_Bone_Token,759
+Papua_Piggea_Token,760
+Picnic_Token,761
+TP_Pete_Token,762
+Sproutinald_Token,763
+Dazey_Token,764
+Bandit_Bob_Token,765
+Snake_Jar_Token,766
+Whattso_Token,767
+Cowbo_Jones_Token,768
+Carpetiem_Token,769
+Goldric_Token,770
+Cattleprod_Token,771
+Fishpaste_Token,772
+Loominadi_Token,773
+Djonnut_Token,774
+Scubidew_Token,775
+Wellington_Token,776
+Easy_Yumyum_Dez_NPC_Token,777
+Med_Yumyum_Dez_NPC_Token,778
+Hard_Yumyum_Dez_NPC_Token,779
+Lonely_Hunter_Token,780
+Hoggi_Token,781
+Bellows_Token,782
+Snouts_Token,783
+Shuvelle_Token,784
+Yondergreen_Token,785
+Bill_Brr_Token,786
+Crystalswine_Token,787
+Easy_FB_Tundra_NPC_Token,788
+Med_FB_Tundra_NPC_Token,789
+Hard_FB_Tundra_NPC_Token,790
+Tundra_NPC_Completion_Token,791
+Tundra_Skills_Completion_Token,792
+Tundra_Misc_Completion_Token,793
+Power_Statue,794
+Speed_Statue,795
+Mining_Statue,796
+Feasty_Statue,797
+Health_Statue,798
+Kachow_Statue,799
+Lumberbob_Statue,800
+Thicc_Skin_Statue,801
+Oceanman_Statue,802
+Ol_Reliable_Statue,803
+Exp_Book_Statue,804
+Anvil_Statue,805
+Cauldron_Statue,806
+Beholder_Statue,807
+Bullseye_Statue,808
+Box_Statue,809
+Twosoul_Statue,810
+EhExPee_Statue,811
+Seesaw_Statue,812
+Pecunia_Statue,813
+Mutton_Statue,814
+Egg_Statue,815
+Battleaxe_Statue,816
+Spiral_Statue,817
+Boat_Statue,818
+Anvil_Tab_2,819
+Anvil_Tab_3,820
+Anvil_Tab_4,821
+Anvil_Tab_5,822
+Anvil_Tab_6,823
+Miniature_Mining_Pouch,834
+Cramped_Mining_Pouch,835
+Small_Mining_Pouch,836
+Average_Mining_Pouch,837
+Sizable_Mining_Pouch,838
+Big_Mining_Pouch,839
+Large_Mining_Pouch,840
+Massive_Mining_Pouch,841
+Volumetric_Mining_Pouch,842
+Colossal_Mining_Pouch,843
+Miniature_Choppin_Pouch,844
+Cramped_Choppin_Pouch,845
+Small_Choppin_Pouch,846
+Average_Choppin_Pouch,847
+Sizable_Choppin_Pouch,848
+Big_Choppin_Pouch,849
+Large_Choppin_Pouch,850
+Massive_Choppin_Pouch,851
+Volumetric_Chopping_Pouch,852
+Colossal_Chopping_Pouch,853
+Miniscule_Food_Pouch,854
+Cramped_Food_Pouch,855
+Small_Food_Pouch,856
+Average_Food_Pouch,857
+Sizable_Food_Pouch,858
+Big_Food_Pouch,859
+Large_Food_Pouch,860
+Massive_Food_Pouch,861
+Volumetric_Food_Pouch,862
+Colossal_Food_Pouch,863
+Mini_Materials_Pouch,864
+Cramped_Material_Pouch,865
+Small_Material_Pouch,866
+Average_Material_Pouch,867
+Sizable_Materials_Pouch,868
+Big_Materials_Pouch,869
+Large_Materials_Pouch,870
+Massive_Materials_Pouch,871
+Volumetric_Matty_Pouch,872
+Colossal_Matty_Pouch,873
+Cramped_Fish_Pouch,874
+Small_Fish_Pouch,875
+Average_Fish_Pouch,876
+Sizable_Fish_Pouch,877
+Big_Fish_Pouch,878
+Large_Fish_Pouch,879
+Massive_Fish_Pouch,880
+Volumetric_Fish_Pouch,881
+Colossal_Fish_Pouch,882
+Cramped_Bug_Pouch,883
+Small_Bug_Pouch,884
+Average_Bug_Pouch,885
+Sizable_Bug_Pouch,886
+Big_Bug_Pouch,887
+Large_Bug_Pouch,888
+Massive_Bug_Pouch,889
+Volumetric_Bug_Pouch,890
+Colossal_Bug_Pouch,891
+Small_Critter_Pouch,892
+Sizable_Critter_Pouch,893
+Big_Critter_Pouch,894
+Large_Critter_Pouch,895
+Massive_Critter_Pouch,896
+Volumetric_Critta_Pouch,897
+Colossal_Critta_Pouch,898
+Small_Soul_Pouch,899
+Sizable_Soul_Pouch,900
+Big_Soul_Pouch,901
+Large_Soul_Pouch,902
+Massive_Soul_Pouch,903
+Volumetric_Soul_Pouch,904
+Colossal_Soul_Pouch,905
+Bronze_STR_Obol,906
+Silver_STR_Obol,907
+Gold_STR_Obol,908
+Platinum_STR_Obol,909
+Dementia_STR_Obol,910
+Bronze_AGI_Obol,911
+Silver_AGI_Obol,912
+Gold_AGI_Obol,913
+Platinum_AGI_Obol,914
+Dementia_AGI_Obol,915
+Bronze_WIS_Obol,916
+Silver_WIS_Obol,917
+Gold_WIS_Obol,918
+Platinum_WIS_Obol,919
+Dementia_WIS_Obol,920
+Bronze_LUK_Obol,921
+Silver_LUK_Obol,922
+Gold_LUK_Obol,923
+Platinum_LUK_Obol,924
+Dementia_LUK_Obol,925
+Bronze_Obol_of_Puny_Damage,926
+Silver_Obol_of_Little_Damage,927
+Golden_Obol_of_Big_Boy_Damage,928
+Platinum_Obol_of_Lethal_Damage,929
+Dementia_Obol_of_Infinite_Damage,930
+Silver_Obol_of_Pocket_Change,931
+Golden_Obol_of_Plentiful_Riches,932
+Bronze_Obol_of_Small_Swings,933
+Silver_Obol_of_Moderate_Mining,934
+Golden_Obol_of_Diligent_Digging,935
+Platinum_Obol_of_Dwarven_Delving,936
+Dementia_Obol_of_Magisterial_Metals,937
+Bronze_Obol_of_Chippin_Chops,938
+Silver_Obol_of_Big_Bark,939
+Golden_Obol_of_Huge_Hackin,940
+Platinum_Obol_of_Lumby_Loggo,941
+Dementia_Obol_of_WOWOWOWWO,942
+Bronze_Obol_of_Finite_Fish,943
+Silver_Obol_of_Puny_Pikes,944
+Golden_Obol_of_Crazy_Carp,945
+Platinum_Obol_of_Tremendous_Trout,946
+Dementia_Obol_of_Monument_Marlins,947
+Bronze_Obol_of_Few_Flies,948
+Silver_Obol_of_Big_Bugs,949
+Golden_Obol_of_Insane_Insects,950
+Platinum_Obol_of_Ample_Anthropods,951
+Dementia_Obol_of_Colossal_Crawlies,952
+Silver_Obol_of_Double_Sixes,953
+Golden_Obol_of_Triple_Sixes,954
+Platinum_Obol_of_Yahtzee_Sixes,955
+Dementia_Obol_of_Infinisixes,956
+Bronze_Obol_of_Pop,957
+Silver_Obol_of_Pop_Pop,958
+Golden_Obol_of_Poppity_Pop,959
+Platinum_Obol_of_Poppity_Poppy,960
+Dementia_Obol_of_Pop_Pop_Pop_Pop,961
+Bronze_Obol_of_Multikill,962
+Silver_Obol_of_Megakill,963
+Golden_Obol_of_Ultrakill,964
+Platinum_Obol_of_Killimanjaro,965
+Dementia_Obol_of_Killionaire,966
+Bronze_Obol_of_Experience,967
+Silver_Obol_of_Experience,968
+Golden_Obol_of_Experience,969
+Platinum_Obol_of_Experience,970
+Dementia_Obol_of_Experience,971
+Bronze_Obol_of_Cards,972
+Silver_Obol_of_Cards,973
+Golden_Obol_of_Cards,974
+Platinum_Obol_of_Cards,975
+Dementia_Obol_of_Cards,976
+Bronze_Obol_of_Defence,977
+Silver_Obol_of_Defence,978
+Golden_Obol_of_Defence,979
+Platinum_Obol_of_Defense_with_an_S,980
+Dementia_Obol_of_Defence,981
+Bronze_Obol_of_Trapping,982
+Silver_Obol_of_Trapping,983
+Golden_Obol_of_Trapping,984
+Platinum_Obol_of_Trapping,985
+Dementia_Obol_of_Trapping,986
+Bronze_Obol_of_Construction,987
+Silver_Obol_of_Construction,988
+Golden_Obol_of_Construction,989
+Platinum_Obol_of_Construction,990
+Dementia_Obol_of_Construction,991
+Bronze_Obol_of_Worship,992
+Silver_Obol_of_Worship,993
+Golden_Obol_of_Worship,994
+Platinum_Obol_of_Worship,995
+Dementia_Obol_of_Worship,996
+Granite_Obol_of_Amarok's_Stare,997
+Skeletal_Obol_of_Efaunt's_Gaze,998
+Frozen_Obol_of_Chizoar's_Rage,999
+Jagged_Obol_of_Massive_Trolling,1001
+Grumpy_Obol_of_the_Grandfrogger,1002
+Sword_Stamp,1003
+Heart_Stamp,1004
+Mana_Stamp,1005
+Tomahawk_Stamp,1006
+Target_Stamp,1007
+Shield_Stamp,1008
+Longsword_Stamp,1009
+Fist_Stamp,1011
+Battleaxe_Stamp,1012
+Agile_Stamp,1013
+Vitality_Stamp,1014
+Book_Stamp,1015
+Manamoar_Stamp,1016
+Clover_Stamp,1017
+Scimitar_Stamp,1018
+Bullseye_Stamp,1019
+Polearm_Stamp,1021
+Violence_Stamp,1022
+Buckler_Stamp,1023
+Hermes_Stamp,1024
+Sukka_Foo,1025
+Arcane_Stamp,1026
+Avast_Yar_Stamp,1027
+Steve_Sword,1028
+Blover_Stamp,1029
+Gilded_Axe_Stamp,1031
+Diamond_Axe_Stamp,1032
+Tripleshot_Stamp,1033
+Blackheart_Stamp,1034
+Maxo_Slappo_Stamp,1035
+Sashe_Sidestamp,1036
 Intellectostampo,1037
-Conjocharmo Stamp,1038
-Dementia Sword,1039
-Hatchet Stamp,1041
-Anvil Zoomer Stamp,1042
-Lil' Mining Baggy Stamp,1043
-Twin Ores Stamp,1044
-Choppin' Bag Stamp,1045
-Duplogs Stamp,1046
-Matty Bag Stamp,1047
-Smart Dirt Stamp,1048
-Cool Diggy Tool Stamp,1049
-Swag Swingy Tool Stamp,1051
-Alch Go Brrr Stamp,1052
-Brainstew Stamps,1053
-Drippy Drop Stamp,1054
-Droplots Stamp,1055
-Fishing Rod Stamp,1056
-Fishhead Stamp,1057
-Catch Net Stamp,1058
-Fly Intel Stamp,1059
-Holy Mackerel Stamp,1061
-Bugsack Stamp,1062
-Buzz Buzz Stamp,1063
-Hidey Box Stamp,1064
-Purp Froge Stamp,1065
-Spikemouth Stamp,1066
-Shiny Crab Stamp,1067
-Gear Stamp,1068
-Stample Stamp,1069
-Amplestample Stamp,1071
-SpoOoky Stamp,1072
-Flowin Stamp,1073
-Prayday Stamp,1074
-Banked Pts Stamp,1075
-Cooked Meal Stamp,1076
-Spice Stamp,1077
-Ladle Stamp,1078
-Nest Eggs Stamp,1079
-Lab Tube Stamp,1081
-Sailboat Stamp,1082
-Gamejoy Stamp,1083
-Divine Stamp,1084
-Multitool Stamp,1085
-Questin Stamp,1086
-Mason Jar Stamp,1087
+Conjocharmo_Stamp,1038
+Dementia_Sword,1039
+Hatchet_Stamp,1041
+Anvil_Zoomer_Stamp,1042
+Lil'_Mining_Baggy_Stamp,1043
+Twin_Ores_Stamp,1044
+Choppin'_Bag_Stamp,1045
+Duplogs_Stamp,1046
+Matty_Bag_Stamp,1047
+Smart_Dirt_Stamp,1048
+Cool_Diggy_Tool_Stamp,1049
+Swag_Swingy_Tool_Stamp,1051
+Alch_Go_Brrr_Stamp,1052
+Brainstew_Stamps,1053
+Drippy_Drop_Stamp,1054
+Droplots_Stamp,1055
+Fishing_Rod_Stamp,1056
+Fishhead_Stamp,1057
+Catch_Net_Stamp,1058
+Fly_Intel_Stamp,1059
+Holy_Mackerel_Stamp,1061
+Bugsack_Stamp,1062
+Buzz_Buzz_Stamp,1063
+Hidey_Box_Stamp,1064
+Purp_Froge_Stamp,1065
+Spikemouth_Stamp,1066
+Shiny_Crab_Stamp,1067
+Gear_Stamp,1068
+Stample_Stamp,1069
+Amplestample_Stamp,1071
+SpoOoky_Stamp,1072
+Flowin_Stamp,1073
+Prayday_Stamp,1074
+Banked_Pts_Stamp,1075
+Cooked_Meal_Stamp,1076
+Spice_Stamp,1077
+Ladle_Stamp,1078
+Nest_Eggs_Stamp,1079
+Lab_Tube_Stamp,1081
+Sailboat_Stamp,1082
+Gamejoy_Stamp,1083
+Divine_Stamp,1084
+Multitool_Stamp,1085
+Questin_Stamp,1086
+Mason_Jar_Stamp,1087
 Crystallin,1088
-Arcade Ball Stamp,1089
-Potion Stamp,1091
-Golden Apple Stamp,1092
-Ball Timer Stamp,1093
-Card Stamp,1094
-Talent I Stamp,1095
-Talent II Stamp,1096
-Talent III Stamp,1097
-Talent IV Stamp,1098
-Talent V Stamp,1099
-Multikill Stamp,1101
-Biblio Stamp,1102
-DNA Stamp,1103
-Refinery Stamp,1104
+Arcade_Ball_Stamp,1089
+Potion_Stamp,1091
+Golden_Apple_Stamp,1092
+Ball_Timer_Stamp,1093
+Card_Stamp,1094
+Talent_I_Stamp,1095
+Talent_II_Stamp,1096
+Talent_III_Stamp,1097
+Talent_IV_Stamp,1098
+Talent_V_Stamp,1099
+Multikill_Stamp,1101
+Biblio_Stamp,1102
+DNA_Stamp,1103
+Refinery_Stamp,1104
 Minuteglass,1105
-Inventory Bag A,1106
-Inventory Bag B,1107
-Inventory Bag C,1108
-Inventory Bag D,1109
-Inventory Bag F,1111
-Inventory Bag G,1112
-Inventory Bag H,1113
-Snakeskinventory Bag,1114
-Totally Normal and not fake Bag,1115
+Inventory_Bag_A,1106
+Inventory_Bag_B,1107
+Inventory_Bag_C,1108
+Inventory_Bag_D,1109
+Inventory_Bag_F,1111
+Inventory_Bag_G,1112
+Inventory_Bag_H,1113
+Snakeskinventory_Bag,1114
+Totally_Normal_and_not_fake_Bag,1115
 Blunderbag,1116
-Sandy Satchel,1117
-Bummo Bag,1118
-Capitalist Case,1119
-Prosperous Pouch,1121
-Sack of Success,1122
-Shivering Sack,1123
-Mamooth Hide Bag,1124
-Peeper Pouch,1125
-Storage Chest 1,1126
-Storage Chest 2,1127
-Storage Chest 3,1128
-Storage Chest 4,1129
-Storage Chest 6,1131
-Storage Chest 7,1132
-Storage Chest 8,1133
-Storage Chest 9,1134
-Storage Chest 10,1135
-Storage Chest 11,1136
-Storage Chest 12,1137
-Storage Chest 13,1138
-Storage Chest 14,1139
-Storage Chest 16,1141
-Storage Chest 17,1142
-Storage Chest 18,1143
-Storage Chest 19,1144
-Storage Chest 20,1145
-Storage Chest 21,1146
-Storage Chest 22,1147
-Storage Chest 23,1148
-Storage Chest 24,1149
-Dank Paypay Chest,1151
-Gelatinous Chest,1152
-Cheesy Chest,1153
-Copper Twine,1154
-Silver Twine,1155
-Gold Twine,1156
-Platinum Twine,1157
-Leafy Vines,1158
-Fun Flags,1159
-Wiener Links,1161
-Zeus Gon Fishin,1162
+Sandy_Satchel,1117
+Bummo_Bag,1118
+Capitalist_Case,1119
+Prosperous_Pouch,1121
+Sack_of_Success,1122
+Shivering_Sack,1123
+Mamooth_Hide_Bag,1124
+Peeper_Pouch,1125
+Storage_Chest_1,1126
+Storage_Chest_2,1127
+Storage_Chest_3,1128
+Storage_Chest_4,1129
+Storage_Chest_6,1131
+Storage_Chest_7,1132
+Storage_Chest_8,1133
+Storage_Chest_9,1134
+Storage_Chest_10,1135
+Storage_Chest_11,1136
+Storage_Chest_12,1137
+Storage_Chest_13,1138
+Storage_Chest_14,1139
+Storage_Chest_16,1141
+Storage_Chest_17,1142
+Storage_Chest_18,1143
+Storage_Chest_19,1144
+Storage_Chest_20,1145
+Storage_Chest_21,1146
+Storage_Chest_22,1147
+Storage_Chest_23,1148
+Storage_Chest_24,1149
+Dank_Paypay_Chest,1151
+Gelatinous_Chest,1152
+Cheesy_Chest,1153
+Copper_Twine,1154
+Silver_Twine,1155
+Gold_Twine,1156
+Platinum_Twine,1157
+Leafy_Vines,1158
+Fun_Flags,1159
+Wiener_Links,1161
+Zeus_Gon_Fishin,1162
 Needledrop,1163
-Scripticus Spoons,1164
-Its a Boy Celebration,1165
-Its a Girl Celebration,1166
-Its Alright Celebration,1167
-Wormie Weight,1168
-Iron Hook,1169
-Dualhook Prongs,1171
-One Pound of Steel,1172
-One Pound of Feathers,1173
-Massless Unit for Physics Questions,1174
-Literal Elephant,1175
-Valve Patented Circle Thingies,1176
+Scripticus_Spoons,1164
+Its_a_Boy_Celebration,1165
+Its_a_Girl_Celebration,1166
+Its_Alright_Celebration,1167
+Wormie_Weight,1168
+Iron_Hook,1169
+Dualhook_Prongs,1171
+One_Pound_of_Steel,1172
+One_Pound_of_Feathers,1173
+Massless_Unit_for_Physics_Questions,1174
+Literal_Elephant,1175
+Valve_Patented_Circle_Thingies,1176
 Dynamite,1177
-Not Dynamite,1178
-Triple Threat,1179
-Fat Albert,1181
-Cooking Ladle,1182
-Pet Egg,1183
-Newbie Card Pack,1188
-Ancient Card Pack,1189
-Dungeon Card Pack,1191
-Galaxy Card Pack,1192
-Smolderin Card Pack,1193
+Not_Dynamite,1178
+Triple_Threat,1179
+Fat_Albert,1181
+Cooking_Ladle,1182
+Pet_Egg,1183
+Newbie_Card_Pack,1188
+Ancient_Card_Pack,1189
+Dungeon_Card_Pack,1191
+Galaxy_Card_Pack,1192
+Smolderin_Card_Pack,1193
 Cash,1195
 Experience,1196
-Skill Experience,1197
-Keychain Fragment,1214
-Loot Dice,1216
-Ice Dollar,1221
-The Red Boaty,1376
-Giftmas Snoozy Cap,1377
-Forest Villa Key,1378
-Efaunt's Tomb Key,1379
-Troll's Enclave Key,1381
-Colosseum Ticket,1382
-Silver Pen,1383
-Talent Point Tab 1,1385
-Talent Point Tab 2,1386
-Talent Point Tab 3,1387
-Talent Point Tab 4,1388
-Talent Point Tab 5,1389
-Gold Food Coupon,1391
-Resource Coupon,1392
-Really Really Resource Coupon,1393
+Skill_Experience,1197
+Keychain_Fragment,1214
+Loot_Dice,1216
+Ice_Dollar,1221
+The_Red_Boaty,1376
+Giftmas_Snoozy_Cap,1377
+Forest_Villa_Key,1378
+Efaunt's_Tomb_Key,1379
+Troll's_Enclave_Key,1381
+Colosseum_Ticket,1382
+Silver_Pen,1383
+Talent_Point_Tab_1,1385
+Talent_Point_Tab_2,1386
+Talent_Point_Tab_3,1387
+Talent_Point_Tab_4,1388
+Talent_Point_Tab_5,1389
+Gold_Food_Coupon,1391
+Resource_Coupon,1392
+Really_Really_Resource_Coupon,1393
