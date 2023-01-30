@@ -125,26 +125,33 @@ class StartWidget(Widget):
 
 
 class SmithingGrindlistWidget(Widget):
+    keyfuncs = {}
+
     def __init__(self, app, parent=None):
         super().__init__(app, parent)
         self.window = curses.newwin(MAXSIZE_Y - 2, MAXSIZE_X - 2, 1, 1)
         self.selection = 0
 
-    def run(self, key):
-        if key == curses.KEY_DOWN:
-            self.selection += 1
-            self.selection = min(1, self.selection)
-        elif key == curses.KEY_UP:
-            self.selection -= 1
-            self.selection = max(0, self.selection)
-        elif key == 10:
-            if self.selection == 0:
-                return
-            elif self.selection == 1:
-                start_widget = self.app.get("start")
-                self.app.goto_widget(self, start_widget)
-                return
+    @Widget.bind(keyfuncs, curses.KEY_DOWN)
+    def go_down(self):
+        self.selection += 1
+        self.selection = min(1, self.selection)
+        self.refresh()
 
+    @Widget.bind(keyfuncs, curses.KEY_UP)
+    def go_up(self):
+        self.selection -= 1
+        self.selection = max(0, self.selection)
+        self.refresh()
+
+    @Widget.bind(keyfuncs, 10)
+    def press_button(self):
+        if self.selection == 0:
+            return
+        elif self.selection == 1:
+            start_widget = self.app.get("start")
+            self.app.goto_widget(self, start_widget)
+            return
         self.refresh()
 
     def refresh(self, clr=False):
