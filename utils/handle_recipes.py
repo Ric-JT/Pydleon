@@ -1,4 +1,5 @@
 import json
+from typing import Dict, List
 import pandas as pd
 
 
@@ -95,6 +96,11 @@ class RecipeBook:
             raise (E)
 
         self.recipes: dict = recipes
+        # {
+        #     key: recipes[key]
+        #     for key in recipes
+        #     if key in ("Pharoah_Bow", "Spiked_Menace")
+        # }
         self.bag: dict = {}
 
         self.possible_recipes: dict = {}
@@ -119,6 +125,50 @@ class RecipeBook:
         recipe_dict = {name: self.recipes.get(name, {})}
         return recipe_dict
 
+    def is_recipe_possible(
+        self, smth_lvl: int, recipe_name: str, recipe_count: int, bag: dict
+    ):
+        recipe = self.recipes[recipe_name]
+        is_possible = True
+
+        # Check smithing level requirements
+        if smth_lvl and smth_lvl < recipe["smth_lvl_req"]:
+            is_possible = False
+            print(f"Not enough smth_lvl for {recipe_name}")
+
+        else:
+            rec_ingredients = recipe["ingredients"]
+
+            # For all ingredients in recipe
+            for rec_ing in rec_ingredients:
+                # required ingredient counts for the recipe
+                required = recipe_count * rec_ingredients[rec_ing]
+
+                # If the ingredient is not a recipe and if there aren't any in the bag
+                if rec_ing not in self.recipes and required > bag.get(rec_ing, 0):
+                    is_possible = False
+
+                    print(
+                        f"Raw material not in bag for recipe: {recipe_name}; raw material: {rec_ing}"
+                    )
+
+                # If ingredient is a recipe but there isn't enough in the bag
+                elif required > bag.get(rec_ing, 0):
+                    # Subbtract from the required the ingredient quantity already in the bag
+                    needed = required - bag.get(rec_ing, 0)
+
+                    # Check if the recipe for the amount needed is possible
+                    is_possible = self.is_recipe_possible(
+                        smth_lvl,
+                        rec_ing,
+                        needed,
+                        bag,
+                    )
+                # If any ingredient is impossible to obtain from bag
+                if not is_possible:
+                    break
+        return is_possible
+
     def get_recipes_by_ingredients(
         self, ingredients: dict, smth_lvl: int = None
     ) -> dict:
@@ -137,29 +187,13 @@ class RecipeBook:
             Possible recipes with the given ingredients
         """
         recipes_dict = {}
+        target_count = 1
         for target in self.recipes:
-            # Start recipe evaluation believing it's possible
-            is_possible = True
-
-            # Get recipe from Recipe Book, if doesn't exist return empty recipe
-            recipe = self.recipes.get(target, {})
-
-            # If there isn't a recipe or is invalid for the current smithing level
-            # assume impossible recipe
-            if not len(recipe) or (smth_lvl and smth_lvl < recipe["smth_lvl_req"]):
-                is_possible = False
-            # If there is a recipe and valid for the current smithing level
-            else:
-                rec_ingredients = recipe["ingredients"]
-                # If any ingredient isn't available or isn't enough to craft the recipe
-                # assume impossible recipe
-                for rec_ingredient in rec_ingredients:
-                    if (
-                        rec_ingredient not in ingredients
-                        or rec_ingredients[rec_ingredient] > ingredients[rec_ingredient]
-                    ):
-                        is_possible = False
-                        break
+            is_possible = self.is_recipe_possible(
+                smth_lvl, target, target_count, ingredients
+            )
+            if is_possible:
+                print("p1:", target, is_possible)
             # If the recipe is still considered possible add it to the recipes dict
             if is_possible:
                 recipes_dict.update(self.get_recipe_by_name(target))
@@ -264,6 +298,122 @@ class RecipeBook:
         grindcost = self.grindcost.copy()
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
+    def _get_nr_stages(self, recipe: dict, bag: dict):
+        ing_stages = []
+        for ing in recipe["ingredients"]:
+            if ing not in self.recipes:
+                ing_stages += [1]
+            else:
+                ing_stages += [1 + self._get_nr_stages(self.recipes[ing])]
+        return max(ing_stages)
+
+    def _get_stages(self, recipe_name, recipe_qtty, recipe, stage=1):
+        stage_key = f"{stage}"
+
+        # Fill current Stage
+        ing_stages = {
+            stage_key: {
+                recipe_name: {
+                    "qtty": recipe_qtty,
+                    "ingredients": {
+                        ing: qtty * recipe_qtty
+                        for ing, qtty in recipe["ingredients"].items()
+                    },
+                }
+            }
+        }
+
+        # Get next stage
+        for ing, qtty in ing_stages[stage_key][recipe_name]["ingredients"].items():
+            if ing in self.recipes:
+                ing_stage = self._get_stages(
+                    ing,
+                    qtty,
+                    self.recipes[ing],
+                    stage=stage + 1,
+                )
+                _update_dict_add(ing_stages, ing_stage)
+
+        return ing_stages
+
+    def merge_dicts(self, dict_dest, dict_src):
+        for key_src, value_src in dict_src.items():
+            if dict_dest.get(key_src):
+                if type(dict_dest[key_src]) == dict:
+                    dict_dest[key_src] = self.merge_dicts(dict_dest[key_src], value_src)
+                else:
+                    dict_dest[key_src] += value_src
+            else:
+                dict_dest[key_src] = value_src
+        return dict_dest
+
+    def print_recipes_stages(self, recipes: Dict[str, int] = None, bag=None):
+        if recipes == None:
+            recipes = self.grindlist if self.grindlist else self.recipes
+            qttys = {recipe_name: 1 for recipe_name in self.recipes}
+        else:
+            qttys = recipes.copy()
+            recipes = {
+                recipe_name: self.get_recipe_by_name(recipe_name)[recipe_name]
+                for recipe_name in recipes
+            }
+
+        if bag == None:
+            bag = self.bag
+
+        recipe_stages: Dict[str, Dict[str, dict]] = {}
+        total_item_cost: Dict[str, int] = {}
+        if len(recipes):
+            for recipe_name, recipe in recipes.items():
+                print("_" * 100)
+                print("recipe_name:", recipe_name)
+
+                recipe_qtty = qttys[recipe_name]
+                recipe_stage = self._get_stages(recipe_name, recipe_qtty, recipe)
+                n_stages = len(recipe_stage)
+                stage_keys = list(recipe_stage.keys())
+                for key in stage_keys:
+                    recipe_stage[
+                        "stage" + str(n_stages - int(key) + 1)
+                    ] = recipe_stage.pop(key)
+                recipe_stages[recipe_name] = recipe_stage
+
+                print("recipe_stages:", recipe_stages)
+
+            print(f"There are {len(recipe_stages)} stages")
+
+            for recipe_name, stage in recipe_stages.items():
+                print(f"{recipe_name} recipe plan:")
+                recipe_cost = self.get_item_cost(recipe_name, qttys[recipe_name])
+                _update_dict_add(total_item_cost, recipe_cost)
+
+                for stage_name, stage_items in stage.items():
+                    print(f"\t{stage_name}")
+                    for item_name, item_details in stage_items.items():
+                        item_qtty = item_details["qtty"]
+                        print(f"\t\tCraft {item_name} x{item_qtty}")
+                        ings = [
+                            f"{ing_name} x{ing_qtty}"
+                            for ing_name, ing_qtty in item_details[
+                                "ingredients"
+                            ].items()
+                        ]
+                        ing_line = " ; ".join(ings)
+                        print(f"\t\tIngredients:", ing_line)
+                print("Recipe Total Cost: ")
+                for item, item_qtty in recipe_cost.items():
+                    print(f"\t{item} x{item_qtty}")
+
+        return recipe_stages
+
+    def _print_possible_recipies(self):
+        print(f"Possible Recipes:")
+        for recipe in self.possible_recipes:
+            print(f"\t{recipe}")
+
+            ingredients = self.possible_recipes[recipe]["ingredients"]
+            [print(f"\t\t * {ing} x{ingredients[ing]}") for ing in ingredients]
+
     def print_inventory(self):
         """This function prints the current Inventory and current Possible Recipes"""
         print_hline()
@@ -271,12 +421,7 @@ class RecipeBook:
         for item in self.bag:
             print(f"\t - {item} x{self.bag[item]}")
 
-        print(f"Possible Recipes:")
-        for recipe in self.possible_recipes:
-            print(f"\t{recipe}")
-
-            ingredients = self.possible_recipes[recipe]["ingredients"]
-            [print(f"\t\t * {ing} x{ingredients[ing]}") for ing in ingredients]
+        self._print_possible_recipies()
         print_hline()
 
     def print_grindlist(self):
@@ -304,10 +449,10 @@ if __name__ == "__main__":
     recipe_book = RecipeBook(filename=recipes_json_filename)
 
     # Initiate Inventory Bag
-    bag = {"Crimson String": 20, "Cue Tape": 5, "Spore Cap": 10, "Copper Bar": 10000}
+    bag = {"Crimson_String": 20, "Cue_Tape": 5, "Spore_Cap": 10, "Copper_Bar": 10000}
 
     # Initiate Grindlist
-    grindlist = {"Wooden Bow": 20, "Goo Galoshes": 0, "Boxing Gloves": 1}
+    grindlist = {"Gold_Helmet": 1, "Platinum_Helmet": 1, "Boxing_Gloves": 0}
 
     # Add Inventory Bag to Recipe Book
     recipe_book.add_to_bag(bag)

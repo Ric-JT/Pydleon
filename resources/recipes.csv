@@ -1,0 +1,316 @@
+Recipe_no,Name,Smithing_Level_Required,Resource1,Resource2,Resource3,Resource4,Source,Anvil_Tab
+1,Boxing_Gloves,1,Crimson_String x1,Cue_Tape x5,,,Start,1
+2,Wooden_Spear,2,Spore_Cap x10,Copper_Bar x5,,,Start,1
+3,Wooden_Bow,2,Spore_Cap x10,Thread x15,,,Start,1
+4,Gnarled_Wand,2,Spore_Cap x10,Oak_Logs x15,,,Start,1
+5,Farmer_Brim,1,Spore_Cap x4,Copper_Ore x5,,,Start,1
+6,Orange_Tee,1,Spore_Cap x6,Oak_Logs x3,,,Start,1
+7,Torn_Jeans,4,Frog_Leg x6,Copper_Bar x3,,,Start,1
+8,Flip_Flops,6,Bean_Slices x12,Grass_Leaf x5,,,Start,1
+9,Copper_Pickaxe,3,Copper_Bar x5,Frog_Leg x10,,,Start,1
+10,Cramped_Mining_Pouch,5,Copper_Ore x120,,,,Start,1
+11,Copper_Chopper,4,Copper_Bar x5,Oak_Logs x10,Thread x5,,Start,1
+12,Cramped_Choppin_Pouch,6,Oak_Logs x150,Trusty_Nails x30,,,Start,1
+13,Leather_Cap,4,Frog_Leg x15,Oak_Logs x30,Thread x10,,Start,1
+14,The_Stingers,6,Copper_Bar x20,Oak_Logs x75,Trusty_Nails x20,,Start,1
+15,Cramped_Food_Pouch,7,Nomwich x75,Hot_Dog x25,Oak_Logs x60,Copper_Bar x15,Start,1
+16,Cramped_Material_Pouch,8,Trusty_Nails x80,Frog_Leg x40,Bean_Slices x30,,Start,1
+17,Copper_Helmet,6,Copper_Bar x20,Bean_Slices x40,,,Start,1
+18,Copper_Platebody,7,Copper_Bar x25,Trusty_Nails x120,,,Start,1
+19,Copper_Platelegs,8,Copper_Bar x30,Bleach_Logs x150,,,Start,1
+20,Copper_Boots,10,Copper_Bar x75,,,,Start,1
+21,Militia_Helm,10,Copper_Helmet x1,Iron_Bar x15,Copper_Ore x80,,Task Unlocks Tab 1,1
+22,Thief_Hood,10,Copper_Helmet x1,Iron_Bar x15,Thread x40,,Task Unlocks Tab 1,1
+23,Top_Hat,10,Copper_Helmet x1,Iron_Bar x15,Oak_Logs x150,,Task Unlocks Tab 1,1
+24,Birthday_Hat,12,Copper_Helmet x1,Iron_Bar x150,,,Start,1
+25,Steel_Axe,12,Slime_Sludge x125,Boring_Brick x125,,,Task Unlocks Tab 1,1
+26,Birch_Longbow,12,Slime_Sludge x125,Bleach_Logs x250,,,Task Unlocks Tab 1,1
+27,Quarterstaff,12,Slime_Sludge x125,Copper_Bar x100,,,Task Unlocks Tab 1,1
+28,Copper_Band,11,Copper_Bar x300,,,,DropTable1,1
+29,Iron_Pickaxe,13,Iron_Bar x70,Carrot_Cube x150,,,Start,1
+30,Small_Mining_Pouch,14,Iron_Ore x700,,,,Start,1
+31,Iron_Hatchet,14,Jungle_Logs x200,Boring_Brick x100,,,Start,1
+32,Small_Choppin_Pouch,15,Bleach_Logs x800,,,,Start,1
+33,Iron_Helmet,12,Iron_Bar x125,Glublin_Ear x300,,,Start,1
+34,Iron_Platebody,13,Iron_Bar x150,Jungle_Logs x600,,,Start,1
+35,Iron_Platelegs,14,Iron_Bar x170,Boring_Brick x225,,,Start,1
+36,Anvil_Tab_2,15,Iron_Bar x250,Chain_Link x200,Forest_Fibres x400,Bullfrog_Horn x250,Start,1
+37,Blue_Tee,3,Orange_Tee x1,Spore_Cap x25,Oak_Logs x50,,The Smithing Grind,1
+38,Sleek_Shank,10,Wooden_Bow x1,Gnarled_Wand x1,Wooden_Spear x2,Thread x300,Task Unlocks Tab 1,1
+39,Iron_Boots,13,Copper_Boots x1,Trusty_Nails x500,Iron_Bar x125,,W1 Colosseum first silver chest,1
+40,Steel_Band,13,Iron_Bar x600,,,,"DropTable3, Task Unlocks Tab 1",1
+41,Purple_Tupacband,5,Bleach_Logs x100,Iron_Ore x50,Crude_Oil x60,,Start,1
+42,Icing_Ironbite,2,Iron_Ore x5,Small_Mana_Potion x2,,,Task Unlocks Tab 1,1
+43,Saucy_Logfries,1,Jungle_Logs x6,Small_Life_Potion x3,,,Task Unlocks Tab 1,1
+44,Goo_Galoshes,11,Copper_Boots x1,Slime_Sludge x600,Jungle_Logs x1000,,Slime,1
+45,Fur_Shirt,14,Glublin_Ear x500,Iron_Bar x500,,,"Glublin, Videogame Highscores are COOL!",1
+46,Hide_Shirt,14,Copper_Platebody x1,Steel_Axe x1,Bleach_Logs x325,,Task Unlocks Tab 1,1
+47,Eco_Friendly_Oil,4,Crude_Oil x1,Grass_Leaf x1,,,Task Unlocks Tab 1,1
+48,Dooble_Goopi,16,Copper_Band x1,Steel_Band x1,Slime_Sludge x1000,,Slime,1
+49,Bleached_Designer_Wode_Patch_Pants,12,Torn_Jeans x3,Plank x275,Bleach_Logs x700,,Wode Board,1
+50,Dirty_Coal_Miner_Baggy_Soot_Pants,12,Torn_Jeans x3,Iron_Ore x200,,,Task Unlocks Tab 1,1
+51,Peanut,5,Hot_Dog x2,Copper_Ore x1,Bleach_Logs x1,,Brunchin' with the Blobs,1
+52,Golden_Peanut,18,Peanut x100,Gold_Bar x50,,,"How It's Made, Episode 7. The Super Peanut",1
+53,Blunderbag,8,Spore_Tee x2,Green_Headband x2,Spore_Cap x150,,Task Unlocks Tab 1,1
+54,Purple_Tee,5,Orange_Tee x1,Red_Spore_Cap x40,Bleach_Logs x100,,Task Unlocks Tab 1,1
+55,Green_Tee,7,Spore_Tee x1,Orange_Tee x1,Thread x150,,Task Unlocks Tab 1,1
+56,Black_Tee,9,Orange_Tee x5,Blue_Tee x2,Purple_Tee x2,Green_Tee x2,Task Unlocks Tab 1,1
+57,Blunderhills_NPC_Completion_Token,1,Easy_Blunderhills_NPC_Token x1,Med_Blunderhills_NPC_Token x1,Hard_Blunderhills_NPC_Token x1,,Champion of the Grasslands,1
+58,Blunder_Skills_Completion_Token,40,Amarok_Helmet x1,Platinum_Bar x1000,Veiny_Logs x2000,,Champion of the Grasslands,1
+59,Blunderhills_Misc_Completion_Token,1,Carrot_Launcher x1,Golden_Peanut x30,Golden_Plop x12,Bolt_Cutters x1,Champion of the Grasslands,1
+60,Acorn_Topper,10,Acorn x25000,Woodular_Circle x15,,,Start,1
+61,Easy_Blunderhills_NPC_Token,1,Woodsman_Token x1,Glumlee_Token x1,Stiltzcho_Token x1,Funguy_Token x1,Champion of the Grasslands,1
+62,Med_Blunderhills_NPC_Token,1,Krunk_Token x1,Tiki_Chief_Token x1,Dog_Bone_Token x1,Papua_Piggea_Token x1,Champion of the Grasslands,1
+63,Hard_Blunderhills_NPC_Token,1,Picnic_Token x1,TP_Pete_Token x1,Sproutinald_Token x1,Dazey_Token x1,Champion of the Grasslands,1
+64,Serrated_Rex_Ring,20,Rex_Ring x1,Iron_Bar x1000,,,Baba Yaga,1
+65,Amarok_Helmet,23,Amarok_Slab x20,Forest_Fibres x2500,Woodular_Circle x5,,Blunder Hills Merit Shop,1
+66,Amarok_Bodyplate,21,Amarok_Slab x10,Iron_Bar x300,Corn_Kernels x600,,Blunder Hills Merit Shop,1
+67,Amarok_Hinds,17,Amarok_Slab x6,Chain_Link x300,Bullfrog_Horn x500,,Blunder Hills Merit Shop,1
+68,Amarok_Paws,14,Iron_Boots x1,Amarok_Slab x5,Grass_Leaf x125,,Blunder Hills Merit Shop,1
+69,Fishing_Overalls,14,Bleached_Designer_Wode_Patch_Pants x2,Goldfish x500,,,Walking Stick,1
+70,Bandito_Pantaloon,14,Dirty_Coal_Miner_Baggy_Soot_Pants x2,Fly x500,,,Poop,1
+72,Chaotic_Amarok_Pendant,25,Chaotic_Amarok_Slab x4,Amarok_Slab x10,Distilled_Water x25,,Blunder Hills Merit Shop,1
+73,Copper_Fish_Rod,10,Copper_Bar x200,Goldfish x180,,,Task Unlocks Tab 1,1
+74,Cramped_Fish_Pouch,9,Goldfish x180,,,,Task Unlocks Tab 1,1
+75,Copper_Netted_Net,10,Jungle_Logs x500,Fly x400,,,Task Unlocks Tab 1,1
+76,Cramped_Bug_Pouch,9,Fly x180,,,,Task Unlocks Tab 1,1
+77,Iron_Fishing_Rod,16,Iron_Bar x300,Hermit_Can x650,Distilled_Water x3,,Task Unlocks Tab 1,1
+78,Small_Fish_Pouch,15,Hermit_Can x425,Distilled_Water x2,,,Task Unlocks Tab 1,1
+79,Reinforced_Net,16,Forest_Fibres x800,Butterfly x850,Distilled_Water x3,,Task Unlocks Tab 1,1
+80,Small_Bug_Pouch,15,Butterfly x425,Distilled_Water x2,,,Task Unlocks Tab 1,1
+81,Silkskin_Traps,16,Poison_Froge x1,Redox_Salts x5,,,Start,1
+82,Small_Critter_Pouch,15,Froge x200,Redox_Salts x3,,,Start,1
+83,Ceramic_Skull,16,Forest_Soul x250,Redox_Salts x5,,,Start,1
+84,Small_Soul_Pouch,15,Forest_Soul x200,Redox_Salts x3,,,Start,1
+1,Gold_Helmet,15,Copper_Helmet x1,Fly x2000,Gold_Bar x250,,Start,2
+2,Gold_Platebody,16,Copper_Platebody x1,Pocket_Sand x1500,Gold_Bar x350,,Start,2
+3,Gold_Platelegs,18,Copper_Platelegs x1,Goldfish x500,Gold_Bar x475,,Start,2
+4,Gold_Boots,20,Iron_Boots x1,Gold_Bar x600,Distilled_Water x4,,Start,2
+5,Bandage_Wraps,18,The_Stingers x3,Cue_Tape x5000,Potty_Rolls x2000,,Task Unlocks Tab 2,2
+6,Royal_Bayonet,17,Forest_Fibres x1250,Steel_Axe x1,Distilled_Water x8,,Task Unlocks Tab 2,2
+7,Spiked_Menace,17,Birch_Longbow x1,Gold_Bar x250,Distilled_Water x8,,Task Unlocks Tab 2,2
+8,Starlight,17,Quarterstaff x1,Chain_Link x1000,Distilled_Water x8,,Task Unlocks Tab 2,2
+9,Gold_Pickaxe,20,Iron_Pickaxe x1,Megalodon_Tooth x2500,Gold_Bar x800,,Task Unlocks Tab 2,2
+10,Average_Mining_Pouch,15,Cramped_Mining_Pouch x2,Small_Mining_Pouch x1,Gold_Ore x2000,,Task Unlocks Tab 2,2
+11,Golden_Axe,20,Iron_Hatchet x1,Golden_Dubloon x5,Crabby_Cakey x2000,,Task Unlocks Tab 2,2
+12,Average_Choppin_Pouch,15,Cramped_Choppin_Pouch x2,Small_Choppin_Pouch x1,Forest_Fibres x2100,,Task Unlocks Tab 2,2
+13,Gold_Fishing_Rod,22,Hermit_Can x2500,Leather_Hide x1000,Iron_Fishing_Rod x1,,Task Unlocks Tab 2,2
+14,Average_Fish_Pouch,17,Cramped_Fish_Pouch x2,Small_Fish_Pouch x1,Hermit_Can x2000,,Task Unlocks Tab 2,2
+15,Golden_Net,22,Golden_Dubloon x5,Butterfly x2500,Reinforced_Net x1,,Task Unlocks Tab 2,2
+16,Average_Bug_Pouch,17,Cramped_Bug_Pouch x2,Small_Bug_Pouch x1,Butterfly x2100,,Task Unlocks Tab 2,2
+17,Defenders_Dignity,23,Goldfish x10000,Golden_Plop x4,Distilled_Water x15,,Mimic,2
+18,Strung_Bludgeon,28,Sleek_Shank x1,Glass_Shard x4,Distilled_Water x20,,Mafioso,2
+19,Average_Food_Pouch,18,Cramped_Food_Pouch x2,Meat_Pie x400,Icing_Ironbite x700,Saucy_Logfries x700,Start,2
+20,Average_Material_Pouch,18,Cramped_Material_Pouch x2,Glass_Shard x1,Chain_Link x1700,,Start,2
+21,Platinum_Helmet,29,Iron_Helmet x1,Jellyfish x2250,Platinum_Bar x750,,Start,2
+22,Platinum_Platbody,30,Iron_Platebody x1,Potato_Remains x5000,Platinum_Bar x1000,,Start,2
+23,Platinum_Shins,31,Iron_Platelegs x1,Sentient_Cereal x5000,Platinum_Bar x1250,,Start,2
+24,Platinum_Boots,32,Gold_Boots x1,Tropilogs x7000,Jellyfish x3000,,Start,2
+25,Polished_Bludgeon,25,Strung_Bludgeon x1,Distilled_Water x25,,,Dr Defecaus,2
+26,Enforced_Slasher,23,Nuget_Cake x3,Leather_Hide x2500,Royal_Bayonet x1,,Task Unlocks Tab 2,2
+27,Pharoah_Bow,23,Spiked_Menace x1,Woodular_Circle x3,Bloach x1400,,Task Unlocks Tab 2,2
+28,Crows_Nest,23,Starlight x1,Golden_Plop x3,Fruitfly x4000,,Task Unlocks Tab 2,2
+29,Platinum_Pickaxe,26,Gold_Pickaxe x1,Platinum_Bar x800,Pincer_Arm x10500,,Task Unlocks Tab 2,2
+30,Sizable_Mining_Pouch,24,Platinum_Ore x7500,Average_Mining_Pouch x1,,,Task Unlocks Tab 2,2
+31,Plat_Hatchet,26,Golden_Axe x1,Tropilogs x6500,Chain_Link x5000,,Task Unlocks Tab 2,2
+32,Sizable_Choppin_Pouch,24,Tropilogs x7500,Average_Choppin_Pouch x1,,,Task Unlocks Tab 2,2
+33,Plat_Fishing_Rod,29,Bloach x2000,Platinum_Bar x800,Gold_Fishing_Rod x1,,Task Unlocks Tab 2,2
+34,Sizable_Fish_Pouch,27,Bloach x2500,Goldfish x5000,Average_Fish_Pouch x1,,Task Unlocks Tab 2,2
+35,Platinet,29,Fruitfly x7000,Platinum_Ore x3000,Golden_Net x1,,Task Unlocks Tab 2,2
+36,Sizable_Bug_Pouch,27,Fruitfly x7500,Average_Bug_Pouch x1,,,Task Unlocks Tab 2,2
+37,Sizable_Food_Pouch,28,Golden_Meat_Pie x9,Nuget_Cake x4,Average_Food_Pouch x2,,Task Unlocks Tab 2,2
+38,Sizable_Materials_Pouch,30,Golden_Plop x3,Woodular_Circle x4,Average_Material_Pouch x2,,Task Unlocks Tab 2,2
+40,Anvil_Tab_3,35,Platinum_Bar x2000,Bloach x2000,Fruitfly x2000,High_Steaks x1500,Start,2
+41,Empty_Box,18,Hermit_Can x250,Megalodon_Tooth x400,Distilled_Water x4,,Start,2
+42,Googley_Eyes,17,Woodular_Circle x2,Distilled_Water x5,Capitalist_Case x1,,Crabcake,2
+43,Bullet,16,Forest_Fibres x10,Fly x10,,,Task Unlocks Tab 2,2
+44,FMJ_Bullet,20,Gold_Ore x15,Bullet x2,,,Task Unlocks Tab 2,2
+45,Nuget_Cake_Fedora,19,Nuget_Cake x5,Distilled_Water x20,Googley_Eyes x1,,Start,2
+46,Viking_Cap,24,Militia_Helm x1,Gold_Bar x400,Glass_Shard x2,,Task Unlocks Tab 2,2
+47,Sleek_Coif,24,Thief_Hood x1,Tropilogs x2000,Glass_Shard x2,,Task Unlocks Tab 2,2
+48,Witch_Hat,24,Top_Hat x1,Corn_Kernels x4000,Glass_Shard x2,,Task Unlocks Tab 2,2
+50,Studded_Hide,26,Hide_Shirt x1,Megalodon_Tooth x4000,Nuget_Cake x1,,Task Unlocks Tab 2,2
+51,Feral_Leathering,26,Fur_Shirt x1,Stick x3000,Nuget_Cake x1,,Task Unlocks Tab 2,2
+52,Furled_Robes,26,Tattered_Cloth x1,Leather_Hide x1500,Nuget_Cake x1,,Task Unlocks Tab 2,2
+53,Cavern_Trekkers,22,Gold_Boots x1,Distilled_Water x9,Copper_Ore x1500,Iron_Ore x1200,Task Unlocks Tab 2,2
+54,Angler_Boots,24,Gold_Boots x1,Distilled_Water x9,Goldfish x1250,Hermit_Can x1000,Task Unlocks Tab 2,2
+55,Logger_Heels,22,Gold_Boots x1,Distilled_Water x9,Jungle_Logs x1600,Forest_Fibres x1000,Task Unlocks Tab 2,2
+56,Bandito_Boots,24,Gold_Boots x1,Distilled_Water x9,Fly x2000,Butterfly x1250,Task Unlocks Tab 2,2
+57,Slurpin_Herm,24,Hermit_Can x5,Average_Strength_Potion x2,,,Task Unlocks Tab 2,2
+58,Buttered_Toasted_Butter,24,Butterfly x5,Kebab_Sticks x1,,,Task Unlocks Tab 2,2
+59,Dootjat_Eye,21,Silver_Antique x1,Gold_Bar x80,Ghost x5,,Sand Giant,2
+60,Sandy_Satchel,18,Golden_Plop x1,Snakeskinventory_Bag x1,Pocket_Sand x777,,Task Unlocks Tab 2,2
+61,Efaunt_Helmet,43,Trimmed_Rune_Platelegs x1,Ripped_Tunic x20,Armor_Upgrade_Stone_C x2,Dootjat_Eye x3,Yum Yum Desert Merit Shop,2
+62,Efaunt_Ribcage,39,Ripped_Tunic x10,Midnight_Cookie x10,Distilled_Water x25,,Yum Yum Desert Merit Shop,2
+63,Efaunt_Hipilium,37,Ripped_Tunic x7,Minuteglass x3,Distilled_Water x25,,Yum Yum Desert Merit Shop,2
+64,Efaunts_Broken_Ankles,32,Platinum_Boots x1,Ripped_Tunic x5,Nuget_Cake x3,,Yum Yum Desert Merit Shop,2
+65,Efaunt_Trunculus,45,Bandage_Wraps x1,Pharoah_Bow x1,Ribbed_Tunic x4,Ripped_Tunic x15,Yum Yum Desert Merit Shop,2
+66,Protectors_Pride,38,Defenders_Dignity x1,Trimmed_Rune_Platelegs x1,Distilled_Water x35,,King Doot,2
+67,Skullfish_Pendant,38,Fishhead_Pendant x1,Distilled_Water x60,,,Biggie Hours,2
+69,Wooden_Traps,29,Mutant_Crabbo x2,Redox_Salts x20,,,Start,2
+70,Sizable_Critter_Pouch,28,Crabbo x1000,Redox_Salts x15,,,Start,2
+71,Horned_Skull,29,Dune_Soul x1200,Redox_Salts x25,,,Start,2
+72,Sizable_Soul_Pouch,28,Dune_Soul x1500,Redox_Salts x20,,,Start,2
+73,Yumyum_Desert_NPC_Completion_Token,30,Easy_Yumyum_Dez_NPC_Token x1,Med_Yumyum_Dez_NPC_Token x1,Hard_Yumyum_Dez_NPC_Token x1,,The New Sheriff,2
+74,Yumyum_Skills_Completion_Token,30,Bloach x4000,Fruitfly x8000,Dense_Water x50,,The New Sheriff,2
+75,Yumyum_Misc_Completion_Token,30,Efaunt_Helmet x1,Fuscismatia x1,Minuteglass x13,Ghost x100,The New Sheriff,2
+76,Star_Talent_Reset_Potion,28,Talent_Point_Reset_Fragment x25,Distilled_Water x5,,,"Biggie Hours, Efaunt",2
+77,Easy_Yumyum_Dez_NPC_Token,30,Bandit_Bob_Token x1,Snake_Jar_Token x1,Whattso_Token x1,Cowbo_Jones_Token x1,The New Sheriff,2
+78,Med_Yumyum_Dez_NPC_Token,30,Carpetiem_Token x1,Goldric_Token x1,Fishpaste_Token x1,Cattleprod_Token x1,The New Sheriff,2
+79,Hard_Yumyum_Dez_NPC_Token,30,Loominadi_Token x1,Djonnut_Token x1,Scubidew_Token x1,Wellington_Token x1,The New Sheriff,2
+1,Dementia_Helmet,36,Platinum_Helmet x1,Froge x5000,Dementia_Bar x300,,Start,3
+2,Dementia_Body,37,Platinum_Platbody x1,Forest_Soul x1000,Dementia_Bar x350,,Start,3
+3,Dementia_Shins,38,Platinum_Shins x1,Floof_Ploof x8000,Dementia_Bar x400,,Start,3
+4,Dementia_Boots,39,Platinum_Boots x1,Poison_Froge x3,Dementia_Bar x500,,Start,3
+5,Uninflated_Glove,40,Bandage_Wraps x2,Melty_Cube x70000,,,Task Unlocks Tab 3,3
+6,The_Ice_Breaker,39,Enforced_Slasher x1,Melty_Cube x25000,Redox_Salts x150,,Task Unlocks Tab 3,3
+7,Blizzard_Bow,39,Pharoah_Bow x1,Forest_Soul x7000,Redox_Salts x150,,Task Unlocks Tab 3,3
+8,Spriggly_Storm,39,Crows_Nest x1,Tundra_Logs x10000,Redox_Salts x150,,Task Unlocks Tab 3,3
+9,Dementia_Pickaxe,38,Platinum_Pickaxe x1,Dementia_Bar x275,Moustache_Comb x15000,,Task Unlocks Tab 3,3
+10,Big_Mining_Pouch,35,Dementia_Ore x17500,Sizable_Mining_Pouch x2,,,Task Unlocks Tab 3,3
+11,Dementia_Dicer,38,Plat_Hatchet x1,Tundra_Logs x15000,Redox_Salts x50,,Task Unlocks Tab 3,3
+12,Big_Choppin_Pouch,35,Tundra_Logs x20000,Sizable_Choppin_Pouch x2,,,Task Unlocks Tab 3,3
+13,Dementia_Rod_for_Fishing,38,Dementia_Bar x300,Redox_Salts x50,Plat_Fishing_Rod x1,,Task Unlocks Tab 3,3
+14,Big_Fish_Pouch,35,Crescent_Scorpie x4,Redox_Salts x50,Sizable_Fish_Pouch x2,,Task Unlocks Tab 3,3
+15,Dementia_Net,38,Mosquisnow x15000,Redox_Salts x50,Platinet x1,,Task Unlocks Tab 3,3
+16,Big_Bug_Pouch,35,Mosquisnow x10000,Sizable_Bug_Pouch x2,,,Task Unlocks Tab 3,3
+17,Natural_Traps,40,Nakeo_Moleo x5,Redox_Salts x50,Wooden_Traps x1,,Task Unlocks Tab 3,3
+18,Big_Critter_Pouch,37,Mousey x10000,Sizable_Critter_Pouch x2,,,Task Unlocks Tab 3,3
+19,Prickle_Skull,40,Rooted_Soul x7000,Redox_Salts x50,Horned_Skull x1,,Task Unlocks Tab 3,3
+20,Big_Soul_Pouch,37,Rooted_Soul x8000,Sizable_Soul_Pouch x2,,,Task Unlocks Tab 3,3
+21,Midnight_Stopwatch,45,Silver_Stopwatch x1,Midnight_Cookie x30,Dense_Water x20,Spontaneity_Salts x400,Dilapidated Slush,3
+22,Dawn_Stopwatch,45,Silver_Stopwatch x1,BobGoldPickle_Chain x1,Dense_Water x20,Spontaneity_Salts x400,Mutated Mush,3
+23,Big_Food_Pouch,39,Slurpin_Herm x1500,Buttered_Toasted_Butter x1500,Yeti_Ham x10000,Sizable_Food_Pouch x2,Start,3
+24,Big_Materials_Pouch,39,Sticky_Stick x15000,Ice_Age_3 x3,Sizable_Materials_Pouch x2,,Start,3
+25,Void_Imperium_Helmet,43,Dementia_Helmet x1,Spontaneity_Salts x500,Void_Bar x1000,Dense_Water x5,Start,3
+26,Void_Imperium_Platebody,44,Dementia_Body x1,Audio_Cord x75000,Void_Bar x500,Dense_Water x4,Start,3
+27,Void_Imperium_Shardshins,45,Dementia_Shins x1,Wispy_Lumber x75000,Void_Bar x650,Dense_Water x4,Start,3
+28,Void_Imperium_Kicks,46,Dementia_Boots x1,Flycicle x60000,Void_Bar x725,Dense_Water x4,Start,3
+29,Eclectic_Ordeal,45,Yellow_Snowflake x100,Minervowl x50,Dootjat_Eye x10,Dense_Water x15,Task Unlocks Tab 3,3
+30,Deuscythe,45,The_Ice_Breaker x1,Black_Lense x10,Eternal_Lord_of_The_Undying_Ember x15,Dense_Water x7,Task Unlocks Tab 3,3
+31,Blackhole_Bow,45,Blizzard_Bow x1,Black_Lense x4,Spontaneity_Salts x350,Dense_Water x7,Task Unlocks Tab 3,3
+32,Grey_Gatsby,45,Spriggly_Storm x1,Black_Lense x4,Frigid_Soul x5000,Dense_Water x7,Task Unlocks Tab 3,3
+33,Void_Imperium_Pik,45,Dementia_Pickaxe x1,Void_Bar x400,Dense_Water x5,,Task Unlocks Tab 3,3
+34,Large_Mining_Pouch,43,Void_Ore x25000,Big_Mining_Pouch x2,,,Task Unlocks Tab 3,3
+35,Void_Imperium_Axe,45,Dementia_Dicer x1,Wispy_Lumber x50000,Dense_Water x5,,Task Unlocks Tab 3,3
+36,Large_Choppin_Pouch,43,Wispy_Lumber x30000,Big_Choppin_Pouch x2,,,Task Unlocks Tab 3,3
+37,Void_Imperium_Rod,45,Spontaneity_Salts x200,Minervowl x3,Dementia_Rod_for_Fishing x1,Dense_Water x5,Task Unlocks Tab 3,3
+38,Large_Fish_Pouch,43,Bloach x50000,Big_Fish_Pouch x2,,,Task Unlocks Tab 3,3
+39,Void_Imperium_Net,45,Flycicle x50000,Dementia_Net x1,Dense_Water x5,,Task Unlocks Tab 3,3
+40,Large_Bug_Pouch,43,Flycicle x35000,Big_Bug_Pouch x2,,,Task Unlocks Tab 3,3
+41,Steel_Traps,46,Eternal_Lord_of_The_Undying_Ember x6,Natural_Traps x1,Dense_Water x5,,Task Unlocks Tab 3,3
+42,Large_Critter_Pouch,44,Pingy x30000,Big_Critter_Pouch x2,,,Task Unlocks Tab 3,3
+43,Manifested_Skull,46,Frigid_Soul x8000,Prickle_Skull x1,Dense_Water x5,,Task Unlocks Tab 3,3
+44,Large_Soul_Pouch,44,Rooted_Soul x30000,Big_Soul_Pouch x2,,,Task Unlocks Tab 3,3
+45,Large_Food_Pouch,44,Golden_Ham x10,Critter_Numnums x30,Soulble_Gum x30,Big_Food_Pouch x1,Task Unlocks Tab 3,3
+46,Large_Materials_Pouch,44,Audio_Cord x60000,Black_Lense x3,Big_Materials_Pouch x1,,Task Unlocks Tab 3,3
+48,Anvil_Tab_4,50,Void_Bar x1200,Frigid_Soul x7500,Eternal_Lord_of_The_Undying_Ember x10,Spontaneity_Salts x400,Start,3
+49,Mark_of_Member,49,Grandma_Disguise x1,Void_Imperium_Helmet x1,Dioxide_Synthesis x400,,Task Unlocks Tab 3,3
+50,Murmillo_Helm,48,Void_Imperium_Helmet x1,Dioxide_Synthesis x150,,,Task Unlocks Tab 3,3
+51,Conquistador_Plume,48,Void_Imperium_Helmet x1,Dioxide_Synthesis x150,,,Task Unlocks Tab 3,3
+52,Adornment_of_the_High_Priest,48,Void_Imperium_Helmet x1,Dioxide_Synthesis x150,,,Task Unlocks Tab 3,3
+53,Member_Hoodie,50,Uninflated_Glove x2,Void_Imperium_Platebody x1,Dioxide_Synthesis x400,,Task Unlocks Tab 3,3
+54,Damascus_Plates,49,Void_Imperium_Platebody x1,Dioxide_Synthesis x250,,,Task Unlocks Tab 3,3
+55,Evergreen_Wraps,49,Void_Imperium_Platebody x1,Dioxide_Synthesis x250,,,Task Unlocks Tab 3,3
+56,Elegantine_Robes,49,Void_Imperium_Platebody x1,Dioxide_Synthesis x250,,,Task Unlocks Tab 3,3
+57,Critter_Numnums,36,Crabbo x100,Distilled_Water x1,,,Task Unlocks Tab 3,3
+58,Soulble_Gum,36,Dune_Soul x70,Distilled_Water x1,,,Task Unlocks Tab 3,3
+59,Shivering_Sack,35,Mamooth_Hide_Bag x1,Melty_Cube x2000,Yellow_Snowflake x3,,Task Unlocks Tab 3,3
+60,Honker_Hat,40,Honker x1000000,Diamond_Duck x1,Dense_Water x25,,Start,3
+61,Tundra_NPC_Completion_Token,1,Easy_FB_Tundra_NPC_Token x1,Med_FB_Tundra_NPC_Token x1,Hard_FB_Tundra_NPC_Token x1,,The Fresh Prince of the Tundra,3
+62,Tundra_Skills_Completion_Token,2,Frigid_Soul x12500,Jade_Scarab x4,Refurbished_Cog x1,,The Fresh Prince of the Tundra,3
+63,Tundra_Misc_Completion_Token,1,Chizoar_Helmet x1,Neutron_Ice_Ring x1,Nullo_Salt x10,Black_Lense x60,The Fresh Prince of the Tundra,3
+64,Bucket_of_Slush,38,Melty_Cube x5,Snow_Ball x20,Iron_Bar x5,,DropTable15,3
+65,Easy_FB_Tundra_NPC_Token,1,Lonely_Hunter_Token x1,Hoggi_Token x1,Snouts_Token x1,,The Fresh Prince of the Tundra,3
+66,Med_FB_Tundra_NPC_Token,2,Shuvelle_Token x1,Yondergreen_Token x1,Crystalswine_Token x1,,The Fresh Prince of the Tundra,3
+67,Hard_FB_Tundra_NPC_Token,1,Bellows_Token x1,Bill_Brr_Token x1,,,The Fresh Prince of the Tundra,3
+68,Chizoars_Caustic_Scarf,52,Chizoars_Blankie x1,Chizoar_Stalagmite x15,Chizoar_Spike x30,,Frostbite Tundra Merit Shop,3
+69,Chizoar_Helmet,50,Void_Imperium_Helmet x1,Chizoar_Spike x25,Blood_Bone x1000,Purple_Salt x100,Frostbite Tundra Merit Shop,3
+70,Chizoar_Bodyplate,49,Void_Imperium_Platebody x1,Chizoar_Spike x18,Ram_Wool x100000,Purple_Salt x50,Frostbite Tundra Merit Shop,3
+71,Chizoar_Scaled_Leggings,48,Void_Imperium_Shardshins x1,Chizoar_Spike x10,Black_Lense x8,Dioxide_Synthesis x250,Frostbite Tundra Merit Shop,3
+72,Chizoar_Walkers,47,Void_Imperium_Kicks x1,Chizoar_Spike x6,Ice_Age_3 x10,Dioxide_Synthesis x100,Frostbite Tundra Merit Shop,3
+1,Lustre_Veil,50,Void_Imperium_Helmet x1,Skelefish x80000,Lustre_Bar x2500,,Start,4
+2,Lustre_Chestplate,51,Void_Imperium_Platebody x1,Purple_Mush_Cap x100000,Lustre_Bar x1200,,Start,4
+3,Lustre_Scales,52,Void_Imperium_Shardshins x1,Purple_Screw x60000,Lustre_Bar x1600,,Start,4
+4,Lustre_Shieldshoe,53,Void_Imperium_Kicks x1,TV_Remote x120000,Lustre_Bar x2000,,Start,4
+5,Knuckle_Sabers,60,Eclectic_Ordeal x1,Thingymabob x50000,Dioxide_Synthesis x2000,,Task Unlocks Tab 4,4
+6,Slimsharp_Fin,52,Deuscythe x1,Alien_Hive_Chunk x90000,Dioxide_Synthesis x500,,Task Unlocks Tab 4,4
+7,Shardsure_Leif,52,Blackhole_Bow x1,Skelefish x110000,Dioxide_Synthesis x500,,Task Unlocks Tab 4,4
+8,Skullslip_Hallow,52,Grey_Gatsby x1,Bunny x50000,Dioxide_Synthesis x500,,Task Unlocks Tab 4,4
+9,Lustre_Pickaxe,52,Void_Imperium_Pik x1,Lustre_Bar x1000,Dioxide_Synthesis x600,,Task Unlocks Tab 4,4
+10,Massive_Mining_Pouch,53,Lustre_Ore x110000,Dioxide_Synthesis x400,,,Task Unlocks Tab 4,4
+11,Lustre_Logger,52,Void_Imperium_Axe x1,Alien_Hive_Chunk x110000,Dioxide_Synthesis x600,,Task Unlocks Tab 4,4
+12,Massive_Choppin_Pouch,53,Alien_Hive_Chunk x110000,Dioxide_Synthesis x400,,,Task Unlocks Tab 4,4
+13,Lustre_Rod,53,Skelefish x90000,Void_Imperium_Rod x1,Dioxide_Synthesis x750,,Task Unlocks Tab 4,4
+14,Massive_Fish_Pouch,54,Skelefish x120000,Dioxide_Synthesis x500,,,Task Unlocks Tab 4,4
+15,Lustre_Netting,53,Worker_Bee x130000,Void_Imperium_Net x1,Dioxide_Synthesis x750,,Task Unlocks Tab 4,4
+16,Massive_Bug_Pouch,54,Worker_Bee x110000,Dioxide_Synthesis x500,,,Task Unlocks Tab 4,4
+17,Meaty_Traps,54,Jade_Scarab x10,Steel_Traps x1,Dioxide_Synthesis x1000,,Task Unlocks Tab 4,4
+18,Massive_Critter_Pouch,55,Honker x100000,Dioxide_Synthesis x1000,,,Task Unlocks Tab 4,4
+19,Glauss_Skull,54,Frigid_Soul x40000,Manifested_Skull x1,Dioxide_Synthesis x1000,,Task Unlocks Tab 4,4
+20,Massive_Soul_Pouch,55,Frigid_Soul x90000,Dioxide_Synthesis x1000,,,Task Unlocks Tab 4,4
+21,Rough_Rockers,56,Cavern_Trekkers x1,Lustre_Shieldshoe x1,Copper_Ore x300000,,Task Unlocks Tab 4,4
+22,Fiberous_Footings,56,Logger_Heels x1,Lustre_Shieldshoe x1,Oak_Logs x300000,,Task Unlocks Tab 4,4
+23,Deep_Sea_Galoshes,56,Angler_Boots x1,Lustre_Shieldshoe x1,Goldfish x300000,,Task Unlocks Tab 4,4
+24,Spaggy_Westerados,56,Bandito_Boots x1,Lustre_Shieldshoe x1,Fly x300000,,Task Unlocks Tab 4,4
+25,Chef_Hat_Shoes,55,Cooking_Clogs x4,Lustre_Shieldshoe x1,,,Task Unlocks Tab 4,4
+26,Sheek_Scrubs,55,Laboratory_Scrubs x4,Lustre_Shieldshoe x1,,,Task Unlocks Tab 4,4
+27,Massive_Food_Pouch,58,Sheepie_Dairy x175000,Magic_Meatloaf x30,Lost_Batteries x10,Dioxide_Synthesis x1000,Start,4
+28,Massive_Materials_Pouch,58,Genie_Lamp x130000,Lost_Batteries x10,Dioxide_Synthesis x1000,,Start,4
+29,Diabolical_Headcase,60,Lustre_Veil x1,Blobfish x600000,Starfire_Bar x10000,Nullo_Salt x800,Task Unlocks Tab 4,4
+30,Diabolical_Abdomen,61,Lustre_Chestplate x1,Cubed_Logs x400000,Starfire_Bar x2500,Nullo_Salt x400,Task Unlocks Tab 4,4
+31,Diabolical_Trimed_Leg_Guards,62,Lustre_Scales x1,Fairy x450000,Starfire_Bar x4000,Nullo_Salt x600,Task Unlocks Tab 4,4
+32,Diabolical_Toe_Tips,63,Lustre_Shieldshoe x1,Manta_Ray x500000,Starfire_Bar x5000,Nullo_Salt x700,Task Unlocks Tab 4,4
+33,Diabolical_Gauntlet,65,Knuckle_Sabers x1,Starfire_Bar x50000,Nullo_Salt x5000,,Task Unlocks Tab 4,4
+34,Diabolical_Flesh_Ripper,60,Slimsharp_Fin x1,Kraken x200000,Starfire_Bar x3000,Nullo_Salt x750,Task Unlocks Tab 4,4
+35,Diabolical_Continuit,60,Shardsure_Leif x1,Voodofish x10,Starfire_Bar x3000,Nullo_Salt x750,Task Unlocks Tab 4,4
+36,Diabolical_Opticule,60,Skullslip_Hallow x1,Squishy_Soul x15000,Starfire_Bar x3000,Nullo_Salt x800,Task Unlocks Tab 4,4
+37,Starfire_Pickaxe,60,Lustre_Pickaxe x1,Lustre_Bar x5000,Pearler_Shell x20,,Task Unlocks Tab 4,4
+38,Volumetric_Mining_Pouch,62,Starfire_Ore x300000,Pearler_Shell x4,Purple_Salt x800,,Task Unlocks Tab 4,4
+39,Starfire_Hatchet,60,Lustre_Logger x1,Cubed_Logs x100000,Pearler_Shell x40,,Task Unlocks Tab 4,4
+40,Volumetric_Chopping_Pouch,62,Cubed_Logs x300000,Pearler_Shell x4,Purple_Salt x800,,Task Unlocks Tab 4,4
+41,Starfire_Rod,61,Manta_Ray x40000,Pearler_Shell x60,Lustre_Rod x1,,Task Unlocks Tab 4,4
+42,Volumetric_Fish_Pouch,63,Manta_Ray x300000,Nullo_Salt x600,,,Task Unlocks Tab 4,4
+43,Starfire_Trim_Netting,61,Fairy x100000,Pearler_Shell x80,Lustre_Netting x1,,Task Unlocks Tab 4,4
+44,Volumetric_Bug_Pouch,63,Fairy x300000,Nullo_Salt x600,,,Task Unlocks Tab 4,4
+45,Royal_Traps,62,Blobfish x100000,Meaty_Traps x1,,,Task Unlocks Tab 4,4
+46,Volumetric_Critta_Pouch,64,Blobfish x300000,Nullo_Salt x800,,,Task Unlocks Tab 4,4
+47,Luciferian_Skull,62,Squishy_Soul x60000,Glauss_Skull x1,,,Task Unlocks Tab 4,4
+48,Volumetric_Soul_Pouch,64,Squishy_Soul x300000,Nullo_Salt x800,,,Task Unlocks Tab 4,4
+49,Volumetric_Food_Pouch,64,Spicy_Space_Ribs x500000,Nullo_Salt x800,Pearler_Shell x25,,Task Unlocks Tab 4,4
+50,Volumetric_Matty_Pouch,64,Condensed_Zap x500000,Pearler_Shell x25,Nullo_Salt x800,,Task Unlocks Tab 4,4
+52,Anvil_Tab_5,65,Starfire_Bar x5000,Cubed_Logs x200000,Fairy x150000,Nullo_Salt x600,Start,4
+53,Peeper_Pouch,53,Sand_Shark x10000,Worker_Bee x20000,Alien_Hive_Chunk x20000,Squishy_Soul x5000,Task Unlocks Tab 4,4
+54,Bolstered_DNA_Splicer,55,Ghost x100,Sappy_DNA_Splicer x5,,,Pincermin,4
+55,Double_Barreled_DNA_Splicer,60,Ice_Age_3 x30,Bolstered_DNA_Splicer x1,,,Thermister,4
+56,Ergonomic_DNA_Splicer,65,Lost_Batteries x200,Double_Barreled_DNA_Splicer x1,,,Octodar,4
+57,Souped_Lab_Ring,60,Lab_Ring x5,Purple_Mush_Cap x100000,Chef_Ring x1,,Mutated Mush,4
+61,Thin_Veil_of_The_Troll,70,Troll_Scales x50,Gold_Twine x10,Starfire_Bar x20000,Nullo_Salt x4000,Start,4
+62,Trollish_Garb,68,Troll_Scales x25,Pearler_Shell x25,Starfire_Bar x10000,Nullo_Salt x2800,Start,4
+63,Twisted_Scales,67,Troll_Scales x15,Condensed_Zap x333333,Starfire_Bar x5000,Nullo_Salt x1600,Start,4
+64,Soles_of_the_Troll,65,Cooking_Clogs x8,Troll_Scales x10,Starfire_Bar x3000,Nullo_Salt x750,Start,4
+1,Magma_Core_Headdress,65,Thin_Veil_of_The_Troll x1,Dust_Mote x80000,Dreadlo_Bar x2500,,Cheese Nub,5
+2,Magma_Core_Wavemaille,66,Trollish_Garb x1,Sundried_Glass x900000,Dreadlo_Bar x1200,,Stiltmole,5
+3,Magma_Core_Battleskirt,67,Twisted_Scales x1,Cheesy_Crumbs x10000000,Dreadlo_Bar x1600,,Molti,5
+4,Magma_Core_Lavarunners,68,Soles_of_the_Troll x1,Orange_Slice x1200000,Dreadlo_Bar x2000,,Purgatory Stalker,5
+5,Molten_Core_Knucklers,70,Diabolical_Gauntlet x1,Golden_Hampter_Gummy_Candy x1000,Hampter x500,,Suggma,5
+6,Magma_Maul,67,Diabolical_Flesh_Ripper x1,Dandielogs x500000,Hampter x100,,Citringe,5
+7,Sediment_Core_Grunkler,67,Diabolical_Continuit x1,Dandielogs x500000,Hampter x100,,Lampar,5
+8,Cattle_Core_Soothsayer_Staff,67,Diabolical_Opticule x1,Dandielogs x500000,Hampter x100,,Fire Spirit,5
+9,Dreadlo_Pickolo,70,Starfire_Pickaxe x1,Starfire_Bar x10000,,,Start,5
+10,Colossal_Mining_Pouch,67,Starfire_Ore x900000,,,,Start,5
+11,Dreadlo_Eviscerator,70,Starfire_Hatchet x1,Alien_Hive_Chunk x110000,,,Start,5
+12,Colossal_Chopping_Pouch,67,Maple_Logs x900000,,,,Start,5
+13,Dreadlo_Rod,71,Starfire_Rod x1,Kraken x250000,,,Start,5
+14,Colossal_Fish_Pouch,68,Kraken x900000,,,,Start,5
+15,Dreadlo_Matted_Netting,71,Starfire_Trim_Netting x1,Scarab x250000,,,Start,5
+16,Colossal_Bug_Pouch,68,Scarab x900000,,,,Start,5
+17,Egalitarian_Royal_Traps,73,Royal_Traps x1,Voodofish x100,Nullo_Salt x10000,,Start,5
+18,Colossal_Critta_Pouch,69,Blobfish x900000,Dioxide_Synthesis x5000,,,Start,5
+19,Dreadnaught_Skull,73,Oozie_Soul x125000,Slush_Skull x1,Luciferian_Skull x1,Nullo_Salt x10000,Start,5
+20,Colossal_Soul_Pouch,69,Oozie_Soul x800000,Dioxide_Synthesis x5000,,,Start,5
+21,Colossal_Food_Pouch,68,Grilled_Cheese_Nomwich x2500000,Golden_Grilled_Cheese_Nomwich x50,Golden_Hampter_Gummy_Candy x50,,Maccie,5
+22,Colossal_Matty_Pouch,69,Suggma_Ashes x2000000,Meteorite x600000,Hampter x200,,Mister Brightside,5
+23,Coldseeker_Bullet,71,Dust_Mote x100,Dandielogs x100,Spitfire x500,,Biggole Mole,5
+24,Anvil_Tab_6,80,Not_Yet x1,Not_Yet x1,Not_Yet x1,,Start,5
+32,Not_Yet,63,Not_Yet x1,Not_Yet x1,,,Start,5
