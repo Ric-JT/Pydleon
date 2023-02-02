@@ -4,6 +4,7 @@ import pandas as pd
 
 from utils.raw_field_parser import RawFieldParser
 from utils.handle_cake import CakeHandler
+from utils.config import config
 from resources.template_data import cake_template
 from maps.itemMap import item_map
 from maps.maps import (
@@ -624,7 +625,9 @@ def bake_dough(dough: dict) -> dict:
 
 
 if __name__ == "__main__":
-    filename = "resources/raw_data.json"
+    filename = config["RAW_DATA_JSON"]
+    cake_filename = config["CAKE_FILENAME"]
+
     with open(filename, "r") as fp:
         saveData = json.load(fp)
 
@@ -632,11 +635,11 @@ if __name__ == "__main__":
 
     cake = bake_dough(dough)
 
-    save_json(cake, filename="resources/cake.json")
+    save_json(cake, filename=cake_filename)
 
     # -------------------------------------------------------
     # Try Cake
-    cake_handler = CakeHandler("resources/cake.json")
+    cake_handler = CakeHandler(cake_filename)
 
     inventory = cake_handler.get_char_inventory(0)
     print_hline()

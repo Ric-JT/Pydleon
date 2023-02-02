@@ -1,10 +1,12 @@
 import pandas as pd
 from typing import Dict, Tuple
 import json
+from utils import config
 
 # This program reads the recipes.csv, created in excel from idelon wiki, to build the recipes.json
 
-recipes_filename = "resources/recipes.csv"
+recipes_filename = config["RECIPES_CSV"]
+raw_data_json_filename = config["RAW_DATA_JSON"]
 recipes_map = pd.read_csv(recipes_filename, header=0, delimiter=",")
 
 
@@ -135,5 +137,5 @@ if __name__ == "__main__":
         )
 
     # Save recipe book as a json
-    with open("resource/raw_data.json", "w") as outfile:
+    with open(raw_data_json_filename, "w") as outfile:
         json.dump(recipe_book, outfile)
