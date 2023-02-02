@@ -17,10 +17,23 @@ from maps.cardLevelMap import card_level_map
 
 
 def print_hline(n: int = 100):
+    """This function prints a sequence of '_', by default 100 sequence length
+
+    Keyword Arguments:
+        n -- Sequence Length (default: {100})
+    """
     print("_" * n)
 
 
-def create_refinery_data(fields):
+def create_refinery_data(fields: dict) -> Dict[str, dict]:
+    """This function creates the refinery data
+
+    Arguments:
+        fields -- fields from the raw data json as a dict
+
+    Returns:
+        Refinery data dict
+    """
     # 0 =
     # 1 = inventory
     # 2 =
@@ -35,7 +48,10 @@ def create_refinery_data(fields):
     # 6 = dioxide salt
     # 7 = red salt
     # 8 = red salt 2
+
+    # load rawRefinery
     rawRefinery = json.loads(fields["Refinery"])
+
     refinery = {}
     refinery["salts"] = {}
 
@@ -55,10 +71,17 @@ def create_refinery_data(fields):
     return refinery
 
 
-def fill_characters_data(
-    chars: list, numChars: int, fields, parser: RawFieldParser
-) -> list:
-    for i in range(numChars):
+def fill_characters_data(chars: list, parser: RawFieldParser) -> list:
+    """This function fills the characters data
+
+    Arguments:
+        chars -- Characters array with every character dict partially updated
+        parser -- Parser responsible to parse each character dict key.
+
+    Returns:
+        Characters array updated with characters data
+    """
+    for i, _ in enumerate(chars):
         print(chars[i]["name"])
         chars[i]["class"]: str = parser.get_char_class(i)
         chars[i]["money"]: int = parser.get_char_money(i)
@@ -89,6 +112,16 @@ def fill_characters_data(
 
 
 def fill_account_data(account: dict, characters: list, fields: dict) -> dict:
+    """This function fills the account data.
+
+    Arguments:
+        account -- Account container attribute
+        characters -- Characters array
+        fields -- fields from the raw data json as a dict
+
+    Returns:
+        Updated Account Data
+    """
     account["chestBank"] = fields["MoneyBANK"]
 
     # chest
@@ -306,7 +339,16 @@ def fill_account_data(account: dict, characters: list, fields: dict) -> dict:
     return account
 
 
-def fillGuildData(fields: dict, guildInfo: dict):
+def fillGuildData(guildInfo: dict) -> dict:
+    """This function fills the Guild Data
+
+    Arguments:
+        guildInfo -- Guild information
+
+    Returns:
+        Updated guildInfo
+    """
+
     res = {}
     res["id"] = guildInfo["i"]
     res["name"] = guildInfo["n"]
@@ -315,39 +357,21 @@ def fillGuildData(fields: dict, guildInfo: dict):
     return res
 
 
-def parse_dough(dough: dict):
-    res = {}
-    numChars = len(dough["charNameData"])
-    fields = dough["saveData"]
-    parser = RawFieldParser(fields)
-    guildInfo = dough["guildInfo"]
-    characters = []
-    for i in range(numChars):
-        newCharacter = cake_template["characters"].copy()
-        newCharacter["name"] = dough["charNameData"][i]
-        characters += [newCharacter]
+def print_line(ids: List[str], values: list, prefix: str = "", separators: list = None):
+    """This function prints a line with the respective ids and values, with possible costumization with prefix and separators
 
-    res["characters"] = fill_characters_data(
-        characters,
-        numChars,
-        fields,
-        parser,
-    )
+    Arguments:
+        ids -- List of ids
+        values -- Values that correspond to he ids
 
-    res["account"] = fill_account_data(
-        cake_template["account"], res["characters"], fields
-    )
-
-    res["account"]["Guild"] = fillGuildData(fields, guildInfo)
-    return res
-
-
-def print_line(ids: list, values: list, prefix: str = "", separators: list = None):
+    Keyword Arguments:
+        prefix -- prefix that may be needed (default: {""})
+        separators -- separator between ids (default: {None})
+    """
     separators = [":"] * len(values) if not separators else separators
     lines = []
     line = []
     for id, value, separator in zip(ids, values, separators):
-
         if type(value) == dict:
             line += [prefix + f"{id}{separator}"]
             new_prefix = prefix + "\t"
@@ -417,13 +441,18 @@ def print_line(ids: list, values: list, prefix: str = "", separators: list = Non
 
         else:
             line += [prefix + f"{id}{separator} {value}"]
-        lines += line
 
-    for line in lines:
-        print(line)
+    lines += line
+    message = " ".join(lines)
+    print(message)
 
 
 def print_characters(chars: list):
+    """This Function prints all the characters info
+
+    Arguments:
+        chars -- Characters information
+    """
     for ch in chars:
         columns = ["name", "class", "level"]
         line = ["", "", "lv."]
@@ -477,6 +506,11 @@ def print_characters(chars: list):
 
 
 def print_account(account: dict):
+    """This function prints the Account Data
+
+    Arguments:
+        account -- Account data
+    """
     columns = ["chestBank"]
     values = [account[column] for column in columns]
     line = ["Bank Money"]
@@ -508,15 +542,28 @@ def print_account(account: dict):
 
 
 def save_json(json_data: dict, filename: str = "new_json.json", indent: int = 4):
+    """This saves a dict in a json with a given indent
+
+    Arguments:
+        json_data -- Json data as a dict
+
+    Keyword Arguments:
+        filename -- json filename (default: {"new_json.json"})
+        indent -- indent number (default: {4})
+    """
     with open(filename, "w") as fp:
         json.dump(json_data, fp, indent=indent)
 
 
-if __name__ == "__main__":
-    filename = "resources/raw_data.json"
-    with open(filename, "r") as fp:
-        saveData = json.load(fp)
+def prepare_dough(flour: dict) -> dict:
+    """This prepares the "raw dough" by building a dict with custom charNameData and guildInfo and with the raw data from the raw json
 
+    Arguments:
+        flour -- Raw data from raw json
+
+    Returns:
+        Raw Dough - dict resulting of the combination of the three ingredients- charNameData, guildInfo, saveData(flour)
+    """
     charNameData = [
         "Mr_Piggao",
         "Miss_Piggy",
@@ -533,18 +580,67 @@ if __name__ == "__main__":
         "n": "Jaegerists",
         "stats": [2, 6, 5, 15, 6, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
     }
-    raw_dough = {
+    dough = {
         "charNameData": charNameData,
         "guildInfo": guildInfo,
-        "saveData": saveData,
+        "saveData": flour,
     }
 
-    cake = parse_dough(raw_dough)
-    # print_characters([cake["characters"][2]])
-    # print_account(cake["account"])
+    return dough
+
+
+def bake_dough(dough: dict) -> dict:
+    """This function initializes processes and fills the structure of the final cake
+
+    Arguments:
+        dough -- Dict with Char Name Data, Guild Info and the raw data from the json
+
+    Returns:
+        Fill dough
+    """
+
+    res = {}
+    numChars = len(dough["charNameData"])
+    fields = dough["saveData"]
+    parser = RawFieldParser(fields)
+    guildInfo = dough["guildInfo"]
+    characters = []
+    for i in range(numChars):
+        newCharacter = cake_template["characters"].copy()
+        newCharacter["name"] = dough["charNameData"][i]
+        characters += [newCharacter]
+
+    res["characters"] = fill_characters_data(
+        characters,
+        parser,
+    )
+
+    res["account"] = fill_account_data(
+        cake_template["account"], res["characters"], fields
+    )
+
+    res["account"]["Guild"] = fillGuildData(guildInfo)
+    return res
+
+
+if __name__ == "__main__":
+    filename = "resources/raw_data.json"
+    with open(filename, "r") as fp:
+        saveData = json.load(fp)
+
+    dough = prepare_dough(saveData)
+
+    cake = bake_dough(dough)
 
     save_json(cake, filename="resources/cake.json")
 
+    # -------------------------------------------------------
+    # Try Cake
     cake_handler = CakeHandler("resources/cake.json")
 
     inventory = cake_handler.get_char_inventory(0)
+    print_hline()
+    print_hline()
+
+    # print_characters(cake["characters"])
+    print_account(cake["account"])
