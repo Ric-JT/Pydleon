@@ -1,7 +1,7 @@
 import pandas as pd
 from typing import Dict, Tuple
 import json
-from utils import config
+from utils.config import config
 
 # This program reads the recipes.csv, created in excel from idelon wiki, to build the recipes.json
 
