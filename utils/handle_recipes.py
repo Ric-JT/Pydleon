@@ -66,6 +66,9 @@ class RecipeBook:
     def __init__(self, filename: str):
         """This is the initial function of Recipe Book. It initiates the attributes of the class.
 
+        Arguments:
+            filename -- Recipe Book json filenmae
+
         Attributes:
         ----------
         self.recipes: dict
@@ -83,11 +86,6 @@ class RecipeBook:
                     Recipe Id in the respective anvil tab
         self.bag: dict
             Dictionary with with items as keys and their required quantity as the value, representing the Inventory bag
-
-        Parameters
-        ----------
-        recipes : dict, optional
-            Recipe book as a dictionary, by default {}
         """
         try:
             with open(filename, "r") as file:
@@ -96,11 +94,6 @@ class RecipeBook:
             raise (E)
 
         self.recipes: dict = recipes
-        # {
-        #     key: recipes[key]
-        #     for key in recipes
-        #     if key in ("Pharoah_Bow", "Spiked_Menace")
-        # }
         self.bag: dict = {}
 
         self.possible_recipes: dict = {}
@@ -110,16 +103,12 @@ class RecipeBook:
         self.grindleft: dict = {}
 
     def get_recipe_by_name(self, name: str) -> dict:
-        """This function gets a recipe from an output item name. If it isn't in the recipe book return an empty dict
+        """This function gets a recipe from an item name. If it isn't in the recipe book return an empty dict
 
-        Parameters
-        ----------
-        name : str
-            Recipe output item name
+        Arguments:
+            name -- Recipe item name
 
-        Returns
-        -------
-        dict
+        Returns:
             Recipe Dictionary from the recipe book
         """
         recipe_dict = {name: self.recipes.get(name, {})}
@@ -127,7 +116,18 @@ class RecipeBook:
 
     def is_recipe_possible(
         self, smth_lvl: int, recipe_name: str, recipe_count: int, bag: dict
-    ):
+    ) -> bool:
+        """This function checks if a recipe is possible based on smth lvl and the items in the bag
+
+        Arguments:
+            smth_lvl -- Character smithing level
+            recipe_name -- Recipe name
+            recipe_count -- Recipe amount
+            bag -- Inventory Bag
+
+        Returns:
+            True if possible else False
+        """
         recipe = self.recipes[recipe_name]
         is_possible = True
 
@@ -174,16 +174,13 @@ class RecipeBook:
     ) -> dict:
         """This function gets the recipes based on a set of ingredients
 
-        Parameters
-        ----------
-        ingredients : dict
-            Set of ingredients to use in recipe search
-        smth_lvl : int, optional
-            Player smithing Level, by default None
+        Arguments:
+            ingredients -- Set of ingredients to use in recipe search
 
-        Returns
-        -------
-        dict
+        Keyword Arguments:
+            smth_lvl -- Character smithing Level (default: {None})
+
+        Returns:
             Possible recipes with the given ingredients
         """
         recipes_dict = {}
@@ -203,10 +200,8 @@ class RecipeBook:
     def add_to_bag(self, bag: dict):
         """Add set of items to self.bag. It also updates the self.grindcost and self.possible_recipes
 
-        Parameters
-        ----------
-        bag : dict
-            Set of items to add
+        Arguments:
+            bag -- Set of items to add
         """
         # Add bag to Recipe Book Bag
         _update_dict_add(self.bag, bag)
@@ -221,16 +216,12 @@ class RecipeBook:
     def get_item_cost(self, item: str, number: int) -> dict:
         """Get the cost in materials of certain number of one type of item.
 
-        Parameters
-        ----------
-        item : str
-            Item to evaluate
-        number : int
-            Number of Items
 
-        Returns
-        -------
-        dict
+        Arguments:
+            item -- Item to evaluate
+            number -- Item amount
+
+        Returns:
             Dictionary with items as key and quantity as value to represent the item cost
         """
 
@@ -258,16 +249,13 @@ class RecipeBook:
     def get_itemlist_cost(self, item_list: dict) -> dict:
         """This function calculates the cost for a set of items
 
-        Parameters
-        ----------
-        item_list : dict
-            Dictionary with item names as keys and number of that item name as value
+        Arguments:
+            item_list -- Dictionary with item names as keys and number of that item name as value
 
-        Returns
-        -------
-        dict
+        Returns:
             Dictionary ith item names as keys and number of that item name as value to represent the cost.
         """
+
         cost = {}
 
         # Get cost for the List of Items
@@ -279,11 +267,10 @@ class RecipeBook:
     def add_to_grindlist(self, wishes: dict = {}):
         """This function adds grind wishes to the grind list. Also updates self.gindcost and self.grindleft
 
-        Parameters
-        ----------
-        wishes : dict, optional
-            Dictionary with items as key and quantity as value to represent the item grind wishes, by default {}
+        Keyword Arguments:
+            wishes -- Dictionary with items as key and quantity as value to represent the item grind wishes (default: {{}})
         """
+
         # Get cost for the new wishes
         wishes = {wish: wishes[wish] for wish in wishes if wishes[wish] > 0}
         cost = self.get_itemlist_cost(wishes)
@@ -298,16 +285,32 @@ class RecipeBook:
         grindcost = self.grindcost.copy()
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
-    def _get_nr_stages(self, recipe: dict, bag: dict):
-        ing_stages = []
-        for ing in recipe["ingredients"]:
-            if ing not in self.recipes:
-                ing_stages += [1]
-            else:
-                ing_stages += [1 + self._get_nr_stages(self.recipes[ing])]
-        return max(ing_stages)
+    def _get_stages(
+        self, recipe_name: str, recipe_qtty: int, recipe: dict, stage: int = 1
+    ) -> dict:
+        """This function builds the recipe process in stages in a dict
+        Structure:
+        -------------
+        stage_key:str : {
+            recipe name->str:{
+                'qtty': recipe_amount -> int
+                'ingrediemts: {
+                    ingredient_name->str: ingredient_amount->int
+                }
+            }
+        }
 
-    def _get_stages(self, recipe_name, recipe_qtty, recipe, stage=1):
+        Arguments:
+            recipe_name -- recipe name
+            recipe_qtty -- recipe amount
+            recipe -- recipe dict
+
+        Keyword Arguments:
+            stage -- starting stage (default: {1})
+
+        Returns:
+            Stages dict
+        """
         stage_key = f"{stage}"
 
         # Fill current Stage
@@ -336,7 +339,16 @@ class RecipeBook:
 
         return ing_stages
 
-    def merge_dicts(self, dict_dest, dict_src):
+    def merge_dicts(self, dict_dest: dict, dict_src: dict):
+        """This function adds a src dict to a dest dict, by adding the lowest level attributes
+
+        Arguments:
+            dict_dest -- Destinatio dict
+            dict_src -- Source dict
+
+        Returns:
+            Merged dict
+        """
         for key_src, value_src in dict_src.items():
             if dict_dest.get(key_src):
                 if type(dict_dest[key_src]) == dict:
@@ -348,6 +360,12 @@ class RecipeBook:
         return dict_dest
 
     def print_recipes_stages(self, recipes: Dict[str, int] = None, bag=None):
+        """This function prints the recipe stages
+
+        Keyword Arguments:
+            recipes -- Recipes (default: {None})
+            bag -- Bag (default: {None})
+        """
         if recipes == None:
             recipes = self.grindlist if self.grindlist else self.recipes
             qttys = {recipe_name: 1 for recipe_name in self.recipes}
@@ -404,9 +422,8 @@ class RecipeBook:
                 for item, item_qtty in recipe_cost.items():
                     print(f"\t{item} x{item_qtty}")
 
-        return recipe_stages
-
     def _print_possible_recipies(self):
+        """This function prints possible recipes"""
         print(f"Possible Recipes:")
         for recipe in self.possible_recipes:
             print(f"\t{recipe}")
