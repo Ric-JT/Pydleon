@@ -384,7 +384,6 @@ class RecipeBook:
         if len(recipes):
             for recipe_name, recipe in recipes.items():
                 print("_" * 100)
-                print("recipe_name:", recipe_name)
 
                 recipe_qtty = qttys[recipe_name]
                 recipe_stage = self._get_stages(recipe_name, recipe_qtty, recipe)
@@ -395,8 +394,6 @@ class RecipeBook:
                         "stage" + str(n_stages - int(key) + 1)
                     ] = recipe_stage.pop(key)
                 recipe_stages[recipe_name] = recipe_stage
-
-                print("recipe_stages:", recipe_stages)
 
             print(f"There are {len(recipe_stages)} stages")
 
