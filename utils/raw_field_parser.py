@@ -20,16 +20,32 @@ from maps.maps import (
     large_bubble_map,
 )
 
-UNKNOWN = "UNKNOWN"
+UNKNOWN: str = "UNKNOWN"
 
 
 class RawFieldParser:
-    def __init__(self, fields: dict) -> None:
+    def __init__(self, fields: dict):
+        """This function initializes the Raw field parser by storing the raw fields
+
+        Arguments:
+            fields -- Raw fields
+        """
         self.fields: dict = fields
 
     def _get_straight_field_data(
         self, src_field_name: str, default_type: str = None
     ) -> object:
+        """This funtion tries to get a field name from fields, if doesn't exist use default value
+
+        Arguments:
+            src_field_name -- Source field name
+
+        Keyword Arguments:
+            default_type -- default type used in the default value (default: {None})
+
+        Returns:
+            The value for the searched key, even if it is the default value
+        """
         if default_type is None:
             default_type: str = src_field_name.replace("_", "").upper()
         default_value: str = f"{UNKNOWN}-{default_type}"
@@ -43,36 +59,78 @@ class RawFieldParser:
         element_prefix: str = "",
         field_unknown: str = "",
     ) -> list:
-        output_list = []
-        for el in array:
-            if el != "length":
+        """Apply map
 
+        Arguments:
+            array -- array with values to map, can be either a list or a dict
+            map -- _description_
+
+        Keyword Arguments:
+            element_prefix -- str used as a key prefix to use map (default: {""})
+            field_unknown -- String used in the default value (default: {""})
+
+        Returns:
+            Mapped list
+        """
+        output_list = []
+
+        # For every element in array to map
+        for el in array:
+            # Except if the element is 'length'
+            if el != "length":
+                # If array is a list
                 if type(array) == list:
+                    # If list element is a string
                     if type(el) == str:
                         key = element_prefix + el  # .upper()
-
+                    # if list element is not a string
                     else:
                         key = el
+                # Else if the array is a dict
                 elif type(array) == dict:
                     key = array[el]
 
+                # Else if the array is integer
                 elif type(array) == int:
+                    input("\n\n\t\tWTF???!!!!!!!\n\n")
                     key = f"{el}"
+                # Else if the array is not a list not a dict nor a integer
                 else:
                     print(f"Type of array: {type(array)}", array)
+
+                # Build default message for unknown key
                 message_parts = [UNKNOWN, f"{key}"]
                 if len(field_unknown):
                     message_parts += [field_unknown.upper()]
                 message = "-".join(message_parts)
+
+                # Try to map key
                 value = map.get(key, message)
-                if UNKNOWN in value:
+
+                # If value is the default value print value
+                if message == value:
                     print("Unknown:", value)
 
+                # Add mapped value
                 output_list += [value]
         return output_list
 
-    def _get_stone_upgrades(self, plain_data: List[Dict[str, int]], char_i: int):
-        StoneData = json.loads(self.fields[f"EMm0_{char_i}"])
+    def _get_stone_upgrades(
+        self, plain_data: List[Dict[str, int]], char_i: int, is_armor: bool = True
+    ) -> List[Dict[str, object]]:
+        """This function gets the stone upgrades for a character equip.
+        Depending if is armor or tools the raw field key prefix vary
+
+        Arguments:
+            plain_data -- Current equip data
+            char_i -- Character index
+
+        Returns:
+            Equip data updated with stone upgrades
+        """
+
+        raw_field_prefix: str = "EMm0_" if is_armor else "EMm1_"
+        StoneData = json.loads(self.fields[raw_field_prefix + char_i])
         # add blank data to everything in the list first
         for j in range(len(plain_data)):
             plain_data[j]["stoneData"] = stone_upgrade_template
@@ -94,6 +152,16 @@ class RawFieldParser:
         equipable_counts: List[Dict[str, int]],
         char_i: int,
     ) -> List[Dict[str, object]]:
+        """This function builds the armor structure and data from the raw json
+
+        Arguments:
+            equipable_names -- Armor equiped Names
+            equipable_counts -- Amount of the equiped tools equiped
+            char_i -- Character index
+
+        Returns:
+            Updated armor structure and data
+        """
 
         raw_equipment_names = self._apply_map(
             equipable_names[0], item_map, field_unknown="armor"
@@ -109,7 +177,9 @@ class RawFieldParser:
             for equip_name, count in zip(raw_equipment_names, raw_equipment_counts)
         ]
 
-        plain_equipment_data = self._get_stone_upgrades(plain_equipment_data, char_i)
+        plain_equipment_data = self._get_stone_upgrades(
+            plain_equipment_data, char_i, is_armor=True
+        )
         return plain_equipment_data
 
     def _get_tools(
@@ -117,7 +187,17 @@ class RawFieldParser:
         equipable_names: List[Dict[str, str]],
         equipable_counts: List[Dict[str, int]],
         char_i: int,
-    ):
+    ) -> List[Dict[str, object]]:
+        """This function builds the tools structure and data from the raw json
+
+        Arguments:
+            equipable_names -- Tools equiped Names
+            equipable_counts -- Amount of the equiped tools equiped
+            char_i -- Character index
+
+        Returns:
+            Updated tools structure and data
+        """
         raw_tool_names = self._apply_map(
             equipable_names[1], item_map, field_unknown="tool"
         )
@@ -132,15 +212,25 @@ class RawFieldParser:
             for tool_name, count in zip(raw_tool_names, raw_tool_counts)
         ]
 
-        plain_tool_data = self._get_stone_upgrades(plain_tool_data, char_i)
+        plain_tool_data = self._get_stone_upgrades(
+            plain_tool_data, char_i, is_armor=False
+        )
         return plain_tool_data
 
     def _get_foods(
         self,
         equipable_names: List[Dict[str, str]],
         equipable_counts: List[Dict[str, int]],
-        char_i: int,
-    ):
+    ) -> List[Dict[str, object]]:
+        """This function builds the food structure and data from the raw json
+
+        Arguments:
+            equipable_names -- Foods equiped Names
+            equipable_counts -- Amount of the foods equiped
+
+        Returns:
+            Updated foods structure and data
+        """
         raw_food_names = self._apply_map(
             equipable_names[2], item_map, field_unknown="food"
         )
@@ -158,6 +248,14 @@ class RawFieldParser:
         return plain_food_data
 
     def get_char_class(self, char_i: int) -> str:
+        """This function gets the Character Class
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Class
+        """
         default_type: str = "CHARCLASS"
         src_field_name: str = f"CharacterClass_{char_i}"
         raw_data = self._get_straight_field_data(src_field_name, default_type)
@@ -166,11 +264,27 @@ class RawFieldParser:
         ]
 
     def get_char_money(self, char_i: int) -> float:
+        """This function gets the Character Money
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Money
+        """
         default_type: str = "MONEY"
         src_field_name: str = f"Money_{char_i}"
         return self._get_straight_field_data(src_field_name, default_type=default_type)
 
     def get_char_AFKtarget(self, char_i: int) -> str:
+        """This function gets the Character AFK Target
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character AFK Target
+        """
         default_type: str = "AFKTARGET"
         src_field_name: str = f"AFKtarget_{char_i}"
 
@@ -180,11 +294,27 @@ class RawFieldParser:
         return afk_target.capitalize()
 
     def get_char_currentMap(self, char_i: int) -> int:
+        """This function gets the Character Current Map
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Current Map
+        """
         default_type: str = "CURRENTMAP"
         src_field_name: str = f"CurrentMap_{char_i}"
         return self._get_straight_field_data(src_field_name, default_type=default_type)
 
     def get_char_npcDialog(self, char_i: int) -> Dict[str, int]:
+        """This function gets the Character NPC Dialogs
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character NPC Dialogs
+        """
         default_type: str = "NPCDIALOG"
         src_field_name: str = f"NPCdialogue_{char_i}"
 
@@ -195,6 +325,14 @@ class RawFieldParser:
         return dialogs_completed
 
     def get_char_AFKtime(self, char_i: int) -> float:
+        """This function gets the Character AFK Time
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character AFK Time
+        """
         default_type: str = "TIMEAWAY"
         src_field_name: str = f"PTimeAway_{char_i}"
 
@@ -204,11 +342,27 @@ class RawFieldParser:
         return AFKtime
 
     def get_char_instaRevives(self, char_i: int) -> int:
+        """This function gets the Character Instant Revives
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Instant Revives
+        """
         default_type: str = "INSTAREVIVES"
         src_field_name: str = f"PVInstaRevives_{char_i}"
         return self._get_straight_field_data(src_field_name, default_type=default_type)
 
     def get_char_gender(self, char_i: int) -> str:
+        """This function gets the Character Gender
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Gender
+        """
         default_type: str = "GENDER"
         src_field_name: str = f"PVGender_{char_i}"
         gender_int: int = self._get_straight_field_data(
@@ -219,11 +373,27 @@ class RawFieldParser:
         return gender
 
     def get_char_minigames(self, char_i: int) -> int:
+        """This function gets the Character Minigames
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Minigames
+        """
         default_type: str = "MINIGAMEPLAYS"
         src_field_name: str = f"PVMinigamePlays_{char_i}"
         return self._get_straight_field_data(src_field_name, default_type=default_type)
 
     def get_char_statlist(self, char_i: int) -> Dict[str, int]:
+        """This function gets the Character Stat List
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Stat List
+        """
         default_type: str = "STATLIST"
         src_field_name: str = f"PVStatList_{char_i}"
         columns: List[str] = ["strength", "agility", "wisdom", "luck", "level"]
@@ -238,6 +408,14 @@ class RawFieldParser:
         return stat_dict
 
     def get_char_POBoxUpgrades(self, char_i: int) -> List[int]:
+        """This function gets the Character PO Box Upgrades
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character PO Box Upgrades
+        """
         default_type: str = "POBOXUPGRADES"
         src_field_name: str = f"POu_{char_i}"
         return json.loads(
@@ -245,6 +423,14 @@ class RawFieldParser:
         )
 
     def get_char_invBagsUsed(self, char_i: int) -> List[dict]:
+        """This function gets the Character Inventory Bags Used
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Inventory Bags Used
+        """
         default_type: str = "INVBAGUSED"
         src_field_name: str = f"InvBagsUsed_{char_i}"
 
@@ -265,6 +451,14 @@ class RawFieldParser:
         ]
 
     def get_char_inventory(self, char_i: int) -> List[Dict[str, int]]:
+        """This function gets the Character Inventory
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Inventory
+        """
         default_name_type: str = "INVITEMNAME"
         src_name_field_name: str = f"InventoryOrder_{char_i}"
 
@@ -289,6 +483,14 @@ class RawFieldParser:
         return item_list
 
     def get_char_equipment(self, char_i: int) -> List[Dict[str, int]]:
+        """This function gets the Character Equipment
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Equipment
+        """
         default_equip_order_type: str = "EQUIPORDER"
         src_equip_order_field_name: str = f"EquipOrder_{char_i}"
         default_equip_qtty_type: str = "EQUIPQTTY"
@@ -306,7 +508,15 @@ class RawFieldParser:
         foods = self._get_foods(equipable_names, equipable_counts, char_i)
         return {"equipment": equipment, "tools": tools, "food": foods}
 
-    def get_char_obols(self, char_i: int):
+    def get_char_obols(self, char_i: int) -> List[Dict[str, Union[str, dict]]]:
+        """This function gets the Character Obols
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Obols
+        """
         raw_obol_names = self._get_straight_field_data(f"ObolEqO0_{char_i}")
         obol_map = json.loads(self._get_straight_field_data(f"ObolEqMAP_{char_i}"))
 
@@ -321,7 +531,15 @@ class RawFieldParser:
 
         return plain_obol_data
 
-    def get_char_statues(self, char_i: int):
+    def get_char_statues(self, char_i: int) -> List[Dict[str, Union[int, float]]]:
+        """This function gets the Character Statues
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Statues
+        """
         raw_statue_array = json.loads(
             self._get_straight_field_data(f"StatueLevels_{char_i}")
         )
@@ -332,24 +550,50 @@ class RawFieldParser:
 
         return statue_items
 
-    def get_char_cards(self, char_i: int):
+    def get_char_cards(self, char_i: int) -> List[str]:
+        """This function gets the Character Cards
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Cards
+        """
         raw_cards_array = self._get_straight_field_data(f"CardEquip_{char_i}")
-        cards_array = self._apply_map(
+        cards_array: List[str] = self._apply_map(
             raw_cards_array, card_equip_map, field_unknown="card"
         )
 
         return cards_array
 
-    def get_char_card_set(self, char_i: int):
+    def get_char_card_set(self, char_i: int) -> List[str]:
+        """This function gets the Character Card Set
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Card Set
+        """
         raw_card_set_name = json.loads(
             self._get_straight_field_data(f"CSetEq_{char_i}")
         )
         card_effects = list(raw_card_set_name.keys())
-        card_set = self._apply_map(card_effects, card_set_map, field_unknown="cardset")
+        card_set: List[str] = self._apply_map(
+            card_effects, card_set_map, field_unknown="cardset"
+        )
 
         return card_set
 
-    def get_char_skill_levels(self, char_i: int):
+    def get_char_skill_levels(self, char_i: int) -> Dict[str, int]:
+        """This function gets the Character Skill Levels
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Skill Levels
+        """
         raw_skill_levels = self._get_straight_field_data(f"Lv0_{char_i}")
 
         skill_levels = [
@@ -367,7 +611,15 @@ class RawFieldParser:
 
         return mapped_skills
 
-    def get_char_star_signs(self, char_i):
+    def get_char_star_signs(self, char_i: int) -> List[str]:
+        """This function gets the Character Star Sign
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Star Sign
+        """
         raw_star_sign_data = self._get_straight_field_data(f"PVtStarSign_{char_i}")
         star_sign_split = raw_star_sign_data.split(",")
         for sign_index, sign in enumerate(star_sign_split):
@@ -377,17 +629,25 @@ class RawFieldParser:
             int(star_sign_id) for star_sign_id in star_sign_split if sign != ""
         ]
 
-        star_signs = [
-            self._apply_map(star_sign_split, star_sign_map, field_unknown="starsignid")
-        ]
+        star_signs: List[str] = self._apply_map(
+            star_sign_split, star_sign_map, field_unknown="starsignid"
+        )
 
         return star_signs
 
-    def get_char_tlnt_lvls(self, char_i: int):
+    def get_char_tlnt_lvls(self, char_i: int) -> Dict[str, int]:
+        """This function gets the Character Talent Levels
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Talent Levels
+        """
         raw_talents = json.loads(self._get_straight_field_data(f"SL_{char_i}"))
         talents = [int(key) for key in raw_talents.keys()]
         talent_keys = self._apply_map(talents, talent_map, field_unknown="talentid")
-        mappedTalents = {
+        mappedTalents: Dict[str, int] = {
             talent_key: raw_talents[raw_key]
             for talent_key, raw_key in zip(talent_keys, raw_talents)
         }
@@ -427,7 +687,15 @@ class RawFieldParser:
 
         return {"talentLevels": indexedTalents, "starTalentLevels": star_talent_indexed}
 
-    def get_char_atk_loadout(self, char_i: int):
+    def get_char_atk_loadout(self, char_i: int) -> List[str]:
+        """This function gets the Character Attack Loadout
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Attack Loadout
+        """
         # talent attack loadout
         raw_atk_loadout = json.loads(
             self._get_straight_field_data(f"AttackLoadout_{char_i}")
@@ -440,37 +708,67 @@ class RawFieldParser:
         unmapped_loadout = [key for key in atk_loadout if key != "Null"]
 
         # change talent IDs to their in-game names
-        mapped_loadout = self._apply_map(
+        mapped_loadout: List[str] = self._apply_map(
             unmapped_loadout, talent_map, field_unknown="talent"
         )
 
         # change talent names to their readable form
         for ix, word in enumerate(mapped_loadout):
-            mapped_loadout[ix] = " ".join(
+            mapped_loadout[ix]: str = " ".join(
                 [w.capitalize() for w in word.lower().split("_")]
             )
         return mapped_loadout
 
-    def get_char_fishing_toolkit(self, char_i: int):
+    def get_char_fishing_toolkit(self, char_i: int) -> Dict[str, List[str]]:
+        """This function gets the Character Fishing Toolkit
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Fishing Toolkit
+        """
         raw_tool_kit = self._get_straight_field_data(f"PVFishingToolkit_{char_i}")
 
         raw_bait = [int(raw_tool_kit[0])]
         raw_line = [int(raw_tool_kit[1])]
 
-        bait = self._apply_map(raw_bait, fishing_bait_map, field_unknown="bait")
-        line = self._apply_map(raw_line, fishing_line_map, field_unknown="fishline")
+        bait: List[str] = self._apply_map(
+            raw_bait, fishing_bait_map, field_unknown="bait"
+        )
+        line: List[str] = self._apply_map(
+            raw_line, fishing_line_map, field_unknown="fishline"
+        )
 
         return {"bait": bait, "line": line}
 
-    def get_char_bubbles(self, char_id: int):
+    def get_char_bubbles(self, char_id: int) -> List[str]:
+        """This function gets the Character Bubles
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Bubles
+        """
         raw_bubbles = json.loads(self._get_straight_field_data(f"CauldronBubbles"))[
             char_id
         ]
-        bubbles = self._apply_map(raw_bubbles, large_bubble_map, field_unknown="bubble")
+        bubbles: List[str] = self._apply_map(
+            raw_bubbles, large_bubble_map, field_unknown="bubble"
+        )
 
         return bubbles
 
-    def get_char_anvil(self, char_id: int):
+    def get_char_anvil(self, char_id: int) -> List[Dict[str, int]]:
+        """This function gets the Character Anvil
+
+        Arguments:
+            char_i -- Character index
+
+        Returns:
+            Character Anvil
+        """
         raw_anvil = self._get_straight_field_data(f"AnvilPA_{char_id}")
 
         # [0-13] of rawAnvil are each anvil product
@@ -479,7 +777,7 @@ class RawFieldParser:
         # 1 = amount of xp gained when claimed
         # 2 = current progress? (idk need more proof but also kinda useless)
         # 3 = ???
-        anvil_products = [
+        anvil_products: List[Dict[str, int]] = [
             {
                 "produced": int(raw_product_stats["0"]),
                 "xp": int(raw_product_stats["1"]),
