@@ -13,5 +13,5 @@ Pydleon is not refactored garbanzo
 * Define grindlist
 * Get grindleft and grindcost
 * Get cost of a set of items
-* Get crafting procedire of a set of items with total cost
+* Get crafting procedure of a set of items with total cost
     
