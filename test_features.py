@@ -24,8 +24,7 @@ recipe_book._print_possible_recipies()
 
 recipe_book.add_to_grindlist(
     {
-        "Pharoah_Bow": 1,
-        "Gold_Boots": 1,
+        "Crows_Nest": 1,
     }
 )
 res = recipe_book.print_recipes_stages(recipes=recipe_book.grindlist)
