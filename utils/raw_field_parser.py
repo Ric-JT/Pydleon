@@ -130,7 +130,7 @@ class RawFieldParser:
         """
 
         raw_field_prefix: str = "EMm0_" if is_armor else "EMm1_"
-        StoneData = json.loads(self.fields[raw_field_prefix + char_i])
+        StoneData = json.loads(self.fields[raw_field_prefix + str(char_i)])
         # add blank data to everything in the list first
         for j in range(len(plain_data)):
             plain_data[j]["stoneData"] = stone_upgrade_template
@@ -505,7 +505,7 @@ class RawFieldParser:
 
         equipment = self._get_armor(equipable_names, equipable_counts, char_i)
         tools = self._get_tools(equipable_names, equipable_counts, char_i)
-        foods = self._get_foods(equipable_names, equipable_counts, char_i)
+        foods = self._get_foods(equipable_names, equipable_counts)
         return {"equipment": equipment, "tools": tools, "food": foods}
 
     def get_char_obols(self, char_i: int) -> List[Dict[str, Union[str, dict]]]:
