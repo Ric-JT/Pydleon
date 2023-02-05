@@ -1,5 +1,5 @@
 import json
-from typing import Dict, List
+from typing import Dict
 import pandas as pd
 
 
@@ -51,7 +51,7 @@ def _update_dict_sub(bag: dict, new_items: dict) -> dict:
     return bag
 
 
-def print_hline(n: int = 100):
+def _print_hline(n: int = 100):
     """This function prints an Horizontal line with *n* consecutive '_'
 
     Parameters
@@ -430,17 +430,17 @@ class RecipeBook:
 
     def print_inventory(self):
         """This function prints the current Inventory and current Possible Recipes"""
-        print_hline()
+        _print_hline()
         print(f"Inventory:")
         for item in self.bag:
             print(f"\t - {item} x{self.bag[item]}")
 
         self._print_possible_recipies()
-        print_hline()
+        _print_hline()
 
     def print_grindlist(self):
         """This function prints the grindlist, grindcost and grindleft"""
-        print_hline()
+        _print_hline()
         print(f"Grind List:")
         for wish in self.grindlist:
             print(f"\t + {wish} x{self.grindlist[wish]}")
@@ -452,7 +452,7 @@ class RecipeBook:
         print(f"Grind Left:")
         for item in self.grindleft:
             print(f"\t - {item} x{self.grindleft[item]}")
-        print_hline()
+        _print_hline()
 
 
 if __name__ == "__main__":
