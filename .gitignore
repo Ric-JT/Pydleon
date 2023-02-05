@@ -1,0 +1,6 @@
+.vscode/settings.json
+test.json
+raw_data.json
+test.py
+*.pyc
+cake.json
