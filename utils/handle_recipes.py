@@ -359,7 +359,9 @@ class RecipeBook:
                 dict_dest[key_src] = value_src
         return dict_dest
 
-    def print_recipes_stages(self, recipes: Dict[str, int] = None, bag=None):
+    def print_recipes_stages(
+        self, recipes: Dict[str, int] = None, bag: Dict[str, int] = None
+    ):
         """This function prints the recipe stages
 
         Keyword Arguments:
