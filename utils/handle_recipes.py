@@ -209,13 +209,17 @@ class RecipeBook:
         # Get possible recipes based on Recipe Book Bag
         self.possible_recipes = self.get_recipes_by_ingredients(self.bag)
 
-    def get_item_cost(self, item: str, number: int, bag: dict = {}) -> dict:
+    def get_item_cost(
+        self, item: str, number: int, bag: Dict[str, int] = {}
+    ) -> Dict[str, int]:
         """Get the cost in materials of certain number of one type of item.
+        Is able to take into account the available items in bag.
 
 
         Arguments:
             item -- Item to evaluate
             number -- Item amount
+            bag -- Bag with available items
 
         Returns:
             Dictionary with items as key and quantity as value to represent the item cost
@@ -227,22 +231,28 @@ class RecipeBook:
         if needed > 0 and self.recipes.get(item):
             ingredients = self.recipes[item]["ingredients"]
 
+            # Get ingredients cost
             ing_cost = self.get_itemlist_cost(ingredients, list_number=needed, bag=bag)
+
+            # Update recipe cost
             _update_dict_add(cost, ing_cost)
 
-        # Else set the item itself as the cost
+        # Else if is needed but doesn't have a recipe
         elif needed > 0:
             cost[item] = needed
 
         return cost
 
     def get_itemlist_cost(
-        self, item_list: dict, list_number: int = 1, bag: dict = {}
-    ) -> dict:
-        """This function calculates the cost for a set of items
+        self, item_list: dict, list_number: int = 1, bag: Dict[str, int] = {}
+    ) -> Dict[str, int]:
+        """This function calculates the cost for a set of items.
+        Is able to take into account the available items in bag.
 
         Arguments:
             item_list -- Dictionary with item names as keys and number of that item name as value
+            list_number -- Number of repetitions of item list
+            bag -- Bag with available items
 
         Returns:
             Dictionary ith item names as keys and number of that item name as value to represent the cost.
@@ -292,7 +302,8 @@ class RecipeBook:
         stage: int = 1,
         bag: Dict[str, int] = {},
     ) -> dict:
-        """This function builds the recipe process in stages in a dict
+        """This function builds the recipe process in stages in a dict.
+        Is able to take into account the available items in bag.
         Structure:
         -------------
         stage_key:str : {
@@ -308,6 +319,8 @@ class RecipeBook:
             recipe_name -- recipe name
             recipe_qtty -- recipe amount
             recipe -- recipe dict
+            stage -- stage number (default: {1})
+            bag -- Bag with available items (default: {{}})
 
         Keyword Arguments:
             stage -- starting stage (default: {1})
@@ -367,11 +380,12 @@ class RecipeBook:
     def print_recipes_stages(
         self, recipes: Dict[str, int] = None, bag: Dict[str, int] = None
     ):
-        """This function prints the recipe stages
+        """This function prints the recipe stages.
+        Is able to take into account the available items in bag.
 
         Keyword Arguments:
-            recipes -- Recipes (default: {None})
-            bag -- Bag (default: {None})
+            recipes -- Recipes dict (default: {None})
+            bag -- Bag with available items(default: {None})
         """
         if recipes == None:
             recipes = self.grindlist if self.grindlist else self.recipes
