@@ -282,7 +282,12 @@ class RecipeBook:
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
     def _get_stages(
-        self, recipe_name: str, recipe_qtty: int, recipe: dict, stage: int = 1
+        self,
+        recipe_name: str,
+        recipe_qtty: int,
+        recipe: dict,
+        stage: int = 1,
+        bag: Dict[str, int] = {},
     ) -> dict:
         """This function builds the recipe process in stages in a dict
         Structure:
@@ -323,12 +328,14 @@ class RecipeBook:
 
         # Get next stage
         for ing, qtty in ing_stages[stage_key][recipe_name]["ingredients"].items():
-            if ing in self.recipes:
+            qtty_needed = qtty - bag.get(ing, 0)
+            if ing in self.recipes and qtty_needed:
                 ing_stage = self._get_stages(
                     ing,
                     qtty,
                     self.recipes[ing],
                     stage=stage + 1,
+                    bag=bag,
                 )
                 _update_dict_add(ing_stages, ing_stage)
 
@@ -380,10 +387,11 @@ class RecipeBook:
         total_item_cost: Dict[str, int] = {}
         if len(recipes):
             for recipe_name, recipe in recipes.items():
-                print("_" * 100)
 
                 recipe_qtty = qttys[recipe_name]
-                recipe_stage = self._get_stages(recipe_name, recipe_qtty, recipe)
+                recipe_stage = self._get_stages(
+                    recipe_name, recipe_qtty, recipe, bag=bag
+                )
                 n_stages = len(recipe_stage)
                 stage_keys = list(recipe_stage.keys())
                 for key in stage_keys:
