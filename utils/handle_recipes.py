@@ -148,10 +148,6 @@ class RecipeBook:
                 if rec_ing not in self.recipes and required > bag.get(rec_ing, 0):
                     is_possible = False
 
-                    print(
-                        f"Raw material not in bag for recipe: {recipe_name}; raw material: {rec_ing}"
-                    )
-
                 # If ingredient is a recipe but there isn't enough in the bag
                 elif required > bag.get(rec_ing, 0):
                     # Subbtract from the required the ingredient quantity already in the bag
@@ -190,7 +186,7 @@ class RecipeBook:
                 smth_lvl, target, target_count, ingredients
             )
             if is_possible:
-                print("p1:", target, is_possible)
+                print("p1:", target, "is possible to craft")
             # If the recipe is still considered possible add it to the recipes dict
             if is_possible:
                 recipes_dict.update(self.get_recipe_by_name(target))
@@ -312,7 +308,6 @@ class RecipeBook:
             Stages dict
         """
         stage_key = f"{stage}"
-
         # Fill current Stage
         ing_stages = {
             stage_key: {
