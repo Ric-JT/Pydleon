@@ -242,7 +242,9 @@ class RecipeBook:
 
         return cost
 
-    def get_itemlist_cost(self, item_list: dict) -> dict:
+    def get_itemlist_cost(
+        self, item_list: dict, list_number: int = 1, bag: dict = {}
+    ) -> dict:
         """This function calculates the cost for a set of items
 
         Arguments:
@@ -255,8 +257,15 @@ class RecipeBook:
         cost = {}
 
         # Get cost for the List of Items
-        for item in item_list:
-            item_cost = self.get_item_cost(item, item_list[item])
+        for item, value in item_list.items():
+            wanted = value * list_number
+            item_cost = self.get_item_cost(item, wanted, bag=bag)
+            if item_cost:
+                # Multiply the item cost by the number of items
+                item_cost_series = pd.Series(item_cost, dtype=int)
+
+                # Convert cost back to Dictionary
+                item_cost = item_cost_series.to_dict()
             _update_dict_add(cost, item_cost)
         return cost
 
