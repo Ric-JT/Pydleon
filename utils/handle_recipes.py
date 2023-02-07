@@ -148,10 +148,6 @@ class RecipeBook:
                 if rec_ing not in self.recipes and required > bag.get(rec_ing, 0):
                     is_possible = False
 
-                    print(
-                        f"Raw material not in bag for recipe: {recipe_name}; raw material: {rec_ing}"
-                    )
-
                 # If ingredient is a recipe but there isn't enough in the bag
                 elif required > bag.get(rec_ing, 0):
                     # Subbtract from the required the ingredient quantity already in the bag
@@ -190,7 +186,7 @@ class RecipeBook:
                 smth_lvl, target, target_count, ingredients
             )
             if is_possible:
-                print("p1:", target, is_possible)
+                print("p1:", target, "is possible to craft")
             # If the recipe is still considered possible add it to the recipes dict
             if is_possible:
                 recipes_dict.update(self.get_recipe_by_name(target))
@@ -213,13 +209,17 @@ class RecipeBook:
         # Get possible recipes based on Recipe Book Bag
         self.possible_recipes = self.get_recipes_by_ingredients(self.bag)
 
-    def get_item_cost(self, item: str, number: int) -> dict:
+    def get_item_cost(
+        self, item: str, number: int, bag: Dict[str, int] = {}
+    ) -> Dict[str, int]:
         """Get the cost in materials of certain number of one type of item.
+        Is able to take into account the available items in bag.
 
 
         Arguments:
             item -- Item to evaluate
             number -- Item amount
+            bag -- Bag with available items
 
         Returns:
             Dictionary with items as key and quantity as value to represent the item cost
@@ -227,30 +227,32 @@ class RecipeBook:
 
         cost = {}
         # If Recipe Book has a recipe for the item
-        if self.recipes.get(item):
+        needed = number - bag.get(item, 0)
+        if needed > 0 and self.recipes.get(item):
             ingredients = self.recipes[item]["ingredients"]
 
-            # Break the ingredient down until there is no more ingredients with recipes
-            for ingredient in ingredients:
-                item_cost = self.get_item_cost(ingredient, ingredients[ingredient])
-                _update_dict_add(cost, item_cost)
+            # Get ingredients cost
+            ing_cost = self.get_itemlist_cost(ingredients, list_number=needed, bag=bag)
 
-            # Multiply the item cost by the number of items
-            cost_series = pd.Series(cost, dtype=int) * number
+            # Update recipe cost
+            _update_dict_add(cost, ing_cost)
 
-            # Convert cost back to Dictionary
-            cost = cost_series.to_dict()
-        # Else set the item itself as the cost
-        else:
-            cost[item] = number
+        # Else if is needed but doesn't have a recipe
+        elif needed > 0:
+            cost[item] = needed
 
         return cost
 
-    def get_itemlist_cost(self, item_list: dict) -> dict:
-        """This function calculates the cost for a set of items
+    def get_itemlist_cost(
+        self, item_list: dict, list_number: int = 1, bag: Dict[str, int] = {}
+    ) -> Dict[str, int]:
+        """This function calculates the cost for a set of items.
+        Is able to take into account the available items in bag.
 
         Arguments:
             item_list -- Dictionary with item names as keys and number of that item name as value
+            list_number -- Number of repetitions of item list
+            bag -- Bag with available items
 
         Returns:
             Dictionary ith item names as keys and number of that item name as value to represent the cost.
@@ -259,9 +261,16 @@ class RecipeBook:
         cost = {}
 
         # Get cost for the List of Items
-        for item in item_list:
-            item_cost = self.get_item_cost(item, item_list[item])
-            _update_dict_add(cost, item_cost)
+        for item, value in item_list.items():
+            wanted = value * list_number
+            item_cost = self.get_item_cost(item, wanted, bag=bag)
+            if item_cost:
+                # Multiply the item cost by the number of items
+                item_cost_series = pd.Series(item_cost, dtype=int)
+
+                # Convert cost back to Dictionary
+                item_cost = item_cost_series.to_dict()
+                _update_dict_add(cost, item_cost)
         return cost
 
     def add_to_grindlist(self, wishes: dict = {}):
@@ -286,9 +295,15 @@ class RecipeBook:
         self.grindleft = _update_dict_sub(grindcost, self.bag)
 
     def _get_stages(
-        self, recipe_name: str, recipe_qtty: int, recipe: dict, stage: int = 1
+        self,
+        recipe_name: str,
+        recipe_qtty: int,
+        recipe: dict,
+        stage: int = 1,
+        bag: Dict[str, int] = {},
     ) -> dict:
-        """This function builds the recipe process in stages in a dict
+        """This function builds the recipe process in stages in a dict.
+        Is able to take into account the available items in bag.
         Structure:
         -------------
         stage_key:str : {
@@ -304,6 +319,8 @@ class RecipeBook:
             recipe_name -- recipe name
             recipe_qtty -- recipe amount
             recipe -- recipe dict
+            stage -- stage number (default: {1})
+            bag -- Bag with available items (default: {{}})
 
         Keyword Arguments:
             stage -- starting stage (default: {1})
@@ -312,7 +329,6 @@ class RecipeBook:
             Stages dict
         """
         stage_key = f"{stage}"
-
         # Fill current Stage
         ing_stages = {
             stage_key: {
@@ -328,12 +344,14 @@ class RecipeBook:
 
         # Get next stage
         for ing, qtty in ing_stages[stage_key][recipe_name]["ingredients"].items():
-            if ing in self.recipes:
+            qtty_needed = qtty - bag.get(ing, 0)
+            if ing in self.recipes and qtty_needed:
                 ing_stage = self._get_stages(
                     ing,
                     qtty,
                     self.recipes[ing],
                     stage=stage + 1,
+                    bag=bag,
                 )
                 _update_dict_add(ing_stages, ing_stage)
 
@@ -359,12 +377,15 @@ class RecipeBook:
                 dict_dest[key_src] = value_src
         return dict_dest
 
-    def print_recipes_stages(self, recipes: Dict[str, int] = None, bag=None):
-        """This function prints the recipe stages
+    def print_recipes_stages(
+        self, recipes: Dict[str, int] = None, bag: Dict[str, int] = None
+    ):
+        """This function prints the recipe stages.
+        Is able to take into account the available items in bag.
 
         Keyword Arguments:
-            recipes -- Recipes (default: {None})
-            bag -- Bag (default: {None})
+            recipes -- Recipes dict (default: {None})
+            bag -- Bag with available items(default: {None})
         """
         if recipes == None:
             recipes = self.grindlist if self.grindlist else self.recipes
@@ -383,10 +404,11 @@ class RecipeBook:
         total_item_cost: Dict[str, int] = {}
         if len(recipes):
             for recipe_name, recipe in recipes.items():
-                print("_" * 100)
 
                 recipe_qtty = qttys[recipe_name]
-                recipe_stage = self._get_stages(recipe_name, recipe_qtty, recipe)
+                recipe_stage = self._get_stages(
+                    recipe_name, recipe_qtty, recipe, bag=bag
+                )
                 n_stages = len(recipe_stage)
                 stage_keys = list(recipe_stage.keys())
                 for key in stage_keys:
@@ -398,8 +420,11 @@ class RecipeBook:
             print(f"There are {len(recipe_stages)} stages")
 
             for recipe_name, stage in recipe_stages.items():
+                _print_hline()
                 print(f"{recipe_name} recipe plan:")
-                recipe_cost = self.get_item_cost(recipe_name, qttys[recipe_name])
+                recipe_cost = self.get_item_cost(
+                    recipe_name, qttys[recipe_name], bag=bag
+                )
                 _update_dict_add(total_item_cost, recipe_cost)
 
                 for stage_name, stage_items in stage.items():
@@ -418,6 +443,7 @@ class RecipeBook:
                 print("Recipe Total Cost: ")
                 for item, item_qtty in recipe_cost.items():
                     print(f"\t{item} x{item_qtty}")
+                _print_hline()
 
     def _print_possible_recipies(self):
         """This function prints possible recipes"""
