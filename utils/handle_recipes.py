@@ -260,7 +260,7 @@ class RecipeBook:
 
                 # Convert cost back to Dictionary
                 item_cost = item_cost_series.to_dict()
-            _update_dict_add(cost, item_cost)
+                _update_dict_add(cost, item_cost)
         return cost
 
     def add_to_grindlist(self, wishes: dict = {}):
@@ -406,6 +406,7 @@ class RecipeBook:
             print(f"There are {len(recipe_stages)} stages")
 
             for recipe_name, stage in recipe_stages.items():
+                _print_hline()
                 print(f"{recipe_name} recipe plan:")
                 recipe_cost = self.get_item_cost(
                     recipe_name, qttys[recipe_name], bag=bag
@@ -428,6 +429,7 @@ class RecipeBook:
                 print("Recipe Total Cost: ")
                 for item, item_qtty in recipe_cost.items():
                     print(f"\t{item} x{item_qtty}")
+                _print_hline()
 
     def _print_possible_recipies(self):
         """This function prints possible recipes"""
