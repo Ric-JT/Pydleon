@@ -209,7 +209,7 @@ class RecipeBook:
         # Get possible recipes based on Recipe Book Bag
         self.possible_recipes = self.get_recipes_by_ingredients(self.bag)
 
-    def get_item_cost(self, item: str, number: int) -> dict:
+    def get_item_cost(self, item: str, number: int, bag: dict = {}) -> dict:
         """Get the cost in materials of certain number of one type of item.
 
 
@@ -223,22 +223,16 @@ class RecipeBook:
 
         cost = {}
         # If Recipe Book has a recipe for the item
-        if self.recipes.get(item):
+        needed = number - bag.get(item, 0)
+        if needed > 0 and self.recipes.get(item):
             ingredients = self.recipes[item]["ingredients"]
 
-            # Break the ingredient down until there is no more ingredients with recipes
-            for ingredient in ingredients:
-                item_cost = self.get_item_cost(ingredient, ingredients[ingredient])
-                _update_dict_add(cost, item_cost)
+            ing_cost = self.get_itemlist_cost(ingredients, list_number=needed, bag=bag)
+            _update_dict_add(cost, ing_cost)
 
-            # Multiply the item cost by the number of items
-            cost_series = pd.Series(cost, dtype=int) * number
-
-            # Convert cost back to Dictionary
-            cost = cost_series.to_dict()
         # Else set the item itself as the cost
-        else:
-            cost[item] = number
+        elif needed > 0:
+            cost[item] = needed
 
         return cost
 
@@ -413,7 +407,9 @@ class RecipeBook:
 
             for recipe_name, stage in recipe_stages.items():
                 print(f"{recipe_name} recipe plan:")
-                recipe_cost = self.get_item_cost(recipe_name, qttys[recipe_name])
+                recipe_cost = self.get_item_cost(
+                    recipe_name, qttys[recipe_name], bag=bag
+                )
                 _update_dict_add(total_item_cost, recipe_cost)
 
                 for stage_name, stage_items in stage.items():
